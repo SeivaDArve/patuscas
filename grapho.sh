@@ -12,6 +12,7 @@
    # Lista de opcoes para o menu `fzf`
       Lz1='Save '; Lz2='<menu-terminal-command-here>'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
+      L4='4. site | Culinaria Ayurvedica (Aki Sinta Saude)'
       L4='4. script | multi cronometros | `D ca`'
       L4='4. 1 filtrar| tmp | Lista de compras'
       L4='4. 1 filtrar| tmp | n receitas'
