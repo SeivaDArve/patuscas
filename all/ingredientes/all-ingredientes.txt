@@ -1,0 +1,72 @@
+# Title: Lista de todos osingredientes [Compras]
+
+Areia Aglomerante Clumping
+Néctar Goiaba Rosa Brasil  
+Refrigerante com Gás Guaraná sem Açúcar
+Ampolas Cabelo Resgate Repara e Protege
+Filetes Primavera Alecrim e Sal Marinho   
+Filetes Primavera Quinoa e 4 Sementes
+Lasanha Bolonhesa
+Batata Vermelha
+Dots Pistácio
+Hambúrguer de Porco com Queijo
+Laranja IGP Algarve
+Lasanha Bolonhesa
+Preparado para Mariscada Ultracongelado
+Pão de Forma sem Côdea
+Pão de Milho Girassol
+Queijo Curado Light Fatiado
+Rojões de Porco
+Rolo Misto Folhado com Queijo e Fiambre
+Tentáculos de Pota Grandes Congelados
+Chantilly
+Creme Culinário
+Danete-Creme de Chocolate
+Iogurte Líquido Morango Infantil
+Iogurte Líquido Pistácio
+Leite Achocolatado
+Leite Achocolatado Ucal-Go!
+Leite UHT Magro Cálcio sem Lactose
+Ovos de Solo Classe L
+Arroz Thai Jasmim
+Topping de Chocolate Belga
+
+Detergente para roupa	skip
+Amaciador de roupa	Comfort
+Papel higiénico	Renova
+Sacos congelação	Lidl
+Pasta de dentes	Aquafresh
+Shampoo	Pantene
+Rissóis de camarão forno	Auchan
+Esponjas de cozinha	Scotch-Brite
+Sacos do lixo	   Pingo Doce
+Água (1x 5L)	   Monchique
+Água (6x 1L)	   Auchan 9.5
+Água (6x 250 ml)	Continente
+Tisanas chá preto	Pleno
+Guaraná	Fanta
+Néctar Maga e Laranja	Compal
+Pensos Higiénicos	Evax Liberty
+Gelado Pistácio	Magnum
+Gelado Classicone Masrhmallow	Continente
+Batatas Palitos	Continente
+Dots Pistácio	Continente
+Pão de forma sem Côdea	Bimbo
+Lasanha Bolonhesa	Continente
+Hambúrguer de Porco com Queijo	Continente
+Leite achocolatado	Agros
+Leite com café	Agros
+Iogurte tipo actimel	Continente
+Iogurte Líquido Pistácio	Continente
+Detergente Máquina Roupa Líquido Delicadas	Continente
+Tablete de chocolate	Milka
+Bolachas Choco Biscuit	Milka
+Bolachas com cobertura de chocolate finas	Milka
+Bolachas recheadas	Milka
+Batata frita lisa camponesas	Lay’s
+Bolacha choco minis 	Milka
+Atum Posta ao Natural	Continente Equilíbrio
+Tempero Strogonoff	Knorr
+	
+	
+
