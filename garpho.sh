@@ -40,7 +40,7 @@
       [[ $v_list =~ "6. " ]] && less ${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt | fzf -m
       [[ $v_list =~ "5. " ]] && echo "uDev: $L5"
       [[ $v_list =~ "4. " ]] && less ${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt
-      [[ $v_list =~ "3. " ]] && echo "uDev: $L3"
+      [[ $v_list =~ "3. " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas | fzf) && less ${v_REPOS_CENTER}/garpho/all/receitas/$v_file
       [[ $v_list =~ "2. " ]] && echo "uDev: $L2"
       [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2" && history -s "$Lz2"
       unset v_list
