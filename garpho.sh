@@ -15,6 +15,7 @@
       L11='11. Help: Como escrever uma receita neste script'
 
       L10='10. Go site   | Culinaria Ayurvedica (Aki Sinta Saude)'
+
        L9='9.  Script    | multi cronometros | `D ca`'
 
        L8='8.  Lista de compras | Criar nova '
@@ -38,7 +39,7 @@
       [[ $v_list =~ "11. " ]] && echo "uDev: $L11"
       [[ $v_list =~ "10. " ]] && xdg-open https://akisintasaude.pt 
       [[ $v_list =~ "9.  " ]] && echo "uDev: $L9"
-      [[ $v_list =~ "8.  " ]] && less ${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt | fzf -m
+      [[ $v_list =~ "8.  " ]] && v_items=$(less ${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt | fzf -m) && [[ -n $v_items ]] && echo "$v_items" > ${v_REPOS_CENTER}/garpho/all/lista-de-compras/1-wish-list.txt
       [[ $v_list =~ "7.  " ]] && echo "uDev: $L7"
       [[ $v_list =~ "6.  " ]] && echo "uDev: $L6"
       [[ $v_list =~ "5.  " ]] && echo "uDev: $L5"
