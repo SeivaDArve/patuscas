@@ -124,7 +124,8 @@ function f_menu_principal {
    # Lista de opcoes para o menu `fzf`
       Lz1='Save '; Lz2='garpho'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-      # Dolce Gusto Mimoc Times (Esta em ca-lculadoras
+      # Dolce Gusto Mimic Times (Esta em ca-lculadoras
+      #L11='11. Agricultura: quando plantar X planta
       L11='11. Help | Como escrever uma receita neste script'
 
       L10='10. Web  | Culinaria Ayurvedica (Aki Sinta Saude)'
