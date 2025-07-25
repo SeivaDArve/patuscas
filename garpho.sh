@@ -21,7 +21,7 @@ function f_menu_receitas {
       L2='2. Ler    | uma Receita texto'                                      
       L1='1. Cancel'
 
-      L0="SELECT 1: Menu X: "
+      L0="garpho: menu Receitas: "
       
    # Ordem de Saida das opcoes durante run-time
       v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n$L5 \n$L6 \n\n$Lz3" | fzf --no-info --pointer=">" --cycle --prompt="$L0")
