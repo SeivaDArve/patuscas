@@ -95,7 +95,7 @@ function f_menu_lista_de_compras {
        L2='2.  Ver   | TODOS os ingredientes + Produtos conhecidos'
        L1='1.  Cancel'
 
-       L0="garpho: agendar compras: "
+       L0="garpho: [1]: menu compras: "
       
       v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n\n$Lz3" | fzf --pointer=">" --cycle --prompt="$L0")
 
