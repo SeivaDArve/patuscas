@@ -52,7 +52,7 @@ function f_menu_lista_de_compras {
        L2='2.  Ver   | TODOS os ingredientes + Produtos conhecidos'
        L1='1.  Cancel'
 
-       L0="garpho: agendar compras: "
+       L0="garpho: [1]: menu compras: "
       
       v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n\n$Lz3" | fzf --pointer=">" --cycle --prompt="$L0")
 
@@ -98,7 +98,7 @@ function f_menu_principal {
 
        L0="garpho: "
       
-      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$L5 \n$L6 \n\n$L7 \n$L8 \n$L9 \n$L10 \n\n$Lz3" | fzf --reverse --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$L5 \n$L6 \n\n$L7 \n$L8 \n$L9 \n$L10 \n\n$Lz3" | fzf --cycle --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3   ]] && echo "$Lz2" 
