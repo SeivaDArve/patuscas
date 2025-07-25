@@ -17,8 +17,8 @@ function f_menu_receitas {
       L6='6. Editar | Boilerplate (para novas receita)'
       L5='5. Criar  | Nova Receita (com boilerplate)'
       L4='4. Abrir  | Livros de Receitas (em PDF)'
-      L3='3. Agendar receitas'                                      
-      L2='2. Ver todas as receitas'                                      
+      L3='3. Marcar | Receitas (guardar lista tmp de receitas)'                                      
+      L2='2. Ler    | uma Receita texto'                                      
       L1='1. Cancel'
 
       L0="SELECT 1: Menu X: "
@@ -35,7 +35,7 @@ function f_menu_receitas {
       [[   $v_list =~ "5. " ]] && f_criar_nova_receita_com_boilerplate
       [[   $v_list =~ "4. " ]] && v_livro=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/pdf | fzf ) && echo "vai ser aberto: $v_livro" && xdg-open ${v_REPOS_CENTER}/garpho/all/receitas/pdf/$v_livro
       [[   $v_list =~ "3. " ]] && echo "uDev"
-      [[   $v_list =~ "2. " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/texto/ | fzf) && less ${v_REPOS_CENTER}/garpho/all/receitas/$v_file
+      [[   $v_list =~ "2. " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/texto | fzf) && less ${v_REPOS_CENTER}/garpho/all/receitas/texto/$v_file
       [[   $v_list =~ "1. " ]] && echo "Canceled" 
       unset v_list
 
