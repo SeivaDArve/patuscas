@@ -1,4 +1,4 @@
-# Title: boilerplate
+# Title: boilerplate-receita-nova
 
 Hashtags: #yammy-only #yammy #forno #estacao-ano-x #preco-x #pessoas-n #tempo-x #rapido #mt-facil #doses-1
 source: 

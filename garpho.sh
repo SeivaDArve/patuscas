@@ -4,12 +4,49 @@
 
 
 
+function f_menu_receitas {
+
+   # Lista de opcoes para o menu `fzf`
+      Lz1='Saved '; Lz2='ga receitas'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+
+      L9='9. Editar | boilerplate (para novas receita)'
+      L5='5. Criar nova Receita (com boilerplate)'
+      L4='4. Livros de Receitas'
+      L3='3. Agendar receitas'                                      
+      L2='2. Ver todas as receitas'                                      
+      L1='1. Cancel'
+
+      L0="SELECT 1: Menu X: "
+      
+   # Ordem de Saida das opcoes durante run-time
+      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n$L5\n\n$Lz3" | fzf --no-info --pointer=">" --cycle --prompt="$L0")
+
+   # Atualizar historico fzf automaticamente (deste menu)
+      echo "$Lz2" >> $Lz4
+   
+   # Atuar de acordo com as instrucoes introduzidas pelo utilizador
+      [[   $v_list =~ $Lz3  ]] && echo -e "Acede ao historico com \`D ..\` e encontra: \n > $Lz2"
+      [[   $v_list =~ "9. " ]] && vim ${v_REPOS_CENTER}/garpho/all/etc/boilerplate-receita-nova.txt
+      [[   $v_list =~ "5. " ]] && echo "uDev"
+      [[   $v_list =~ "4. " ]] && v_livro=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/pdf | fzf ) && echo "vai ser aberto: $v_livro" && xdg-open ${v_REPOS_CENTER}/garpho/all/receitas/pdf/$v_livro
+      [[   $v_list =~ "3. " ]] && echo "uDev"
+      [[   $v_list =~ "2. " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/texto/ | fzf) && less ${v_REPOS_CENTER}/garpho/all/receitas/$v_file
+      [[   $v_list =~ "1. " ]] && echo "Canceled" 
+      unset v_list
+
+
+
+
+}
     
 
 function f_filtrar_hashtags {
 
    # Lista de opcoes para o menu `fzf`
       Lz1='Save '; Lz2='ga hash'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+
+      L8='8. #tempo[-de30min] ' 
+      L7='7. #tempo[+de30min] ' 
 
       L6='6. #forno ' 
       L5='5. #batidos ' 
@@ -20,10 +57,16 @@ function f_filtrar_hashtags {
 
       L0="garpho: Menu Hashtags: SELECT (1 ou +): "
       
-      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n$L5 \n$L6 \n\n$Lz3" | fzf -m --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n$L5 \n$L6 \n\n$L7 \n$L8 \n\n$Lz3" | fzf -m --cycle --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[ $v_list =~ "8. " ]] && echo "uDev"
+      [[ $v_list =~ "7. " ]] && echo "uDev"
+      [[ $v_list =~ "6. " ]] && echo "uDev"
+      [[ $v_list =~ "5. " ]] && echo "uDev"
+      [[ $v_list =~ "4. " ]] && echo "uDev"
+      [[ $v_list =~ "3. " ]] && echo "uDev"
       [[ $v_list =~ "2. " ]] && echo "uDev: $L2"
       [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
       unset v_list
@@ -74,46 +117,46 @@ function f_menu_lista_de_compras {
 }
 
 
+function f_demonstrar_todos_os_produtos {
+   L0="garpho: Lista de todos os ingredientes"
+
+   v_items=$(less ${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt | fzf --prompt="$L0" -m) && [[ -n $v_items ]] && echo "$v_items" > ${v_REPOS_CENTER}/garpho/all/lista-de-compras/1-wish-list.txt
+
+   [[ -n $v_items ]] && echo $v_items
+}
 
 function f_menu_principal {
    # Menu Simples
 
    # Lista de opcoes para o menu `fzf`
-      Lz1='Save '; Lz2='garpho'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+      Lz1='Saved '; Lz2='ga'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-      # Dolce Gusto Mimic Times (Esta em ca-lculadoras
-      L10='10. Agricultura'    # quando plantar X planta
-       L9='9.  Help | boilerplate (Como escrever uma receita neste script)'
-       L8='8.  web  | Culinaria Ayurvedica (Aki Sinta Saude)'
-       L7='7.  Menu | multi cronometros | `D ca`' 
+       L8='8. Menu | Agricultura'    # quando plantar X planta
+       L7='7. web  | Culinaria Ayurvedica (Aki Sinta Saude)'
 
-       L6='6.  Menu | Agendar/Gerir Compras'
-       L5='5.  Menu | Agendar/Gerir Receitas' 
+       L6='6. Menu | multi cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
+       L5='5. Menu | Agendar/Gerir Compras'
 
-       L4='4.  Ver  | Todos os ingredientes + Produtos conhecidos'
-       L3='3.  Ver  | Todas as receitas'
-       L2='2.  Ver  | Todos os Hashtag'
+       L4='4. Ver  | Todos os ingredientes + Produtos conhecidos'
+       L3='3. Menu | Receitas'
+       L2='2. Menu | Hashtags'
 
        L1='1. Cancel'
 
-       L0="garpho: "
+       L0="garpho: main menu: "
       
-      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$L5 \n$L6 \n\n$L7 \n$L8 \n$L9 \n$L10 \n\n$Lz3" | fzf --reverse --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$L5 \n$L6 \n\n$L7 \n$L8 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
-      [[ $v_list =~ $Lz3   ]] && echo "$Lz2" 
-      [[ $v_list =~ "12. " ]] && echo "uDev: $L12"
-      [[ $v_list =~ "11. " ]] && echo "uDev: $L11"
-      [[ $v_list =~ "10. " ]] && xdg-open https://akisintasaude.pt 
-      [[ $v_list =~ "9.  " ]] && echo "uDev: $L9"
-      [[ $v_list =~ "8.  " ]] && v_items=$(less ${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt | fzf -m) && [[ -n $v_items ]] && echo "$v_items" > ${v_REPOS_CENTER}/garpho/all/lista-de-compras/1-wish-list.txt
-      [[ $v_list =~ "7.  " ]] && echo "uDev: $L7"
-      [[ $v_list =~ "6.  " ]] && f_menu_lista_de_compras
-      [[ $v_list =~ "5.  " ]] && echo "uDev: $L5"
-      [[ $v_list =~ "4.  " ]] && less ${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt
-      [[ $v_list =~ "3.  " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/texto/ | fzf) && less ${v_REPOS_CENTER}/garpho/all/receitas/$v_file
-      [[ $v_list =~ "2.  " ]] && f_filtrar_hashtags
-      [[ $v_list =~ "1.  " ]] && echo "Canceled: $Lz2" && history -s "$Lz2"
+      [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[ $v_list =~ "8. " ]] && echo "uDev: $L10"
+      [[ $v_list =~ "7. " ]] && xdg-open https://akisintasaude.pt 
+      [[ $v_list =~ "6. " ]] && echo "uDev: $L7"
+      [[ $v_list =~ "5. " ]] && f_menu_lista_de_compras
+      [[ $v_list =~ "4. " ]] && f_demonstrar_todos_os_produtos
+      [[ $v_list =~ "3. " ]] && f_menu_receitas
+      [[ $v_list =~ "2. " ]] && f_filtrar_hashtags
+      [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2" && history -s "$Lz2"
       unset v_list
     
 }
@@ -133,4 +176,6 @@ elif [ $1 == "hash" ]; then
    # Aprentar o menu de hashtags diretamente
    f_filtrar_hashtags
 
+elif [ $1 == "receitas" ]; then
+   f_menu_receitas
 fi

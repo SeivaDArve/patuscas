@@ -1,5 +1,3 @@
-# Title: Lista de todos osingredientes [Compras]
-
 Areia Aglomerante Clumping
 Néctar Goiaba Rosa Brasil  
 Refrigerante com Gás Guaraná sem Açúcar
@@ -30,47 +28,45 @@ Leite UHT Magro Cálcio sem Lactose
 Ovos de Solo Classe L
 Arroz Thai Jasmim
 Topping de Chocolate Belga
-natas
-chocolate de culinaria
-baunilha
-Gelatina em pó (com aromas)
-Gelatina em folhas (neutra)
-Detergente para roupa	skip
-Amaciador de roupa	Comfort
-Papel higiénico	Renova
-Sacos congelação	Lidl
-Pasta de dentes	Aquafresh
-Shampoo	Pantene
-Rissóis de camarão forno	Auchan
-Esponjas de cozinha	Scotch-Brite
-Sacos do lixo	   Pingo Doce
-Água (1x 5L)	   Monchique
-Água (6x 1L)	   Auchan 9.5
-Água (6x 250 ml)	Continente
-Tisanas chá preto	Pleno
-Guaraná	Fanta
-Néctar Maga e Laranja	Compal
-Pensos Higiénicos	Evax Liberty
-Gelado Pistácio	Magnum
-Gelado Classicone Masrhmallow	Continente
-Batatas Palitos	Continente
-Dots Pistácio	Continente
-Pão de forma sem Côdea	Bimbo
-Lasanha Bolonhesa	Continente
-Hambúrguer de Porco com Queijo	Continente
-Leite achocolatado	Agros
-Leite com café	Agros
-Iogurte tipo actimel	Continente
-Iogurte Líquido Pistácio	Continente
-Detergente Máquina Roupa Líquido Delicadas	Continente
-Tablete de chocolate	Milka
-Bolachas Choco Biscuit	Milka
-Bolachas com cobertura de chocolate finas	Milka
-Bolachas recheadas	Milka
-Batata frita lisa camponesas	Lay’s
-Bolacha choco minis 	Milka
-Atum Posta ao Natural	Continente Equilíbrio
-Tempero Strogonoff	Knorr
-	
-	
-
+Natas
+Chocolate de culinaria
+Baunilha
+Gelatina em pó, com aromas
+Gelatina em folhas, neutra
+Detergente para roupa - (skip)
+Amaciador de roupa - (Comfort)
+Papel higiénico - (Renova)
+Sacos congelação - (Lidl)
+Pasta de dentes - (Aquafresh)
+Shampoo - (Pantene)
+Rissóis de camarão forno - (Auchan)
+Esponjas de cozinha - (ScotchvBrite)
+Sacos do lixo - (Pingo Doce)
+Água (1x 5L) - (Monchique)
+Água (6x 1L) - (Auchan 9.5)
+Água (6x 250 ml) - (Continente)
+Tisanas chá preto - (Pleno)
+Guaraná	
+Fanta
+Néctar Maga e Laranja - (Compal)
+Pensos Higiénicos	- (Evax Liberty)
+Gelado Pistácio - (Magnum)
+Gelado Classicone Masrhmallow - (Continente)
+Batatas Palitos - (Continente)
+Dots Pistácio - (Continente)
+Pão de forma sem Côdea - (Bimbo)
+Lasanha Bolonhesa - (Continente)
+Hambúrguer de Porco com Queijo - (Continente)
+Leite achocolatado - (Agros)
+Leite com café - (Agros)
+Iogurte tipo actimel - (Continente)
+Iogurte Líquido Pistácio - (Continente)
+Detergente Máquina Roupa Líquido Delicadas - (Continente)
+Tablete de chocolate - (Milka)
+Bolachas Choco Biscuit - (Milka)
+Bolachas com cobertura de chocolate finas - (Milka)
+Bolachas recheadas - (Milka)
+Batata frita lisa camponesas - (Lay’s)
+Bolacha choco minis - (Milka)
+Atum Posta ao Natural - (Continente Equilíbrio)
+Tempero Strogonoff - (Knorr)
