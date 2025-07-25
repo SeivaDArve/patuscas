@@ -83,7 +83,10 @@ function f_criar_nova_receita_com_boilerplate {
       cat $v_tmp1 >> $v_tmp2
 
    # Concluir. Mover e renomear o ficheiro temporario
-      mv $v_tmp2 $v_perm
+      rv  $v_tmp1 
+      mv  $v_tmp2 $v_perm
+
+   # Editar ficheiro final, para inserir a receita
       vim $v_perm
 }
 
