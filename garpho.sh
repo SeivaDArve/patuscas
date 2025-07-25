@@ -64,10 +64,11 @@ function f_criar_nova_receita_com_boilerplate {
       read -p " > " v_name
       echo
          
-      v_name_title="# Title: $v_name"
+      v_name_underscored=$(sed 's/ /_/g' <(echo $v_name))  # Nome do ficheiro, os espacos " " foram substituidos por underscores "_"
+      v_name_title="# Title: $v_name"   
 
    # Caminho final do ficheiro
-      v_perm=$v_path/$v_name
+      v_perm=$v_path/$v_name_underscored
 
    # Substituir o texto do ficheiro temporario pelo texto do boilerplate
       cat $v_boi > $v_tmp1
