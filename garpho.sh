@@ -8,6 +8,10 @@
 
    # Example: f_create_tmp_file will create a temporary file stored at $v_tmp (with abs path, at ~/.tmp/...)
 
+# Ficheiros internos
+   v_all_items=${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt
+   v_wish_list=${v_REPOS_CENTER}/garpho/all/lista-de-compras/1-wish-list.txt 
+
 
 function f_menu_receitas {
 
@@ -102,13 +106,13 @@ function f_filtrar_hashtags {
       L6='6. #forno ' 
       L5='5. #batidos ' 
       L4='4. #bolos' 
-      L3='3. #yammy-n' 
-      L2='2. #yammy-s' 
-      L1='1. Cancel'
+      L3='3. #com-yammy' 
+      L2='2. #sem-yammy' 
+      L1='1. Cancel/Ignore'
 
       L0="garpho: Menu Hashtags: "
       
-      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n$L5 \n$L6 \n\n$L7 \n$L8 \n\n$Lz3" | fzf --pointer=">" -m --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n$L5 \n$L6 \n\n$L7 \n$L8 \\n\n$Lz3" | fzf --pointer=">" -m --cycle --prompt="$L0" )
 
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
@@ -121,6 +125,9 @@ function f_filtrar_hashtags {
       [[ $v_list =~ "2. " ]] && echo "uDev: $L2"
       [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
       unset v_list
+
+
+
 }
     
 
@@ -130,8 +137,6 @@ function f_menu_lista_de_compras {
       
    # Lista de opcoes para o menu `fzf`
       Lz1='Save '; Lz2='ga compras'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
-
-      L11='11. Script | multi cronometros | `D ca`'
 
       L10='10. Agendar: Lista de Compras nova:'
        L9='9.  Lista  | 1 | Nova Wish list      | Criar nova  (de 0 para 3)'
@@ -148,11 +153,10 @@ function f_menu_lista_de_compras {
 
        L0="garpho: menu compras: "
       
-      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n\n$L4 \n$L5 \n$L6 \n\n$L7 \n$L8 \n$L9 \n$L10 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3   ]] && echo "$Lz2" 
-      [[ $v_list =~ "11. " ]] && echo "uDev: $L11" 
       [[ $v_list =~ "10. " ]] && echo "uDev: $L10" 
       [[ $v_list =~ "9.  " ]] && echo "uDev: $L9" 
       [[ $v_list =~ "8.  " ]] && echo "uDev: $L8" 
@@ -168,11 +172,12 @@ function f_menu_lista_de_compras {
 
 
 function f_demonstrar_todos_os_produtos {
+
    L0="garpho: Lista de todos os ingredientes"
+   v_items=$(less $v_all_items | fzf --prompt="$L0" --pointer=">" -m) 
 
-   v_items=$(less ${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt | fzf --prompt="$L0" --pointer=">" -m) && [[ -n $v_items ]] && echo "$v_items" > ${v_REPOS_CENTER}/garpho/all/lista-de-compras/1-wish-list.txt
+   [[ -n $v_items ]] && echo "$v_items" > $v_wish_list
 
-   [[ -n $v_items ]] && echo $v_items
 }
 
 function f_menu_principal {
@@ -181,26 +186,25 @@ function f_menu_principal {
    # Lista de opcoes para o menu `fzf`
       Lz1='Saved '; Lz2='ga'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-       L8='8. Menu | Agricultura'    # quando plantar X planta
-       L7='7. web  | Culinaria Ayurvedica (Aki Sinta Saude)'
+       L8='8. web  | Culinaria Ayurvedica (Aki Sinta Saude)'
+       L7='7. Menu | Agricultura'    # quando plantar X planta
+       L6='6. Menu | Cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
+       L5='5. Menu | Compras'
 
-       L6='6. Menu | multi cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
-       L5='5. Menu | Agendar/Gerir Compras'
-
-       L4='4. Ver  | Ingredientes; Produtos'
+       L4='4. Ver  | Itens    (uDev: criar menu para poder editar)'
        L3='3. Menu | Receitas'
-       L2='2. Menu | Hashtags'
 
+       L2='2. Menu | Busca com Hashtags'
        L1='1. Cancel'
 
        L0="garpho: main menu: "
       
-      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$L5 \n$L6 \n\n$L7 \n$L8 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
-      [[ $v_list =~ "8. " ]] && echo "uDev: $L10"
-      [[ $v_list =~ "7. " ]] && xdg-open https://akisintasaude.pt 
+      [[ $v_list =~ "8. " ]] && xdg-open https://akisintasaude.pt 
+      [[ $v_list =~ "7. " ]] && echo "uDev: $L10"
       [[ $v_list =~ "6. " ]] && echo "uDev: $L7"
       [[ $v_list =~ "5. " ]] && f_menu_lista_de_compras
       [[ $v_list =~ "4. " ]] && f_demonstrar_todos_os_produtos

@@ -5,8 +5,8 @@ source:
 img: 
 
 Ingredientes:
-   @ [1,5 | kg] batatas novas (pequenas) 
-   @ [   qb.  ] azeite
+   @ [1,5 | kg] batatas novas, pequenas (exemplo)
+   @ [   qb.  ] azeite (exemplo) 
 
 Prep:
    --1-- Notas:
@@ -15,14 +15,16 @@ Prep:
    --2-- Ferver as batatas 20 min, com casca
 
 Servir:
-   - Servir quente/frio
+   - Servir quente
+   - Servir morno
+   - Servir frio
    - Servir no aro metalico
    - Doses: X pessoas
    - Peso final: X kg
 
 Materiais:
-   % 1 Frigideira especial
-   % 1 Tabua de madeira especial
+   % 1 Frigideira especial (exemplo)
+   % 1 Tabua de madeira especial (exemplo)
 
 Duraçao: 
    Pre-Preparacao:  x min
