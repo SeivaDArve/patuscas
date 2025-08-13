@@ -18,27 +18,31 @@ function f_menu_receitas {
    # Lista de opcoes para o menu `fzf`
       Lz1='Saved '; Lz2='ga receitas'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-      L6='6. Editar | Boilerplate (para novas receita)'
-      L5='5. Criar  | Nova Receita (com boilerplate)'
-      L4='4. Abrir  | Livros de Receitas (em PDF)'
-      L3='3. Marcar | Receitas (guardar lista tmp de receitas)'                                      
-      L2='2. Ler    | uma Receita texto'                                      
+      L7='7. Editar | Boilerplate (para novas receita)'
+      L6='6. Marcar | Receitas (guardar lista tmp de receitas)'                                      
+
+      L5='5. Editar   | Uma Receita de texto'
+      L4='4. Criar    | Nova Receita (com boilerplate)'
+
+      L3='3. Ler/Abrir  | Livros de Receitas (em PDF)'
+      L2='2. Ler/Abrir  | Uma Receita texto'                                      
       L1='1. Cancel'
 
       L0="garpho: menu Receitas: "
       
    # Ordem de Saida das opcoes durante run-time
-      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n$L5 \n$L6 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n\n$L4 \n$L5 \n\n$L6 \n$L7 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
    # Atualizar historico fzf automaticamente (deste menu)
       echo "$Lz2" >> $Lz4
    
    # Atuar de acordo com as instrucoes introduzidas pelo utilizador
       [[   $v_list =~ $Lz3  ]] && echo -e "Acede ao historico com \`D ..\` e encontra: \n > $Lz2"
-      [[   $v_list =~ "6. " ]] && vim ${v_REPOS_CENTER}/garpho/all/etc/boilerplate-receita-nova.txt
-      [[   $v_list =~ "5. " ]] && f_criar_nova_receita_com_boilerplate
-      [[   $v_list =~ "4. " ]] && v_livro=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/pdf | fzf ) && echo "vai ser aberto: $v_livro" && xdg-open ${v_REPOS_CENTER}/garpho/all/receitas/pdf/$v_livro
-      [[   $v_list =~ "3. " ]] && echo "uDev"
+      [[   $v_list =~ "7. " ]] && vim ${v_REPOS_CENTER}/garpho/all/etc/boilerplate-receita-nova.txt
+      [[   $v_list =~ "6. " ]] && echo "uDev"
+      [[   $v_list =~ "5. " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/texto | fzf) && vim ${v_REPOS_CENTER}/garpho/all/receitas/texto/$v_file
+      [[   $v_list =~ "4. " ]] && f_criar_nova_receita_com_boilerplate
+      [[   $v_list =~ "3. " ]] && v_livro=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/pdf | fzf ) && echo "vai ser aberto: $v_livro" && xdg-open ${v_REPOS_CENTER}/garpho/all/receitas/pdf/$v_livro
       [[   $v_list =~ "2. " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/texto | fzf) && less ${v_REPOS_CENTER}/garpho/all/receitas/texto/$v_file
       [[   $v_list =~ "1. " ]] && echo "Canceled" 
       unset v_list
@@ -186,15 +190,15 @@ function f_menu_principal {
    # Lista de opcoes para o menu `fzf`
       Lz1='Saved '; Lz2='ga'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-       L8='8. web  | Culinaria Ayurvedica (Aki Sinta Saude)'
-       L7='7. Menu | Agricultura'    # quando plantar X planta
-       L6='6. Menu | Cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
-       L5='5. Menu | Compras'
+       L8='8. web  |   | Culinaria Ayurvedica (Aki Sinta Saude)'
+       L7='7. Menu |   | Agricultura'    # quando plantar X planta
+       L6='6. Menu |   | Cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
+       L5='5. Menu | c | Compras'
 
-       L4='4. Ver  | Itens    (uDev: criar menu para poder editar)'
-       L3='3. Menu | Receitas'
+       L4='4. Ver  |   | Itens    (uDev: criar menu para poder editar)'
+       L3='3. Menu | r | Receitas'
 
-       L2='2. Menu | Busca com Hashtags'
+       L2='2. Menu | H | Busca com Hashtags'
        L1='1. Cancel'
 
        L0="garpho: main menu: "
