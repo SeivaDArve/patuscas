@@ -1,6 +1,15 @@
 # Title: Garpho
 # Description: A script to cook
 
+# Sourcing DRYa Lib 1: Color schemes
+   v_lib1=${v_REPOS_CENTER}/DRYa/all/lib/drya-lib-1-colors-greets.sh
+   [[ -f $v_lib1 ]] && source $v_lib1 || (read -s -n 1 -p "DRYa: error: drya-lib-1 does not exist " && echo)
+
+   v_greet="Garpho"
+   v_talk="garpho: "
+
+   # Examples: `db` (an fx to use during debug)
+   #           f_greet, f_greet2, f_talk, f_done, f_anyK, f_Hline, f_horizlina, f_verticline, etc... [From the repo at: "https://github.com/SeivaDArve/DRYa.git"]
 
 # Sourcing DRYa Lib 2
    v_lib2=${v_REPOS_CENTER}/DRYa/all/lib/drya-lib-2-tmp-n-config-files.sh
@@ -12,6 +21,28 @@
    v_all_items=${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt
    v_wish_list=${v_REPOS_CENTER}/garpho/all/lista-de-compras/1-wish-list.txt 
 
+function f_abrir_ler_receitas_pdf {
+   # Menu fzf para escolher abrir/ler um livro de receitas PDF
+
+   L0="garpho: Abrir/Ler um livro de receitas em PDF: "
+
+   v_livros=${v_REPOS_CENTER}/garpho/all/receitas/pdf
+   v_livro=$(ls $v_livros | fzf --prompt="$L0") 
+   
+   [[ -n $v_livro ]] && f_talk && echo "Vai ser aberto: $v_livro" 
+   [[ -n $v_livro ]] && xdg-open $v_livros/$v_livro
+}
+
+function f_abrir_ler_receitas_texto {
+   # Menu fzf para escolher abrir/ler uma receitas guardada em texto
+
+   L0="garpho: Abrir/Ler uma receita de texto: "
+
+   v_files=${v_REPOS_CENTER}/garpho/all/receitas/texto
+   v_file=$(ls $v_files | fzf --prompt="$L0")
+   
+   [[ -n $v_file ]] && less $v_files/$v_file
+}
 
 function f_menu_receitas {
 
@@ -21,11 +52,11 @@ function f_menu_receitas {
       L7='7. Editar | Boilerplate (para novas receita)'
       L6='6. Marcar | Receitas (guardar lista tmp de receitas)'                                      
 
-      L5='5. Editar   | Uma Receita de texto'
-      L4='4. Criar    | Nova Receita (com boilerplate)'
+      L5='5. Editar |   | Uma Receita de texto'
+      L4='4. Criar  | n | Nova Receita (com boilerplate)'
 
-      L3='3. Ler/Abrir  | Livros de Receitas (em PDF)'
-      L2='2. Ler/Abrir  | Uma Receita texto'                                      
+      L3='3. Ler/Abrir | p | Livros de Receitas (em PDF)'
+      L2='2. Ler/Abrir | t | Uma Receita texto'                                      
       L1='1. Cancel'
 
       L0="garpho: menu Receitas: "
@@ -42,8 +73,8 @@ function f_menu_receitas {
       [[   $v_list =~ "6. " ]] && echo "uDev"
       [[   $v_list =~ "5. " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/texto | fzf) && vim ${v_REPOS_CENTER}/garpho/all/receitas/texto/$v_file
       [[   $v_list =~ "4. " ]] && f_criar_nova_receita_com_boilerplate
-      [[   $v_list =~ "3. " ]] && v_livro=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/pdf | fzf ) && echo "vai ser aberto: $v_livro" && xdg-open ${v_REPOS_CENTER}/garpho/all/receitas/pdf/$v_livro
-      [[   $v_list =~ "2. " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/texto | fzf) && less ${v_REPOS_CENTER}/garpho/all/receitas/texto/$v_file
+      [[   $v_list =~ "3. " ]] && f_abrir_ler_receitas_pdf 
+      [[   $v_list =~ "2. " ]] && f_abrir_ler_receitas_texto 
       [[   $v_list =~ "1. " ]] && echo "Canceled" 
       unset v_list
 
@@ -235,8 +266,25 @@ elif [ $1 == "hash" ] || [ $1 == "H" ]; then
    f_filtrar_hashtags
 
 elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
+
    if [ -z $2 ]; then
+      # Menu 'receitas' principal
       f_menu_receitas
+
+   elif [ $2 == "pdf" ] || [ $2 == "p" ]; then
+
+      if [ -z $3 ]; then
+         # Menu 'receitas' em PDF
+         f_abrir_ler_receitas_pdf
+
+      elif [ $3 == "yammy" ] || [ $3 == "y" ]; then
+         # Aceder diretamente ao livro principal da yammy
+         echo "ga r p y" >> $Lz4
+         xdg-open ${v_REPOS_CENTER}/garpho/all/receitas/pdf/livro_receitas_yammi_2.pdf
+      fi
+
+   elif [ $2 == "texto" ] || [ $2 == "t" ]; then
+      f_abrir_ler_receitas_texto 
 
    elif [ $2 == "nova" ] || [ $2 == "n" ]; then
       f_criar_nova_receita_com_boilerplate 
