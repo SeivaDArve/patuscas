@@ -180,7 +180,7 @@ function f_demonstrar_todos_os_produtos {
    L0="garpho: Lista de todos os ingredientes"
    v_items=$(less $v_all_items | fzf --prompt="$L0" --pointer=">" -m) 
 
-   [[ -n $v_items ]] && echo "$v_items" > $v_wish_list
+   [[ -n $v_items ]] && echo "$v_items" > $v_wish_list && echo "Sent to Wish list (uDev: perguntar primeiro o que fazer, print, send to wish, send to shopping, remove from shopping, remove from wish" && echo && echo "$v_items"
 
 }
 
