@@ -222,7 +222,7 @@ function f_menu_principal {
       Lz1='Saved '; Lz2='ga'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
        L8='8. web  |   | Culinaria Ayurvedica (Aki Sinta Saude)'
-       L7='7. Menu |   | Agricultura'    # quando plantar X planta
+       L7='7. Edit |   | agricultura.org'    # quando plantar X planta
        L6='6. Menu |   | Cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
        L5='5. Menu | c | Compras'
 
@@ -240,7 +240,7 @@ function f_menu_principal {
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
       [[ $v_list =~ "8. " ]] && xdg-open https://akisintasaude.pt 
-      [[ $v_list =~ "7. " ]] && echo "uDev: $L10"
+      [[ $v_list =~ "7. " ]] && emacs ${v_REPOS_CENTER}/garpho/all/agric/agricultura.org
       [[ $v_list =~ "6. " ]] && echo "uDev: $L7"
       [[ $v_list =~ "5. " ]] && f_menu_lista_de_compras
       [[ $v_list =~ "4. " ]] && f_demonstrar_todos_os_produtos
