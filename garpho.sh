@@ -41,7 +41,7 @@ function f_abrir_ler_receitas_texto {
    v_files=${v_REPOS_CENTER}/garpho/all/receitas/texto
    v_file=$(ls $v_files | fzf --prompt="$L0")
    
-   [[ -n $v_file ]] && less $v_files/$v_file
+   [[ -n $v_file ]] && bash e $v_files/$v_file  # uDev: usar drya-text-editor `e`
 }
 
 function f_menu_receitas {
