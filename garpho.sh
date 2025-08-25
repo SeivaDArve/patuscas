@@ -221,8 +221,9 @@ function f_menu_principal {
    # Lista de opcoes para o menu `fzf`
       Lz1='Saved '; Lz2='ga'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
+      #L9 Onde conservar os ingredientes
        L8='8. web  |   | Culinaria Ayurvedica (Aki Sinta Saude)'
-       L7='7. Edit |   | agricultura.org'    # quando plantar X planta
+       L7='7. Edit |   | Apontamentos + Agricultura.org'    # quando plantar X planta
        L6='6. Menu |   | Cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
        L5='5. Menu | c | Compras'
 

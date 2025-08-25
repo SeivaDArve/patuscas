@@ -1,38 +1,46 @@
 # Title: boilerplate-receita-nova
 
 Hashtags: #yammy-only #yammy #forno #estacao-ano-x #preco-x #pessoas-n #tempo-x #rapido #mt-facil #doses-1
-source: 
-img: 
+Source: 
+Img: 
 
 Ingredientes:
-   @ [1,5 | kg] batatas novas, pequenas (exemplo)
-   @ [   qb.  ] azeite (exemplo) 
+   @ [1,5 | kg] (exemplo: batatas novas, pequenas)
+   @ [    |   ] 
+
+   @ [   qb.  ] (exemplo: azeite) 
+   @ [   qb.  ] 
+
 
 Prep:
-   --1-- Notas:
-         A agua escorrida no passo X pode ser usada para sopa noutra receita
+ --1-- Notas:
+   A agua escorrida no passo X pode ser usada para sopa noutra receita (ou para mais tarde deixar os talheres de molho, facilitandoba lavagem)
 
-   --2-- Ferver as batatas 20 min, com casca
+ --2-- Ferver X
 
 Servir:
-   - Servir quente
-   - Servir morno
-   - Servir frio
-   - Servir no aro metalico
-   - Doses: X pessoas
-   - Peso final: X kg
+   [X] Servir quente
+   [ ] Servir morno
+   [ ] Servir frio
+   [ ] Servir no aro metalico
+   [ ] Doses: X pessoas
+
+Doses / Porcoes / Peso final:
+   - Peso final (kg):
+   - Doses (pessoas):
 
 Materiais:
-   % 1 Frigideira especial (exemplo)
-   % 1 Tabua de madeira especial (exemplo)
+   % 1 (exemplo: Frigideira especial)
+   % 1 (exemplo: Tabua de madeira especial)
+   % 1 
 
 Duraçao: 
    Pre-Preparacao:  x min
    Preparacao:      x min
    Lavar materiais: x min
-   total: 
+   Total: 
 
-Dicas: 
+Dicas/Notas: 
  - 
 
 Relatorio das ultimas prep:

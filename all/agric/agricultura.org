@@ -1,4 +1,6 @@
 #+TITLE: Agricultura.org
 
+* Receitas ToDo:
+Yakisoba (do restaurante Nood)
 * Compostagem
 exemplo: https://youtu.be/MnpUWPUXGu4?si=3GnT87LSsHBISxfb
