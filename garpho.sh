@@ -36,9 +36,13 @@ function f_abrir_ler_receitas_pdf {
 function f_abrir_ler_receitas_texto {
    # Menu fzf para escolher abrir/ler uma receitas guardada em texto
 
+   # uDev: upgrade para --multiple
+
    L0="garpho: Abrir/Ler uma receita de texto: "
 
-   v_files=${v_REPOS_CENTER}/garpho/all/receitas/texto
+   # Variavel ja definida anteriormente
+      #v_files=${v_REPOS_CENTER}/garpho/all/receitas/texto
+
    v_file=$(ls $v_files | fzf --prompt="$L0")
    
    [[ -n $v_file ]] && bash e $v_files/$v_file  # uDev: usar drya-text-editor `e`
@@ -285,7 +289,53 @@ elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
       fi
 
    elif [ $2 == "texto" ] || [ $2 == "t" ]; then
-      f_abrir_ler_receitas_texto 
+
+      # Iniciar as Variaveis relacionadas com as receitas de texto
+         v_files=${v_REPOS_CENTER}/garpho/all/receitas/texto
+
+      if [ -z $3 ]; then
+         # Nao nao forem dados mais args, abrir fzf
+         f_abrir_ler_receitas_texto 
+   
+      else
+         # Se forem dados mais args, usar esses args como pesquisas
+
+         f_greet
+
+         # Filtrar do prompt os comandos iniciais dos argumentos de pesquisa. Retira os 2 primeiros comandos, deixando so pesquisas para usar com `grep`
+            shift  # Elimina o arg $1
+            shift  # Elimina o arg $2
+                   # O arg $3 passou a ser arg $1
+
+         # Criar uma lista de receitas. Apenas das receitas que correspinderem com o padrao
+            v_found=$(ls $v_files | grep -i $1)
+
+         # Verbose do resultado:
+            f_talk; echo "Receitas Encontradas (com padrao: '$1'):"
+                    echo "$v_found" | sed 's/^/ > /g'
+                    echo
+            f_talk; echo "[Any key]: Editar receitas encontradas por ordem"
+
+                    read -sn1
+
+         # Para cada receita encontrada, criar uma linha horizontal, editar esse ficheiro com drya-text-editor e esperar que o user aceite uma tecla para editar a proxima
+            for i in $(cat <(echo $v_found))
+            do
+               f_hzl
+
+               f_talk; echo "A editar: $i"
+                       echo
+
+               bash e $v_files/$i
+
+                       echo
+               f_talk; echo "[Any key]: Seguir para proxima Receita"
+
+               read -sn 1
+               echo
+            done
+      fi
+      
 
    elif [ $2 == "nova" ] || [ $2 == "n" ]; then
       f_criar_nova_receita_com_boilerplate 
