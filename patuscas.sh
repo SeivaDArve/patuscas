@@ -1,12 +1,12 @@
-# Title: Garpho
+# Title: Patuscas
 # Description: A script to cook
 
 # Sourcing DRYa Lib 1: Color schemes
    v_lib1=${v_REPOS_CENTER}/DRYa/all/lib/drya-lib-1-colors-greets.sh
    [[ -f $v_lib1 ]] && source $v_lib1 || (read -s -n 1 -p "DRYa: error: drya-lib-1 does not exist " && echo)
 
-   v_greet="Garpho"
-   v_talk="garpho: "
+   v_greet="Patuscas"
+   v_talk="patuscas: "
 
    # Examples: `db` (an fx to use during debug)
    #           f_greet, f_greet2, f_talk, f_done, f_anyK, f_Hline, f_horizlina, f_verticline, etc... [From the repo at: "https://github.com/SeivaDArve/DRYa.git"]
@@ -18,15 +18,15 @@
    # Example: f_create_tmp_file will create a temporary file stored at $v_tmp (with abs path, at ~/.tmp/...)
 
 # Ficheiros internos
-   v_all_items=${v_REPOS_CENTER}/garpho/all/ingredientes/all-ingredientes.txt
-   v_wish_list=${v_REPOS_CENTER}/garpho/all/lista-de-compras/1-wish-list.txt 
+   v_all_items=${v_REPOS_CENTER}/patuscas/all/ingredientes/all-ingredientes.txt
+   v_wish_list=${v_REPOS_CENTER}/patuscas/all/lista-de-compras/1-wish-list.txt 
 
 function f_abrir_ler_receitas_pdf {
    # Menu fzf para escolher abrir/ler um livro de receitas PDF
 
-   L0="garpho: Abrir/Ler um livro de receitas em PDF: "
+   L0="patuscas: Abrir/Ler um livro de receitas em PDF: "
 
-   v_livros=${v_REPOS_CENTER}/garpho/all/receitas/pdf
+   v_livros=${v_REPOS_CENTER}/patuscas/all/receitas/pdf
    v_livro=$(ls $v_livros | fzf --prompt="$L0") 
    
    [[ -n $v_livro ]] && f_talk && echo "Vai ser aberto: $v_livro" 
@@ -38,10 +38,10 @@ function f_abrir_ler_receitas_texto {
 
    # uDev: upgrade para --multiple
 
-   L0="garpho: Abrir/Ler uma receita de texto: "
+   L0="patuscas: Abrir/Ler uma receita de texto: "
 
    # Variavel ja definida anteriormente
-      #v_files=${v_REPOS_CENTER}/garpho/all/receitas/texto
+      #v_files=${v_REPOS_CENTER}/patuscas/all/receitas/texto
 
    v_file=$(ls $v_files | fzf --prompt="$L0")
    
@@ -63,7 +63,7 @@ function f_menu_receitas {
       L2='2. Ler/Abrir | t | Uma Receita texto'                                      
       L1='1. Cancel'
 
-      L0="garpho: menu Receitas: "
+      L0="patuscas: menu Receitas: "
       
    # Ordem de Saida das opcoes durante run-time
       v_list=$(echo -e "$L1 \n$L2 \n$L3 \n\n$L4 \n$L5 \n\n$L6 \n$L7 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
@@ -73,9 +73,9 @@ function f_menu_receitas {
    
    # Atuar de acordo com as instrucoes introduzidas pelo utilizador
       [[   $v_list =~ $Lz3  ]] && echo -e "Acede ao historico com \`D ..\` e encontra: \n > $Lz2"
-      [[   $v_list =~ "7. " ]] && vim ${v_REPOS_CENTER}/garpho/all/etc/boilerplate-receita-nova.txt
+      [[   $v_list =~ "7. " ]] && vim ${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.txt
       [[   $v_list =~ "6. " ]] && echo "uDev"
-      [[   $v_list =~ "5. " ]] && v_file=$(ls ${v_REPOS_CENTER}/garpho/all/receitas/texto | fzf) && vim ${v_REPOS_CENTER}/garpho/all/receitas/texto/$v_file
+      [[   $v_list =~ "5. " ]] && v_file=$(ls ${v_REPOS_CENTER}/patuscas/all/receitas/texto | fzf) && vim ${v_REPOS_CENTER}/patuscas/all/receitas/texto/$v_file
       [[   $v_list =~ "4. " ]] && f_criar_nova_receita_com_boilerplate
       [[   $v_list =~ "3. " ]] && f_abrir_ler_receitas_pdf 
       [[   $v_list =~ "2. " ]] && f_abrir_ler_receitas_texto 
@@ -97,10 +97,10 @@ function f_criar_nova_receita_com_boilerplate {
       v_tmp2=$v_tmp
          
    # Caminho do boilerplate modelo
-      v_boi=${v_REPOS_CENTER}/garpho/all/etc/boilerplate-receita-nova.txt
+      v_boi=${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.txt
 
    # Caminho do diretorio onde vai ser guardado o ficheiro da receita
-      v_path=${v_REPOS_CENTER}/garpho/all/receitas/texto
+      v_path=${v_REPOS_CENTER}/patuscas/all/receitas/texto
 
    # Decidir o nome da receita
       echo    "Qual o nome que quer dar a receita? "
@@ -149,7 +149,7 @@ function f_filtrar_hashtags {
       L2='2. #sem-yammy' 
       L1='1. Cancel/Ignore'
 
-      L0="garpho: Menu Hashtags: "
+      L0="patuscas: Menu Hashtags: "
       
       v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n$L5 \n$L6 \n\n$L7 \n$L8 \\n\n$Lz3" | fzf --pointer=">" -m --cycle --prompt="$L0" )
 
@@ -190,7 +190,7 @@ function f_menu_lista_de_compras {
        L2='2.  Ver   | TODOS os ingredientes + Produtos conhecidos'
        L1='1.  Cancel'
 
-       L0="garpho: menu compras: "
+       L0="patuscas: menu compras: "
       
       v_list=$(echo -e "$L1 \n$L2 \n$L3 \n\n$L4 \n$L5 \n$L6 \n\n$L7 \n$L8 \n$L9 \n$L10 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
@@ -212,7 +212,7 @@ function f_menu_lista_de_compras {
 
 function f_demonstrar_todos_os_produtos {
 
-   L0="garpho: Lista de todos os ingredientes"
+   L0="patuscas: Lista de todos os ingredientes"
    v_items=$(less $v_all_items | fzf --prompt="$L0" --pointer=">" -m) 
 
    [[ -n $v_items ]] && echo "$v_items" > $v_wish_list && echo "Sent to Wish list (uDev: perguntar primeiro o que fazer, print, send to wish, send to shopping, remove from shopping, remove from wish" && echo && echo "$v_items"
@@ -238,14 +238,14 @@ function f_menu_principal {
        L1='1. Cancel'
 
        Lh=$(echo -e "\nCanal 'NOS' 138: 24 Kitchen\nCanal 'NOS' 137: Casa e Cozinha\n ")
-       L0="garpho: main menu: "
+       L0="patuscas: main menu: "
       
       v_list=$(echo -e "$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
       [[ $v_list =~ "8. " ]] && xdg-open https://akisintasaude.pt 
-      [[ $v_list =~ "7. " ]] && emacs ${v_REPOS_CENTER}/garpho/all/agric/agricultura.org
+      [[ $v_list =~ "7. " ]] && emacs ${v_REPOS_CENTER}/patuscas/all/agric/agricultura.org
       [[ $v_list =~ "6. " ]] && echo "uDev: $L7"
       [[ $v_list =~ "5. " ]] && f_menu_lista_de_compras
       [[ $v_list =~ "4. " ]] && f_demonstrar_todos_os_produtos
@@ -285,13 +285,13 @@ elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
       elif [ $3 == "yammy" ] || [ $3 == "y" ]; then
          # Aceder diretamente ao livro principal da yammy
          echo "ga r p y" >> $Lz4
-         xdg-open ${v_REPOS_CENTER}/garpho/all/receitas/pdf/livro_receitas_yammi_2.pdf
+         xdg-open ${v_REPOS_CENTER}/patuscas/all/receitas/pdf/livro_receitas_yammi_2.pdf
       fi
 
    elif [ $2 == "texto" ] || [ $2 == "t" ]; then
 
       # Iniciar as Variaveis relacionadas com as receitas de texto
-         v_files=${v_REPOS_CENTER}/garpho/all/receitas/texto
+         v_files=${v_REPOS_CENTER}/patuscas/all/receitas/texto
 
       if [ -z $3 ]; then
          # Nao nao forem dados mais args, abrir fzf
