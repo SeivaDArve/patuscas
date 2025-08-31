@@ -51,7 +51,7 @@ function f_abrir_ler_receitas_texto {
 function f_menu_receitas {
 
    # Lista de opcoes para o menu `fzf`
-      Lz1='Saved '; Lz2='ga receitas'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+      Lz1='Saved '; Lz2='P receitas'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
       L7='7. Editar | Boilerplate (para novas receita)'
       L6='6. Marcar | Receitas (guardar lista tmp de receitas)'                                      
@@ -137,7 +137,7 @@ function f_criar_nova_receita_com_boilerplate {
 function f_filtrar_hashtags {
 
    # Lista de opcoes para o menu `fzf`
-      Lz1='Save '; Lz2='ga hash'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+      Lz1='Save '; Lz2='P hash'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
       L8='8. #tempo[-de30min] ' 
       L7='7. #tempo[+de30min] ' 
@@ -175,7 +175,7 @@ function f_menu_lista_de_compras {
    # Gerir e criar listas de compras
       
    # Lista de opcoes para o menu `fzf`
-      Lz1='Save '; Lz2='ga compras'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+      Lz1='Save '; Lz2='P compras'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
       L10='10. Agendar: Lista de Compras nova:'
        L9='9.  Lista  | 1 | Nova Wish list      | Criar nova  (de 0 para 3)'
@@ -223,7 +223,7 @@ function f_menu_principal {
    # Menu Simples
 
    # Lista de opcoes para o menu `fzf`
-      Lz1='Saved '; Lz2='ga'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+      Lz1='Saved '; Lz2='P'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
       #L9 Onde conservar os ingredientes
        L8='8. web  |   | Culinaria Ayurvedica (Aki Sinta Saude)'
@@ -284,7 +284,7 @@ elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
 
       elif [ $3 == "yammy" ] || [ $3 == "y" ]; then
          # Aceder diretamente ao livro principal da yammy
-         echo "ga r p y" >> $Lz4
+         echo "P r p y" >> $Lz4
          xdg-open ${v_REPOS_CENTER}/patuscas/all/receitas/pdf/livro_receitas_yammi_2.pdf
       fi
 
