@@ -17,6 +17,10 @@
 
    # Example: f_create_tmp_file will create a temporary file stored at $v_tmp (with abs path, at ~/.tmp/...)
 
+
+# Vars
+   v_fzf_talk="Patuscas"
+
 # Ficheiros internos
    v_all_items=${v_REPOS_CENTER}/patuscas/all/ingredientes/all-ingredientes.txt
    v_wish_list=${v_REPOS_CENTER}/patuscas/all/lista-de-compras/1-wish-list.txt 
@@ -210,12 +214,37 @@ function f_menu_lista_de_compras {
 }
 
 
-function f_demonstrar_todos_os_produtos {
-
-   L0="patuscas: Lista de todos os ingredientes"
+function f_menu_demonstrar_todos_os_artigos {
+   L0="$v_fzf_talk: Lista de todos os artigos"
    v_items=$(less $v_all_items | fzf --prompt="$L0" --pointer=">" -m) 
 
    [[ -n $v_items ]] && echo "$v_items" > $v_wish_list && echo "Sent to Wish list (uDev: perguntar primeiro o que fazer, print, send to wish, send to shopping, remove from shopping, remove from wish" && echo && echo "$v_items"
+}
+
+function f_menu_artigos {
+
+   # Menu Simples
+
+   # Lista de opcoes para o menu `fzf`
+      Lz1='Saved '; Lz2='P a'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+
+      L2='2. Mostrar todos os Artigos'                                      
+      L1='1. Cancel'
+
+      L0="Patuscas: Menu Artigos: "
+      
+   # Ordem de Saida das opcoes durante run-time
+      v_list=$(echo -e "$L1 \n$L2 \n\n$Lz3" | fzf --no-info --pointer=">" --cycle --prompt="$L0")
+
+   # Atualizar historico fzf automaticamente (deste menu)
+      echo "$Lz2" >> $Lz4
+
+   # Atuar de acordo com as instrucoes introduzidas pelo utilizador
+      [[    $v_list =~ $Lz3  ]] && echo -e "Acede ao historico com \`D ..\` e encontra: \n > $Lz2"
+      [[    $v_list =~ "2. " ]] && f_menu_demonstrar_todos_os_artigos  
+      [[    $v_list =~ "1. " ]] && echo "Canceled: Menu: $Lz2" 
+      [[ -z $v_list          ]] && echo "ESC key used, aborting..." && exit 1
+      unset  v_list
 
 }
 
@@ -231,7 +260,7 @@ function f_menu_principal {
        L6='6. Menu |   | Cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
        L5='5. Menu | c | Compras'
 
-       L4='4. Ver  |   | Itens    (uDev: criar menu para poder editar)'
+       L4='4. Ver  | a | Artigos    (uDev: criar menu para poder editar)'
        L3='3. Menu | r | Receitas'
 
        L2='2. Menu | H | Busca com Hashtags'
@@ -248,7 +277,7 @@ function f_menu_principal {
       [[ $v_list =~ "7. " ]] && emacs ${v_REPOS_CENTER}/patuscas/all/agric/agricultura.org
       [[ $v_list =~ "6. " ]] && echo "uDev: $L7"
       [[ $v_list =~ "5. " ]] && f_menu_lista_de_compras
-      [[ $v_list =~ "4. " ]] && f_demonstrar_todos_os_produtos
+      [[ $v_list =~ "4. " ]] && f_menu_artigos
       [[ $v_list =~ "3. " ]] && f_menu_receitas
       [[ $v_list =~ "2. " ]] && f_filtrar_hashtags
       [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2" && history -s "$Lz2"
@@ -269,6 +298,10 @@ elif [ $1 == "compras" ] || [ $1 == "c" ]; then
 elif [ $1 == "hash" ] || [ $1 == "H" ]; then
    # Aprentar o menu de hashtags diretamente
    f_filtrar_hashtags
+
+elif [ $1 == "artigos" ] || [ $1 == "a" ]; then
+   # Aprentar o menu de Artigos
+   f_menu_artigos 
 
 elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
 
