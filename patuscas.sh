@@ -28,7 +28,7 @@
 function f_abrir_ler_receitas_pdf {
    # Menu fzf para escolher abrir/ler um livro de receitas PDF
 
-   L0="patuscas: Abrir/Ler um livro de receitas em PDF: "
+   L0="$v_fzf_talk: Abrir/Ler um livro de receitas em PDF: "
 
    v_livros=${v_REPOS_CENTER}/patuscas/all/receitas/pdf
    v_livro=$(ls $v_livros | fzf --prompt="$L0") 
@@ -42,10 +42,10 @@ function f_abrir_ler_receitas_texto {
 
    # uDev: upgrade para --multiple
 
-   L0="patuscas: Abrir/Ler uma receita de texto: "
+   L0="$v_fzf_talk: Abrir/Ler uma receita de texto: "
 
    # Variavel ja definida anteriormente
-      #v_files=${v_REPOS_CENTER}/patuscas/all/receitas/texto
+      v_files=${v_REPOS_CENTER}/patuscas/all/receitas/texto
 
    v_file=$(ls $v_files | fzf --prompt="$L0")
    
