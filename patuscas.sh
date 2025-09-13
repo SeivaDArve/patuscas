@@ -184,9 +184,10 @@ function f_lista_de_compras_menu_adicionar_artigos {
 
        L1='1. Cancel'
 
+       Lh=$(echo -e "\nInfo: Pode substituir o ultimo arg 'a' por um 'artigo'\n > Exemplo \`P c + \"batatas fritas\"\` \n > Exemplo \`P c + batatas fritas\` \n ")
        L0="patuscas: menu Adicionar Compras (Artigos): "
       
-      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
