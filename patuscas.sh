@@ -290,6 +290,9 @@ if [ -z $1 ]; then
    # Se nao for apresentado nenhum argumento, apresentar o menu principal
    f_menu_principal
 
+elif [ $1 == "." ] || [ $1 == "edit-self" ]; then
+   bash e ${v_REPOS_CENTER}/patuscas/patuscas.sh
+
 elif [ $1 == "compras" ] || [ $1 == "c" ]; then
    # Aprentar o menu de lista de compras diretamente
    f_menu_lista_de_compras
