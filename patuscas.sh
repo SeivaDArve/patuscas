@@ -172,10 +172,87 @@ function f_filtrar_hashtags {
 
 
 }
-    
 
+function f_lista_de_compras_menu_adicionar_artigos {
+   # Gerir e criar listas de compras
+      
+   # Lista de opcoes para o menu `fzf`
+      Lz1='Save '; Lz2='P c + a'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+
+       L3='3. | m | Adicionar | Artigos manualmente'
+       L2='2. | f | Adicionar | Artigos com fzf menu'
+
+       L1='1. Cancel'
+
+       L0="patuscas: menu Adicionar Compras (Artigos): "
+      
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
+
+   # Perceber qual foi a escolha da lista
+      [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[ $v_list =~ "3. " ]] && echo "uDev: $L3" 
+      [[ $v_list =~ "2. " ]] && echo "uDev: $L2"
+      [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
+      unset v_list
+}
+    
+function f_lista_de_compras_menu_adicionar {
+   # Gerir e criar listas de compras
+      
+   # Lista de opcoes para o menu `fzf`
+      Lz1='Save '; Lz2='P c +'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+
+       L4='4. | m | Adicionar | Manualmente (editar o ficheiro)'
+       L3='3. | r | Adicionar | Receitas'
+       L2='2. | a | Adicionar | Artigos'
+
+       L1='1. Cancel'
+
+       L0="patuscas: menu Adicionar Compras: "
+      
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
+
+   # Perceber qual foi a escolha da lista
+      [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[ $v_list =~ "4. " ]] && echo "uDev: $L4" 
+      [[ $v_list =~ "3. " ]] && echo "uDev: $L3" 
+      [[ $v_list =~ "2. " ]] && f_lista_de_compras_menu_adicionar_artigos
+      [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
+      unset v_list
+}
 
 function f_menu_lista_de_compras {
+   # Gerir e criar listas de compras
+      
+   # Lista de opcoes para o menu `fzf`
+      Lz1='Save '; Lz2='P compras'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
+
+       L6='6. | s | Informar (Stock - X) | Artigo X acabou'
+       L5='5. | S | Informar (Stock + X) | Artigo X foi adquirido'
+
+       L4='4. | - | Remover   | Artigos ou receitas'
+       L3='3. | + | Adicionar | Artigos ou receitas'
+       L2='2. | v | Ver       | Listas de compas atuais'
+
+       L1='1. Cancel'
+
+       Lh=$(echo -e "\nO que pretende fazer na lista de compras?\n ")
+       L0="patuscas: menu Lista de Compras: "
+      
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$L5 \n$L6 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
+
+   # Perceber qual foi a escolha da lista
+      [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[ $v_list =~ "6. " ]] && echo "uDev: $L6" 
+      [[ $v_list =~ "5. " ]] && echo "uDev: $L5" 
+      [[ $v_list =~ "4. " ]] && echo "uDev: $L4" 
+      [[ $v_list =~ "3. " ]] && f_lista_de_compras_menu_adicionar 
+      [[ $v_list =~ "2. " ]] && echo "uDev: $L2"
+      [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
+      unset v_list
+}
+
+function f_menu_lista_de_compras_legacy {
    # Gerir e criar listas de compras
       
    # Lista de opcoes para o menu `fzf`
@@ -286,6 +363,20 @@ function f_menu_principal {
 
 
 
+
+
+
+# -------------------------------------------
+# -- Functions above --+-- Arguments Below --
+# -------------------------------------------
+
+
+
+
+
+
+
+
 if [ -z $1 ]; then
    # Se nao for apresentado nenhum argumento, apresentar o menu principal
    f_menu_principal
@@ -295,7 +386,45 @@ elif [ $1 == "." ] || [ $1 == "edit-self" ]; then
 
 elif [ $1 == "compras" ] || [ $1 == "c" ]; then
    # Aprentar o menu de lista de compras diretamente
-   f_menu_lista_de_compras
+
+   if [ -z $2 ]; then
+      f_menu_lista_de_compras
+   elif [ $2 == "v" ]; then
+      f_talk; echo "Ver lista de compras atual"
+   elif [ $2 == "+" ]; then
+      f_talk; echo "Adicionar + artigos a lista de compras"
+   elif [ $2 == "-" ]; then
+      f_talk; echo "Remover artigos da lista de compras"
+   elif [ $2 == "s" ]; then
+      f_talk; echo "Informar que existe menos X artigos em stock"
+   elif [ $2 == "S" ]; then
+      f_talk; echo "Informar que foi adicionado X artigos ao stock"
+   else
+      echo "Opcao para lista de compras nao reconhecida"
+   fi
+
+elif [ $1 == "hash" ] || [ $1 == "H" ]; then
+   # Aprentar o menu de hashtags diretamente
+   f_filtrar_hashtags
+
+
+
+elif [ $1 == "hash" ] || [ $1 == "H" ]; then
+   # Aprentar o menu de hashtags diretamente
+   f_filtrar_hashtags
+
+
+
+elif [ $1 == "hash" ] || [ $1 == "H" ]; then
+   # Aprentar o menu de hashtags diretamente
+   f_filtrar_hashtags
+
+
+
+elif [ $1 == "hash" ] || [ $1 == "H" ]; then
+   # Aprentar o menu de hashtags diretamente
+   f_filtrar_hashtags
+
 
 
 elif [ $1 == "hash" ] || [ $1 == "H" ]; then
