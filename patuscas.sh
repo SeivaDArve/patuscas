@@ -385,6 +385,10 @@ if [ -z $1 ]; then
 elif [ $1 == "." ] || [ $1 == "edit-self" ]; then
    bash e ${v_REPOS_CENTER}/patuscas/patuscas.sh
 
+elif [ $1 == "done" ]; then
+   # Criar um blind commit e sincronizar tudo com o github
+   f_talk; echo "Tem a certeza que quer upload do estado atual do patuscas? (uDev)"
+
 elif [ $1 == "compras" ] || [ $1 == "c" ]; then
    # Aprentar o menu de lista de compras diretamente
 
@@ -403,30 +407,6 @@ elif [ $1 == "compras" ] || [ $1 == "c" ]; then
    else
       echo "Opcao para lista de compras nao reconhecida"
    fi
-
-elif [ $1 == "hash" ] || [ $1 == "H" ]; then
-   # Aprentar o menu de hashtags diretamente
-   f_filtrar_hashtags
-
-
-
-elif [ $1 == "hash" ] || [ $1 == "H" ]; then
-   # Aprentar o menu de hashtags diretamente
-   f_filtrar_hashtags
-
-
-
-elif [ $1 == "hash" ] || [ $1 == "H" ]; then
-   # Aprentar o menu de hashtags diretamente
-   f_filtrar_hashtags
-
-
-
-elif [ $1 == "hash" ] || [ $1 == "H" ]; then
-   # Aprentar o menu de hashtags diretamente
-   f_filtrar_hashtags
-
-
 
 elif [ $1 == "hash" ] || [ $1 == "H" ]; then
    # Aprentar o menu de hashtags diretamente
