@@ -376,7 +376,7 @@ function f_menu_principal {
       [[   $v_list =~ "3. " ]] && f_menu_receitas
       [[   $v_list =~ "2. " ]] && f_filtrar_hashtags
       [[   $v_list =~ "1. " ]] && echo "Canceled: $Lz2" && history -s "$Lz2"
-      [[   $v_list =~ "S. " ]] && echo "A enviar um blind commit para github" && cd ${v_REPOS_CENTER}/patuscas/ && git add -A && git commit -m "Blind upload: Patuscas: Menu de sync automatico" && f_greet && git status
+      [[   $v_list =~ "S. " ]] && echo "A enviar um blind commit para github" && cd ${v_REPOS_CENTER}/patuscas/ && git add -A && git commit -m "Blind upload: Patuscas: Menu de sync automatico" && f_greet && git push && git status
       unset v_list
 }
 
