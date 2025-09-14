@@ -24,7 +24,9 @@
 function f_detetar_se_precisa_upload__var_Ls {
    # Usar drya-lib-4 para saber se ha commits. Caso haja, adicionar uma linha a mais no menu principal para sincronizar 
 
-   cd ${v_REPOS_CENTER}/moedaz
+   # uDev: fazer esta opcao so para as listas de compras
+      
+   cd ${v_REPOS_CENTER}/moedaz   # Usado para debug
    cd ${v_REPOS_CENTER}/patuscas
    v_tst=$(git status -s)
 
