@@ -1,6 +1,7 @@
 # Title: Patuscas
 # Description: A script to cook
 
+
 # Sourcing DRYa Lib 1: Color schemes
    v_lib1=${v_REPOS_CENTER}/DRYa/all/lib/drya-lib-1-colors-greets.sh
    [[ -f $v_lib1 ]] && source $v_lib1 || (read -s -n 1 -p "DRYa: error: drya-lib-1 does not exist " && echo)
@@ -18,7 +19,22 @@
    # Example: f_create_tmp_file will create a temporary file stored at $v_tmp (with abs path, at ~/.tmp/...)
 
 
+
+
+function f_detetar_se_precisa_upload__var_Ls {
+   # Usar drya-lib-4 para saber se ha commits. Caso haja, adicionar uma linha a mais no menu principal para sincronizar 
+
+   cd ${v_REPOS_CENTER}/moedaz
+   cd ${v_REPOS_CENTER}/patuscas
+   v_tst=$(git status -s)
+
+   [[ -z $v_tst ]] && Ls=""
+   [[ -n $v_tst ]] && Ls="S. [Sincronizar] Existem alteracoes que pode enviar.\n"
+}
+
+
 # Vars
+   # uDev: ${v_talk} tambem serve
    v_fzf_talk="Patuscas"
 
 # Ficheiros internos
@@ -231,7 +247,7 @@ function f_menu_lista_de_compras {
        L6='6. | s | Informar (Stock - X) | Artigo X acabou'
        L5='5. | S | Informar (Stock + X) | Artigo X foi adquirido'
 
-       L4='4. | - | Remover   | Artigos ou receitas'
+       L4='4. | - | Remover   | Artigos ou receitas' # Artigos eliminados da lista, passam para a lista de adquiridos com a data/hora atual
        L3='3. | + | Adicionar | Artigos ou receitas'
        L2='2. | v | Ver       | Listas de compas atuais'
 
@@ -343,22 +359,24 @@ function f_menu_principal {
 
        L2='2. Menu | H | Busca com Hashtags'
        L1='1. Cancel'
+       Ls="Lsc" && f_detetar_se_precisa_upload__var_Ls 
 
        Lh=$(echo -e "\nCanal 'NOS' 138: 24 Kitchen\nCanal 'NOS' 137: Casa e Cozinha\n ")
-       L0="patuscas: main menu: "
+       L0="${v_talk}main menu: "
       
-      v_list=$(echo -e "$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
+      v_list=$(echo -e "${Ls}$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
-      [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
-      [[ $v_list =~ "8. " ]] && xdg-open https://akisintasaude.pt 
-      [[ $v_list =~ "7. " ]] && emacs ${v_REPOS_CENTER}/patuscas/all/agric/agricultura.org
-      [[ $v_list =~ "6. " ]] && echo "uDev: $L7"
-      [[ $v_list =~ "5. " ]] && f_menu_lista_de_compras
-      [[ $v_list =~ "4. " ]] && f_menu_artigos
-      [[ $v_list =~ "3. " ]] && f_menu_receitas
-      [[ $v_list =~ "2. " ]] && f_filtrar_hashtags
-      [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2" && history -s "$Lz2"
+      [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[   $v_list =~ "8. " ]] && xdg-open https://akisintasaude.pt 
+      [[   $v_list =~ "7. " ]] && emacs ${v_REPOS_CENTER}/patuscas/all/agric/agricultura.org
+      [[   $v_list =~ "6. " ]] && echo "uDev: $L7"
+      [[   $v_list =~ "5. " ]] && f_menu_lista_de_compras
+      [[   $v_list =~ "4. " ]] && f_menu_artigos
+      [[   $v_list =~ "3. " ]] && f_menu_receitas
+      [[   $v_list =~ "2. " ]] && f_filtrar_hashtags
+      [[   $v_list =~ "1. " ]] && echo "Canceled: $Lz2" && history -s "$Lz2"
+      [[   $v_list =~ "S. " ]] && echo "A enviar um blind commit para github" && cd ${v_REPOS_CENTER}/patuscas/ && git add -A && git commit -m "Blind upload: Patuscas: Menu de sync automatico" && f_greet && git status
       unset v_list
 }
 
@@ -370,7 +388,6 @@ function f_menu_principal {
 # -------------------------------------------
 # -- Functions above --+-- Arguments Below --
 # -------------------------------------------
-
 
 
 
