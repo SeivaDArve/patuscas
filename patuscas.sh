@@ -366,7 +366,7 @@ function f_menu_principal {
        Lh=$(echo -e "\nCanal 'NOS' 138: 24 Kitchen\nCanal 'NOS' 137: Casa e Cozinha\n ")
        L0="${v_talk}main menu: "
       
-      v_list=$(echo -e "${Ls}$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
+      v_list=$(echo -e "${Ls}$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0" --wrap)
 
    # Perceber qual foi a escolha da lista
       [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
@@ -381,7 +381,6 @@ function f_menu_principal {
       [[   $v_list =~ "S. " ]] && echo "A enviar um blind commit para github" && cd ${v_REPOS_CENTER}/patuscas/ && git add -A && git commit -m "Blind upload: Patuscas: Menu de sync automatico" && f_greet && git push && git status
       unset v_list
 }
-
 
 
 
