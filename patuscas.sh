@@ -65,6 +65,7 @@ function f_detetar_se_precisa_upload__var_Ls {
 # Ficheiros internos
    v_all_items=${v_REPOS_CENTER}/patuscas/all/ingredientes/all-ingredientes.txt
    v_wish_list=${v_REPOS_CENTER}/patuscas/all/lista-de-compras/1-wish-list.txt 
+   v_lista_atual_de_compras=${v_REPOS_CENTER}/patuscas/all/organizar-compras/lista-compras.txt
 
 function f_abrir_ler_receitas_pdf {
    # Menu fzf para escolher abrir/ler um livro de receitas PDF
@@ -437,8 +438,18 @@ elif [ $1 == "compras" ] || [ $1 == "c" ]; then
       f_menu_lista_de_compras
    elif [ $2 == "v" ]; then
       f_talk; echo "Ver lista de compras atual"
+      L0="uDev: Aos selecionados: Eliminar/Declarar Comprados"
+      v_items=$(cat $v_lista_atual_de_compras | fzf --prompt="$L0")
    elif [ $2 == "+" ]; then
-      f_talk; echo "Adicionar + artigos a lista de compras"
+      if [ -z $2 ]; then
+         f_talk; echo "Adicionar + artigos a lista de compras"
+         L0="uDev: Aos selecionados: Adicionar na lista de compras"
+         v_items=$(cat $v_all_items | fzf --prompt="$L0")
+         for i in $v_items; do echo $i >> $v_lista_atual_de_compras; done
+      else
+         for i in $*; do echo $i >> $v_lista_atual_de_compras; done
+      fi
+
    elif [ $2 == "-" ]; then
       f_talk; echo "Remover artigos da lista de compras"
    elif [ $2 == "s" ]; then
