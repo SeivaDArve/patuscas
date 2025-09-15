@@ -23,16 +23,39 @@
 
 function f_detetar_se_precisa_upload__var_Ls {
    # Usar drya-lib-4 para saber se ha commits. Caso haja, adicionar uma linha a mais no menu principal para sincronizar 
+   # Podera correr Antes e Depois do menu principal (ou so Antes, ou so Depois, o user pode escolher)
 
-   # uDev: fazer esta opcao so para as listas de compras
+   # uDev: fazer esta opcao so para as listas de compras ou so para tudo (criar opcao pra isso)
+
+
+   function f_detected_commits_to_download {
+      # Pre-Utilizacao (verificar se no github ha novidades) - git fetch 
+
+      cd ${v_REPOS_CENTER}/patuscas
+      echo "git fetch"
+      git fetch
       
-   cd ${v_REPOS_CENTER}/moedaz   # Usado para debug
-   cd ${v_REPOS_CENTER}/patuscas
-   v_tst=$(git status -s)
+      echo "git status"
+      git status  # ... f_greet && f_talk && echo "Deseja buscar as novidades que existem no github?"
+      read
+   }
 
-   [[ -z $v_tst ]] && Ls=""
-   [[ -n $v_tst ]] && Ls="S. [Sincronizar] Existem alteracoes que pode enviar.\n"
-}
+      
+      
+   function f_detected_commits_to_upload {
+      # Pos-Utilizacao (verificar se ha novidades para enviar para o github) - git status
+         cd ${v_REPOS_CENTER}/moedaz   # Usado para debug
+         cd ${v_REPOS_CENTER}/patuscas
+         v_tst=$(git status -s)
+
+         [[ -z $v_tst ]] && Ls=""
+         [[ -n $v_tst ]] && Ls="S. [Sincronizar] Existem alteracoes que pode enviar.\n"
+   }
+
+   #f_detected_commits_to_download 
+   f_detected_commits_to_upload
+ }
+
 
 
 # Vars
