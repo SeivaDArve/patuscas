@@ -20,28 +20,46 @@
 
 
 
+function f_detected_commits_to_download {
+   # Pre-Utilizacao (verificar se no github ha novidades) - git fetch 
+   # Podera correr Antes do menu principal 
+
+   cd ${v_REPOS_CENTER}/patuscas
+
+   f_greet
+   f_talk; echo "A buscar atualizacoes da net \`git fetch\`"
+
+   git fetch
+
+   f_talk; echo "A buscar atualizacoes na maquina \`git status\`"
+   
+   git status 
+
+   v_git=$(git status -s)
+   v_busca="organizar-compras"
+   v_txt=$(echo "$v_git" | grep $v_busca)
+   v_ask="Deseja buscar as novidades que existem no github?"
+
+   if [[ -z $v_txt ]]; then
+      f_talk; echo "Nenhum texto encontrado: Lista de compras nao tem alteracoes"
+      f_talk; echo "$v_ask"
+
+   else 
+     
+      f_talk; echo "texto encontrado: Lista de compras tem alteracoes"
+      f_talk; echo "$v_ask"
+   fi
+
+   f_talk; echo "Any Key to Main Menu"
+   read -sn1
+}
 
 function f_detetar_se_precisa_upload__var_Ls {
    # Usar drya-lib-4 para saber se ha commits. Caso haja, adicionar uma linha a mais no menu principal para sincronizar 
-   # Podera correr Antes e Depois do menu principal (ou so Antes, ou so Depois, o user pode escolher)
+   # Podera correr Depois do menu principal 
 
    # uDev: fazer esta opcao so para as listas de compras ou so para tudo (criar opcao pra isso)
 
-
-   function f_detected_commits_to_download {
-      # Pre-Utilizacao (verificar se no github ha novidades) - git fetch 
-
-      cd ${v_REPOS_CENTER}/patuscas
-      echo "git fetch"
-      git fetch
-      
-      echo "git status"
-      git status  # ... f_greet && f_talk && echo "Deseja buscar as novidades que existem no github?"
-      read
-   }
-
-      
-      
    function f_detected_commits_to_upload {
       # Pos-Utilizacao (verificar se ha novidades para enviar para o github) - git status
          cd ${v_REPOS_CENTER}/moedaz   # Usado para debug
@@ -52,9 +70,8 @@ function f_detetar_se_precisa_upload__var_Ls {
          [[ -n $v_tst ]] && Ls="S. [Sincronizar] Existem alteracoes que pode enviar.\n"
    }
 
-   #f_detected_commits_to_download 
    f_detected_commits_to_upload
- }
+}
 
 
 
@@ -422,6 +439,14 @@ function f_menu_principal {
 
 if [ -z $1 ]; then
    # Se nao for apresentado nenhum argumento, apresentar o menu principal
+   # Nesta fx, usar `git fetch` + `git pull`
+
+   f_detected_commits_to_download 
+   f_menu_principal
+
+elif [ $1 == "o" ] || [ $1 == "offline" ]; then
+   # Nesta fx, nao usar `git fetch` + `git pull`
+
    f_menu_principal
 
 elif [ $1 == "." ] || [ $1 == "edit-self" ]; then
@@ -441,14 +466,38 @@ elif [ $1 == "compras" ] || [ $1 == "c" ]; then
       L0="uDev: Aos selecionados: Eliminar/Declarar Comprados"
       v_items=$(cat $v_lista_atual_de_compras | fzf --prompt="$L0")
    elif [ $2 == "+" ]; then
-      if [ -z $2 ]; then
+      rm    $v_lista_atual_de_compras
+      touch $v_lista_atual_de_compras
+
+      if [ -z $3 ]; then
          f_talk; echo "Adicionar + artigos a lista de compras"
+
          L0="uDev: Aos selecionados: Adicionar na lista de compras"
-         v_items=$(cat $v_all_items | fzf --prompt="$L0")
-         for i in $v_items; do echo $i >> $v_lista_atual_de_compras; done
+         v_items=$(cat $v_all_items | fzf -m --prompt="$L0")
+         
+         for i in $v_items
+         do 
+            for i in $i
+            do
+               v_i="$v_i $i"
+            done
+
+            unset IFS
+         done
+            echo "$v_i" >> "$v_lista_atual_de_compras"
+
+      elif [ $3 == "m" ]; then
+         vim $v_lista_atual_de_compras 
       else
+         IFS=$'\n'
          for i in $*; do echo $i >> $v_lista_atual_de_compras; done
+         unset IFS
       fi
+
+      #read
+      f_greet
+      f_talk; echo "Lista de compras"
+      cat $v_lista_atual_de_compras
 
    elif [ $2 == "-" ]; then
       f_talk; echo "Remover artigos da lista de compras"
