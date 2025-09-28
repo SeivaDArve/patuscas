@@ -5,12 +5,10 @@ Source:
 Img: 
 
 Ingredientes:
-   @ [1,5 | kg] (exemplo: batatas novas, pequenas)
-   @ [    |   ] 
-
-   @ [   qb.  ] (exemplo: azeite) 
-   @ [   qb.  ] 
-
+   @ [ 1,5 | kg  ] (exemplo: batatas novas, pequenas)
+   @ [     | kg  ] 
+   @ [       qb. ] (exemplo: azeite) 
+   @ [       qb. ] 
 
 Prep:
  --1-- Notas:
@@ -20,10 +18,9 @@ Prep:
 
 Servir:
    [X] Servir quente
-   [ ] Servir morno
-   [ ] Servir frio
-   [ ] Servir no aro metalico
-   [ ] Doses: X pessoas
+   [X] Servir morno
+   [X] Servir frio
+   [X] Servir no aro metalico
 
 Doses / Porcoes / Peso final:
    - Peso final (kg):

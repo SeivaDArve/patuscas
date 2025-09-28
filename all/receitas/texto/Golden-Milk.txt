@@ -1,0 +1,45 @@
+# Title: Golden-Milk
+
+Hashtags: #yammy-only #yammy #forno #estacao-ano-x #preco-x #pessoas-n #tempo-x #rapido #mt-facil #doses-1
+Source: Internet
+Img: 
+
+Ingredientes:
+   @ [ 250 | ml            ] leite
+   @ [ 1/2 | colher de cha ] curcuma
+   @ [ 1/4 | colher de cha ] gengibre
+   @ [ 1/4 | colher de cha ] canela
+   @ [ 1   | pitada        ] pimenta
+   @ [ 1/4 | colher de cha ] mel (opcional, no fim)
+
+
+Prep:
+ --1-- Ferver
+       Levar o leite ao lume com todos os ingreditentes (menos o mel) até levantar fervura
+
+ --2-- Adocar
+       Deixar arrefecer um pouco e juntar uma colher de mel
+
+Servir:
+   [X] Servir morno
+
+Doses / Porcoes / Peso final:
+   - Doses (pessoas): 1
+
+Materiais:
+   % 1 (exemplo: Frigideira especial)
+   % 1 (exemplo: Tabua de madeira especial)
+   % 1 
+
+Duraçao: 
+   Pre-Preparacao:  x min
+   Preparacao:      x min
+   Lavar materiais: x min
+   Total: 
+
+Dicas/Notas: 
+ - 
+
+Relatorio das ultimas prep:
+ - 
+
