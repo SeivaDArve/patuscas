@@ -11,15 +11,25 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
 :END:
 
 * elisp
-  (getenv "HOME")  ;; Saber a pasta ~ atual
+#+BEGIN_SRC emacs-lisp
+(setq v_home (getenv "HOME"))          ;; Saber a pasta ~ atual
+(setq v_tmp  (concat v_home "/.tmpnnnnn/"))
+(setq v_file (concat v_tmp "tmp-output-from-patuscas")
+(make-directory v_tmp t)        
+#+END_SRC
+
 
 * Info
 ** Source
 ** Imagens
-Exemplo: https://cdn-icons-png.flaticon.com/512/857/857681.png
-[[https://endereco.com/imagem.png][Minha Imagem]]
+Imagem 1 (web): [[https://cdn-icons-png.flaticon.com/512/857/857681.png]] 
+Imagem 1 (web): [[https://cdn-icons-png.flaticon.com/512/857/857681.png][Exemplo]]  
+
+Imagem 2 (patuscas): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
+
 ** Hashtags
-#yammy-only #yammy #forno #estacao-ano-x #preco-x #pessoas-n #tempo-x #rapido #mt-facil #doses-1
+#+NAME: hashtag-yammy
+#yammy #forno #estacao-ano-x #preco-x #pessoas-n #tempo-x #rapido #mt-facil #doses-1 |
 
 * Ingredientes
 #+NAME: Ingredientes
