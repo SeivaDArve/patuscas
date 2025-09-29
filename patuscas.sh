@@ -595,5 +595,9 @@ elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
 
    elif [ $2 == "nova" ] || [ $2 == "n" ]; then
       f_criar_nova_receita_com_boilerplate 
+
+   elif [ $2 == "edit-boilerplate" ] || [ $2 == "b" ]; then
+      bash e $v_boi
+   
    fi
 fi

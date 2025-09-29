@@ -10,6 +10,9 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
 #+STARTUP: indent
 :END:
 
+* elisp
+  (getenv "HOME")  ;; Saber a pasta ~ atual
+
 * Info
 ** Source
 ** Imagens
@@ -20,13 +23,13 @@ Exemplo: https://cdn-icons-png.flaticon.com/512/857/857681.png
 
 * Ingredientes
 #+NAME: Ingredientes
-| Quantidade | Unidade | Nome     |
-|------------+---------+----------|
-| 1          | Un.     | Maçãs    |
-| 1,5        | Kg      | Peras    |
-| 2          | gr      | Laranjas |
-| qb.        | qb.     | Sal      |
-|------------+---------+----------|
+| ID | Quantidade | Unidade | Nome     |
+|----+------------+---------+----------|
+|  1 | 1          | Un.     | Maçãs    |
+|  2 | 1,5        | Kg      | Peras    |
+|  3 | 2          | gr      | Laranjas |
+|  4 | qb.        | qb.     | Sal      |
+|----+------------+---------+----------|
 #+TBLFM: $4=$2*$3::@>$4=vsum(@2..@-1)
 
 * Preparacao
