@@ -1,0 +1,67 @@
+# Title: ovos-mexidos-suaves.org
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
+
+* Inf4o
+** Source
+** Imagens
+Imagem 1 (web): 
+
+** Hashtags
+-
+* Ingredientes
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade          | Nome                    |
+|----+------------+------------------+-------------------------|
+|  1 |          4 | un               | ovos                    |
+|  2 |          2 | colheres de sopa | Manteiga Primor Com Sal |
+|  3 |        100 | ml               | leite                   |
+|  4 |        qb. | qb.              | Sal                     |
+|  5 |        qb. | qb.              | Cebolinho ou coentros   |
+
+* Preparacao
+** passo 1
+Antes de ir ao lume, passe um pouco de manteiga pelo fundo de uma frigideira antiaderente e coloque os ovos sobre a manteiga. Parta os ovos sem mexer as gemas e as claras.
+
+** Passo 2
+Leve então a frigideira ao lume em fogo baixo.
+
+** Passo 3
+A clara vai cozinhar primeiro que a gema. Quando a gema começar a ficar cozinhada, acrescente a manteiga e o leite e mexa vigorosamente para misturar a manteiga do fundo da frigideira e o leite.
+
+** Passo 4
+Para que os ovos fiquem húmidos e cremosos, não deixe cozinhar tempo de mais. Tempere a gosto e sirva o cebolinho picado por cima dos ovos.
+* Servir:
+- [X] Servir quente
+- [X] Servir morno
+- [X] Servir frio
+- [X] Servir no aro metalico
+
+* Doses / Porcoes / Peso final:
+- Peso final (kg):
+- Doses (pessoas): 1
+
+* Materiais / Utensilios: 
+% 1 (exemplo: Frigideira )
+% 1 medidor de capacidade (para liquidos)
+
+* Duraçao
+   Pre-Preparacao:  x min
+   Preparacao:      x min
+   Lavar materiais: x min
+   Total: 
+
+* Dicas/Notas: 
+ - 
+
+* Relatorio das ultimas prep:
+ - 
+
