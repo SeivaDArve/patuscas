@@ -84,6 +84,13 @@ function f_detetar_se_precisa_upload__var_Ls {
    v_all_items=${v_REPOS_CENTER}/patuscas/all/ingredientes/all-ingredientes.txt
    v_wish_list=${v_REPOS_CENTER}/patuscas/all/lista-de-compras/1-wish-list.txt 
    v_lista_atual_de_compras=${v_REPOS_CENTER}/patuscas/all/organizar-compras/lista-compras.txt
+   v_boi=${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.org
+
+
+
+
+
+
 
 function f_abrir_ler_receitas_pdf {
    # Menu fzf para escolher abrir/ler um livro de receitas PDF
@@ -117,14 +124,14 @@ function f_menu_receitas {
    # Lista de opcoes para o menu `fzf`
       Lz1='Saved '; Lz2='P receitas'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-      L7='7. Editar | Boilerplate (para novas receita)'
-      L6='6. Marcar | Receitas (guardar lista tmp de receitas)'                                      
+      L7='7. |   | Editar Boilerplate (para futuras novas receita)'
+      L6='6. |   | Marcar Receitas (guardar lista tmp de receitas)'                                      
 
-      L5='5. Editar |   | Uma Receita de texto'
-      L4='4. Criar  | n | Nova Receita (com boilerplate)'
+      L5='5. |   | Editar Uma Receita de texto'
+      L4='4. | n | Criar Nova Receita (com boilerplate)'
 
-      L3='3. Ler/Abrir | p | Livros de Receitas (em PDF)'
-      L2='2. Ler/Abrir | t | Uma Receita texto'                                      
+      L3='3. | p | Ler/Abrir Livros de Receitas (em PDF)'
+      L2='2. | t | Ler/Abrir Uma Receita texto'                                      
       L1='1. Cancel'
 
       L0="patuscas: menu Receitas: "
@@ -137,7 +144,7 @@ function f_menu_receitas {
    
    # Atuar de acordo com as instrucoes introduzidas pelo utilizador
       [[   $v_list =~ $Lz3  ]] && echo -e "Acede ao historico com \`D ..\` e encontra: \n > $Lz2"
-      [[   $v_list =~ "7. " ]] && vim ${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.txt
+      [[   $v_list =~ "7. " ]] && bash e $v_boi
       [[   $v_list =~ "6. " ]] && echo "uDev"
       [[   $v_list =~ "5. " ]] && v_file=$(ls ${v_REPOS_CENTER}/patuscas/all/receitas/texto | fzf) && vim ${v_REPOS_CENTER}/patuscas/all/receitas/texto/$v_file
       [[   $v_list =~ "4. " ]] && f_criar_nova_receita_com_boilerplate
@@ -161,7 +168,8 @@ function f_criar_nova_receita_com_boilerplate {
       v_tmp2=$v_tmp
          
    # Caminho do boilerplate modelo
-      v_boi=${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.txt
+      #Criado no inicio do ficheiro
+      #v_boi=${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.org
 
    # Caminho do diretorio onde vai ser guardado o ficheiro da receita
       v_path=${v_REPOS_CENTER}/patuscas/all/receitas/texto
