@@ -11,11 +11,25 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
 :END:
 
 * elisp
-#+BEGIN_SRC emacs-lisp
-(setq v_home (getenv "HOME"))          ;; Saber a pasta ~ atual
-(setq v_tmp  (concat v_home "/.tmpnnnnn/"))
-(setq v_file (concat v_tmp "tmp-output-from-patuscas")
-(make-directory v_tmp t)        
+#+BEGIN_SRC emacs-lisp :results silent :eval yes :confirm no
+
+  (setq org-confirm-babel-evaluate nil)
+  
+  (setq v_titulo
+        (let ((parsed (org-element-parse-buffer)))
+        (org-element-property :title parsed)))   ;; Buscar uma variavel que guarde o texto de "#+TITLE"
+
+
+  (setq v_home (getenv "HOME"))          ;; Saber a pasta ~ atual
+  (setq v_tmp  (concat v_home "/.tmp/"))
+  (setq v_name "last-output-from-patuscas--")
+  (setq v_file (concat v_tmp v_name v_titulo))
+
+  (make-directory v_tmp t)        
+  (with-temp-buffer (write-file v_file))
+
+  (format "%s %s %s %d" "var1" "var2" "var3" 123)   ;; A diferença entre %s e %d está no tipo esperado dos argumentos: %d é para inteiros (números). %s é para strings (ou qualquer coisa que seja convertida para string) 
+
 #+END_SRC
 
 
