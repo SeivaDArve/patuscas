@@ -13,6 +13,8 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
 * Info
 ** Source
 ** Imagens
+Exemplo: https://cdn-icons-png.flaticon.com/512/857/857681.png
+[[https://endereco.com/imagem.png][Minha Imagem]]
 ** Hashtags
 #yammy-only #yammy #forno #estacao-ano-x #preco-x #pessoas-n #tempo-x #rapido #mt-facil #doses-1
 
