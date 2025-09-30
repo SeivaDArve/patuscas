@@ -12,6 +12,7 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
 
 * elisp
 #+BEGIN_SRC emacs-lisp :results silent :eval yes :confirm no
+  ;; Funcoes para exportar este ficheiro ja evaluado para um ficheiro temporario em ~/home/.tmp
 
   (setq org-confirm-babel-evaluate nil)
   
@@ -31,6 +32,9 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
   (format "%s %s %s %d" "var1" "var2" "var3" 123)   ;; A diferença entre %s e %d está no tipo esperado dos argumentos: %d é para inteiros (números). %s é para strings (ou qualquer coisa que seja convertida para string) 
 
 #+END_SRC
+
+#+TBLFM: $1=@#-1
+;; Auto Incrementar apartir da linha 1 da coluna até à sua ulima linha (`@#` é o número da linha atual ao qual subtraimos 1 (`@#` - 1).
 
 
 * Info
@@ -54,6 +58,9 @@ Imagem 2 (patuscas): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
 |  3 | 2          | gr      | Laranjas |
 |  4 | qb.        | qb.     | Sal      |
 |----+------------+---------+----------|
+#+TBLFM: $1=@#-1
+;; Auto Incrementar apartir da linha 1 da coluna até à sua ulima linha (`@#` é o número da linha atual ao qual subtraimos 1 (`@#` - 1).
+
 #+TBLFM: $4=$2*$3::@>$4=vsum(@2..@-1)
 
 * Preparacao
