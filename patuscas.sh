@@ -247,7 +247,7 @@ function f_lista_de_compras_menu_adicionar_artigos {
    # Lista de opcoes para o menu `fzf`
       Lz1='Save '; Lz2='P c + a'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-       L3='3. | m | Adicionar | Artigos manualmente'
+       L3='3. | m | Adicionar | Artigos manualmente' # uDev: aos itens que foram adicionados manualmente, perguntar se quer memorizar
        L2='2. | f | Adicionar | Artigos com fzf menu'
 
        L1='1. Cancel'
@@ -271,21 +271,24 @@ function f_lista_de_compras_menu_adicionar {
    # Lista de opcoes para o menu `fzf`
       Lz1='Save '; Lz2='P c +'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-       L4='4. | m | Adicionar | Manualmente (editar o ficheiro)'
-       L3='3. | r | Adicionar | Receitas'
-       L2='2. | a | Adicionar | Artigos'
+      bL5='5. | rf | Adicionar | Receitas (com fzf)'
+
+       L4='4. | ap | Adicionar | Artigos (prompt terminal)'
+       L3='3. | am | Adicionar | Artigos (manualmente, editar o ficheiro)'
+       L2='2. | af | Adicionar | Artigos (com fzf)'
 
        L1='1. Cancel'
 
        L0="patuscas: menu Adicionar Compras: "
       
-      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n$L5 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[ $v_list =~ "5. " ]] && echo "uDev: $L5" 
       [[ $v_list =~ "4. " ]] && echo "uDev: $L4" 
       [[ $v_list =~ "3. " ]] && echo "uDev: $L3" 
-      [[ $v_list =~ "2. " ]] && f_lista_de_compras_menu_adicionar_artigos
+      [[ $v_list =~ "2. " ]] && echo "uDev: $L2" 
       [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
       unset v_list
 }
@@ -316,7 +319,7 @@ function f_menu_lista_de_compras {
       [[ $v_list =~ "5. " ]] && echo "uDev: $L5" 
       [[ $v_list =~ "4. " ]] && echo "uDev: $L4" 
       [[ $v_list =~ "3. " ]] && f_lista_de_compras_menu_adicionar 
-      [[ $v_list =~ "2. " ]] && echo "uDev: $L2"
+      [[ $v_list =~ "2. " ]] && vim $v_lista_atual_de_compras 
       [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
       unset v_list
 }
@@ -495,7 +498,7 @@ elif [ $1 == "compras" ] || [ $1 == "c" ]; then
          done
             echo "$v_i" >> "$v_lista_atual_de_compras"
 
-      elif [ $3 == "m" ]; then
+      elif [ $3 == "am" ]; then
          vim $v_lista_atual_de_compras 
       else
          IFS=$'\n'
