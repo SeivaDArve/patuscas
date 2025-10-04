@@ -99,18 +99,17 @@ function f_detetar_se_precisa_upload__var_Ls {
 }
 
 
+function f_declare_variables {
+   # Vars
+      # uDev: ${v_talk} tambem serve
+      v_fzf_talk="Patuscas"
 
-# Vars
-   # uDev: ${v_talk} tambem serve
-   v_fzf_talk="Patuscas"
-
-# Ficheiros internos
-   v_all_items=${v_REPOS_CENTER}/patuscas/all/ingredientes/all-ingredientes.txt
-   v_wish_list=${v_REPOS_CENTER}/patuscas/all/lista-de-compras/1-wish-list.txt 
-   v_lista_atual_de_compras=${v_REPOS_CENTER}/patuscas/all/organizar-compras/lista-compras.txt
-   v_boi=${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.org
-
-
+   # Ficheiros internos
+      v_all_items=${v_REPOS_CENTER}/patuscas/all/ingredientes/all-ingredientes.txt
+      v_wish_list=${v_REPOS_CENTER}/patuscas/all/lista-de-compras/1-wish-list.txt 
+      v_lista_atual_de_compras=${v_REPOS_CENTER}/patuscas/all/organizar-compras/lista-compras.txt
+      v_boi=${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.org
+}
 
 
 
@@ -474,6 +473,7 @@ function f_menu_principal {
 
 
 
+f_declare_variables
 
 if [ -z $1 ]; then
    # Se nao for apresentado nenhum argumento, apresentar o menu principal

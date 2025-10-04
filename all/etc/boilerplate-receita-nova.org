@@ -10,7 +10,8 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
 #+STARTUP: indent
 :END:
 
-* elisp
+* Emacs Lisp
+** elisp: To eval
 #+BEGIN_SRC emacs-lisp :results silent :eval yes :confirm no
   ;; Funcoes para exportar este ficheiro ja evaluado para um ficheiro temporario em ~/home/.tmp
 
@@ -33,23 +34,8 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
 
 #+END_SRC
 
-#+TBLFM: $1=@#-1
-;; Auto Incrementar apartir da linha 1 da coluna até à sua ulima linha (`@#` é o número da linha atual ao qual subtraimos 1 (`@#` - 1).
-
-
-* Info
-** Source
-** Imagens
-Imagem 1 (web): [[https://cdn-icons-png.flaticon.com/512/857/857681.png]] 
-Imagem 1 (web): [[https://cdn-icons-png.flaticon.com/512/857/857681.png][Exemplo]]  
-
-Imagem 2 (patuscas): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
-
-** Hashtags
-#+NAME: hashtag-yammy
-#yammy #forno #estacao-ano-x #preco-x #pessoas-n #tempo-x #rapido #mt-facil #doses-1 |
-
-* Ingredientes
+** elisp: Instructions
+*** formulas de tabelas
 #+NAME: Ingredientes
 | ID | Quantidade | Unidade | Nome     |
 |----+------------+---------+----------|
@@ -60,39 +46,92 @@ Imagem 2 (patuscas): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
 |----+------------+---------+----------|
 #+TBLFM: $1=@#-1
 ;; Auto Incrementar apartir da linha 1 da coluna até à sua ulima linha (`@#` é o número da linha atual ao qual subtraimos 1 (`@#` - 1).
+;; Para fazer efeito, precisa do cursor por cima da formula e carregar C-c C-c (ou seja, Crtl-C Ctrl-C)
 
-#+TBLFM: $4=$2*$3::@>$4=vsum(@2..@-1)
+#+TBLFM: $2..$4=$2*$3::@>$4=vsum(@2..@-1)
+;; uDev
 
-* Preparacao
-** Passo 1: Notas:
+#+TBLFM:
+;; uDev: apagar campos desnecessarios da tabela
+
+
+
+
+
+* -------------- Info -------------- 
+** Source
+** Imagens
+Imagem 1 (web): [[https://cdn-icons-png.flaticon.com/512/857/857681.png]] 
+Imagem 1 (web): [[https://cdn-icons-png.flaticon.com/512/857/857681.png][Exemplo]]  
+Imagem 1 (offline): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
+
+[[udev][Apagar exemplos]]
+
+Imagem 1: (web)     : 
+Imagem 1: (offline) : 
+
+** Hashtags
+#+NAME: hashtag-yammy
+#yammy #forno #estacao-ano-x #preco-x #pessoas-n #tempo-x #rapido #mt-facil #doses-1 |
+
+* ---------- Ingredientes ---------- 
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade   | Nome     | 
+|----+------------+-----------+----------+
+|  1 |          1 | Un.       | Maçãs    | 
+|  2 |        1,5 | Kg        | Peras    |
+|  3 |          2 | gr        | Laranjas |
+|  5 |          1 | litro     | leite    |
+|  7 |          1 | colh-sopa | fermento |
+|  8 |          2 |           |          |
+|  6 |          - | colh-cha  | acucar   |
+|  4 |          - | qb.       | Sal      |
+|----+------------+-----------+----------+
+#+TBLFM: $1=@#-1
+
+#+NAME: funcoes-para-tabela-ingredientes
+| ID | adicionar linhas | tabela inteira         |
+|----+------------------+------------------------|
+|    | [[udev][adicionar: Kg]]    |                        |
+|    |                  | [[udev][limpar tabela anterior]] |
+|    |                  | [[apagar estas instrucoes][apagar esta tabela]]1    |
+
+* ----------- Preparacao ----------- 
+
+[[udev][fx criar passo novo]]  [[udev][fx: apagar exemplos]]
+
+** Passo 1: Notas:    (exemplo)
 A agua escorrida no passo X pode ser usada para sopa noutra receita (ou para mais tarde deixar os talheres de molho, facilitandoba lavagem)
 
-** Passo 2: Ferver X
+** Passo 2: Ferver X  (exemplo)
 
-* Servir:
+* ------------- Servir ------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar Notas]]
+
 - [X] Servir quente
 - [X] Servir morno
 - [X] Servir frio
 - [X] Servir no aro metalico
 
-* Doses / Porcoes / Peso final:
+* -- Doses / Porcoes / Peso final -- 
 - Peso final (kg):
 - Doses (pessoas):
 
-* Materiais / Utensilios: 
+* ----- Materiais / Utensilios ----- 
 % 1 (exemplo: Frigideira especial)
 % 1 (exemplo: Tabua de madeira especial)
 % 1 
 
-* Duraçao
+* ------------ Duraçao ------------- 
    Pre-Preparacao:  x min
    Preparacao:      x min
    Lavar materiais: x min
    Total: 
 
-* Dicas/Notas: 
+* ---------- Dicas / Notas --------- 
  - 
 
-* Relatorio das ultimas prep:
+* --- Relatorio das ultimas prep --- 
  - 
 
