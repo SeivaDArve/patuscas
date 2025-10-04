@@ -20,6 +20,30 @@ __name__="patuscas.sh"
    # Example: f_create_tmp_file will create a temporary file stored at $v_tmp (with abs path, at ~/.tmp/...)
 
 
+function f_escape_time_at_patuscas_startup {
+   # Allowing the user to escape `git fetch` for 1 second
+   # It is best to use any key to 'escape' rather than 'Ctrl-C' directly, because 'Ctrl-C' are 2 keys, and 'Ctrl' key might not be enabled on termux "extra keys" at all
+
+   # Copiado de DRYa:
+
+   unset v_escape
+   read -sn 1 -t 1 v_escape
+
+   if [[ -n $v_escape ]]; then 
+
+      echo uDev
+      echo
+
+      echo    "DRYa: escaped main DRYa loader..."
+      echo    " > Press 'Ctrl-C' to stop loading DRYa"
+      echo    " > Press 'ENTER'  to load DRYa normally"
+      echo -n " > "
+      read -s  # Existe oportunidade para codigos secretos aqui, carregar DRYa de forma especial
+      echo
+   fi
+
+   v_go="$v_escape"
+}
 
 function f_detected_commits_to_download {
    # Pre-Utilizacao (verificar se no github ha novidades) - git fetch 
@@ -404,7 +428,8 @@ function f_menu_principal {
       Lz1='Saved '; Lz2='P'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
       #L9 Onde conservar os ingredientes
-       L8='8. web  |   | Culinaria Ayurvedica (Aki Sinta Saude)'
+       L9='9. web  |   | "Sabor Intenso"   (website)'
+       L8='8. web  |   | "Aki Sinta Saude" (website Culinaria Ayurvedica)'
        L7='7. Edit |   | Apontamentos + Agricultura.org'    # quando plantar X planta
        L6='6. Menu |   | Cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
        L5='5. Menu | c | Compras'
@@ -419,10 +444,11 @@ function f_menu_principal {
        Lh=$(echo -e "\nCanal 'NOS' 138: 24 Kitchen\nCanal 'NOS' 137: Casa e Cozinha\n ")
        L0="${v_talk}main menu: "
       
-      v_list=$(echo -e "${Ls}$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0" --wrap)
+      v_list=$(echo -e "${Ls}$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n$L9 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0" --wrap)
 
    # Perceber qual foi a escolha da lista
       [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[   $v_list =~ "9. " ]] && xdg-open https://saborintenso.com
       [[   $v_list =~ "8. " ]] && xdg-open https://akisintasaude.pt 
       [[   $v_list =~ "7. " ]] && emacs ${v_REPOS_CENTER}/patuscas/all/agric/agricultura.org
       [[   $v_list =~ "6. " ]] && echo "uDev: $L7"
@@ -453,7 +479,9 @@ if [ -z $1 ]; then
    # Se nao for apresentado nenhum argumento, apresentar o menu principal
    # Nesta fx, usar `git fetch` + `git pull`
 
-   f_detected_commits_to_download 
+   unset  v_go    && f_escape_time_at_patuscas_startup
+   [[ -n $v_go ]] && f_detected_commits_to_download 
+
    f_menu_principal
 
 elif [ $1 == "o" ] || [ $1 == "offline" ]; then
