@@ -109,6 +109,11 @@ function f_declare_variables {
       v_wish_list=${v_REPOS_CENTER}/patuscas/all/lista-de-compras/1-wish-list.txt 
       v_lista_atual_de_compras=${v_REPOS_CENTER}/patuscas/all/organizar-compras/lista-compras.txt
       v_boi=${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.org
+      v_apontamentos="${v_REPOS_CENTER}/patuscas/all/notas/Apontamentos-Patuscas.org"
+
+   # Links
+      v_link_SabInt="https://saborintenso.com"
+      v_link_AyuVed="https://akisintasaude.pt"
 }
 
 
@@ -429,7 +434,7 @@ function f_menu_principal {
       #L9 Onde conservar os ingredientes
        L9='9. web  |   | "Sabor Intenso"   (website)'
        L8='8. web  |   | "Aki Sinta Saude" (website Culinaria Ayurvedica)'
-       L7='7. Edit |   | Apontamentos + Agricultura.org'    # quando plantar X planta
+       L7='7. Edit |   | Apontamentos-Patuscas.org' 
        L6='6. Menu |   | Cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
        L5='5. Menu | c | Compras'
 
@@ -447,9 +452,9 @@ function f_menu_principal {
 
    # Perceber qual foi a escolha da lista
       [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
-      [[   $v_list =~ "9. " ]] && xdg-open https://saborintenso.com
-      [[   $v_list =~ "8. " ]] && xdg-open https://akisintasaude.pt 
-      [[   $v_list =~ "7. " ]] && emacs ${v_REPOS_CENTER}/patuscas/all/agric/agricultura.org
+      [[   $v_list =~ "9. " ]] && xdg-open $v_link_SabInt 
+      [[   $v_list =~ "8. " ]] && xdg-open $v_link_AyuVed 
+      [[   $v_list =~ "7. " ]] && bash e $v_apontamentos
       [[   $v_list =~ "6. " ]] && echo "uDev: $L7"
       [[   $v_list =~ "5. " ]] && f_menu_lista_de_compras
       [[   $v_list =~ "4. " ]] && f_menu_artigos
