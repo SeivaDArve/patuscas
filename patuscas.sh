@@ -186,7 +186,7 @@ function f_menu_receitas {
 function f_criar_nova_receita_com_boilerplate { 
    # Usa drya-lib-2 e boilerplate-receita-nova.txt para criar uma nova receita do zero 
 
-   # Criar dois novos ficheiroz (com lib)
+   # Criar dois novos ficheiros (com lib)
       f_create_tmp_file 
       v_tmp1=$v_tmp
 
@@ -211,7 +211,7 @@ function f_criar_nova_receita_com_boilerplate {
       v_name_title="# Title: $v_name"   
 
    # Caminho final do ficheiro
-      v_perm=$v_path/$v_name_underscored
+      v_perm=$v_path/$v_name_underscored.org
 
    # Substituir o texto do ficheiro temporario pelo texto do boilerplate
       cat $v_boi > $v_tmp1
@@ -230,7 +230,7 @@ function f_criar_nova_receita_com_boilerplate {
       mv  $v_tmp2 $v_perm
 
    # Editar ficheiro final, para inserir a receita
-      vim $v_perm
+      bash e $v_perm
 }
 
 

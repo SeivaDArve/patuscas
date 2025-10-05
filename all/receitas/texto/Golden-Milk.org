@@ -17,8 +17,9 @@ Prep:
  --1-- Ferver
        Levar o leite ao lume com todos os ingreditentes (menos o mel) até levantar fervura
 
- --2-- Adocar
-       Deixar arrefecer um pouco e juntar uma colher de mel
+ --2-- Adocar (opcional)
+       Diz-se que mel fervido é toxico. 
+       Deixar arrefecer e junte entao uma colher de mel.
 
 Servir:
    [X] Servir morno
@@ -27,9 +28,8 @@ Doses / Porcoes / Peso final:
    - Doses (pessoas): 1
 
 Materiais:
-   % 1 (exemplo: Frigideira especial)
-   % 1 (exemplo: Tabua de madeira especial)
-   % 1 
+   % 1 Medidor
+   % 1 Cafeteira
 
 Duraçao: 
    Pre-Preparacao:  x min

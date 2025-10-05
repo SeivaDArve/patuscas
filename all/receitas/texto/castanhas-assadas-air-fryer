@@ -1,4 +1,4 @@
-#+Title: boilerplate-receita-nova
+#+Title: castanhas-assadas-air-fryer
 #+Author: David Rodrigues <mydvr7@gmail.com>
 
 Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
@@ -72,83 +72,50 @@ Imagem 1: (offline) :
 
 ** Hashtags
 #+NAME: hashtag-yammy
-- [X] yammy
-- [X] forno
+- [ ] yammy
+- [ ] forno
 - [X] air-fryer
   
-- [X] estacao-ano-primavera
-- [X] estacao-ano-verao
+- [ ] estacao-ano-primavera
+- [ ] estacao-ano-verao
 - [X] estacao-ano-outono
-- [X] estacao-ano-inverno
+- [ ] estacao-ano-inverno
   
-- [X] preco-x
-- [X] nr-pessoas-n
-- [X] tempo-x
 - [X] rapido
 - [X] mt-facil
-- [X] doses-1
+
 
 * ------------- Ingredientes -------------- 
 
 #+NAME: Ingredientes
 | ID | Quantidade | Unidade   | Nome     |
 |----+------------+-----------+----------|
-|  1 | 1          | Un.       | Maçãs    |
-|  2 | 1,5        | Kg        | Peras    |
-|  3 | 2          | gr        | Laranjas |
-|  4 | 1          | litro     | leite    |
-|  5 | 1/4        | colh-sopa | fermento |
-|  6 | 1/2        | colh-cha  | acucar   |
-|  7 | qb.        | qb.       | Sal      |
+| 14 | qb.        | qb.       | Castanhas |
 |----+------------+-----------+----------|
-|  8 |            | Un.       |          |
-|  9 |            | Kg        |          |
-| 10 |            | gr        |          |
-| 11 |            | litro     |          |
-| 12 |            | colh-sopa |          |
-| 13 |            | colh-cha  |          |
-| 14 | qb.        | qb.       |          |
-|----+------------+-----------+----------|
-#+TBLFM: $1=@#-1
-
-#+NAME: funcoes-para-tabela-ingredientes
-| ID | adicionar linhas | tabela inteira             |
-|----+------------------+----------------------------|
-|  1 | [[udev][adicionar: Kg]]    |                            |
-|----+------------------+----------------------------|
-|  2 |                  | [[udev][limpar tabela Ingredientes]] |
-|----+------------------+----------------------------|
-|  3 |                  | [[apagar estas instrucoes][apagar esta tabela]]         |
-|----+------------------+----------------------------|
 #+TBLFM: $1=@#-1
 
 * -------------- Preparacao --------------- 
 
-[[udev][fx criar passo novo]]  [[udev][fx: apagar exemplos]]  [[udev][Apagar estas Notas]]
+[[udev][fx criar passo novo]]  [[udev][fx: apagar exemplos]]
 
-** Passo 1: Notas:    (exemplo)
-A agua escorrida no passo X pode ser usada para sopa noutra receita (ou para mais tarde deixar os talheres de molho, facilitandoba lavagem)
-
-** Passo 2: Ferver X  (exemplo)
-
+** Passo 1
+Com uma faca, fazer um golpe nas cascas das castanhas todas
+** Passo 2
+Colocar na air fryer ate (tempo: uDev)... ficarem assadas
+** Passo 3
+Servir morno
 * ---------------- Servir ----------------- 
 
 Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
 
-- [X] Servir quente
 - [X] Servir morno
-- [X] Servir frio
-- [X] Servir no aro metalico
 
 * ------ Doses / Porcoes / Peso final ----- 
 - Peso final (kg):
 - Doses (pessoas):
 
 * -------- Materiais / Utensilios --------- 
-% 1 (exemplo: Frigideira especial)
-% 1 (exemplo: Tabua de madeira especial)
-% 1 
-
+-
 * --------------- Duraçao ----------------- 
    Pre-Preparacao:  x min
    Preparacao:      x min
