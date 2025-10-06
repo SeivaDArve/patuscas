@@ -448,7 +448,7 @@ function f_menu_principal {
        Lh=$(echo -e "\nCanal 'NOS' 138: 24 Kitchen\nCanal 'NOS' 137: Casa e Cozinha\n ")
        L0="${v_talk}main menu: "
       
-      v_list=$(echo -e "${Ls}$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n$L9 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0" --wrap)
+      v_list=$(echo -e "${Ls}$L1 \n$L2 \n\n$L3 \n$L4 \n\n$L5 \n$L6 \n$L7 \n$L8 \n$L9 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
