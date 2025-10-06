@@ -30,6 +30,7 @@ Doses / Porcoes / Peso final:
 Materiais:
    % 1 Medidor
    % 1 Cafeteira
+   % 1 Copo 
 
 Duraçao: 
    Pre-Preparacao:  x min
