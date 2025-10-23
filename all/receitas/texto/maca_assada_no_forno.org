@@ -1,0 +1,83 @@
+# Title: maca assada no forno
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
+
+* ----------------- Info ------------------ 
+** Source
+https://www.pingodoce.pt/receitas/macas-assadas/
+
+** Imagens
+
+Imagem 1: (web)     : 
+Imagem 1: (offline) : 
+
+** Hashtags
+#+NAME: hashtag-yammy
+- [ ] yammy
+- [X] forno
+- [X] air-fryer
+  
+- [ ] estacao-ano-primavera
+- [ ] estacao-ano-verao
+- [X] estacao-ano-outono
+- [X] estacao-ano-inverno
+  
+* ------------- Ingredientes -------------- 
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade | Nome             |
+|----+------------+---------+------------------|
+|  1 |          4 | Un.     | Maçã Raineta     |
+|  2 |          4 | c.cha   | açucar Mascavado |
+|  3 |          1 | Un.     | Pau dr canela    |
+|  4 |          4 | c.cha   | vinho do porto   |
+|----+------------+---------+------------------|
+#+TBLFM: $1=@#-1
+
+* -------------- Preparacao --------------- 
+
+** Passo 1: Pre-Aquecer forno
+Ligue o forno a 180 º C.
+
+** Passo 2: Preparar as Maças
+Lave muito bem as maçãs e retire-lhes o caroço com um descaroçador. Coloque-as num tabuleiro de ir ao forno e, no lugar do caroço, introduza 1 pau de canela, 1 colher de chá de açúcar mascavado e o vinho do Porto.
+
+** Passo 3: Retirar do forno
+Leve ao forno durante cerca de 25 minutos ou até as maçãs estarem macias.
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [ ] Servir quente
+- [X] Servir morno
+- [X] Servir frio
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg): 500 gr~
+- Doses (pessoas): 4
+
+* -------- Materiais / Utensilios --------- 
+
+% 1 Tabuleiro de ir ao forno
+
+* --------------- Duraçao ----------------- 
+Pre-Preparacao:  x min
+Preparacao:      x min
+Lavar materiais: x min
+Total: 
+
+* ------------- Dicas / Notas ------------- 
+ - 
+
+* --- Relatorio das ultimas preparacoes --- 
+ - 
+
