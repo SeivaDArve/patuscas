@@ -1,0 +1,93 @@
+# Title: Par de Ovos estrelados geometricos
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
+
+
+* ----------------- Info ------------------ 
+** Source
+https://youtube.com/shorts/ZO6dHbKC1EQ?si=OLSkk4esQQDJLDYV
+** Imagens
+
+Imagem 1: (web)     : 
+Imagem 1: (offline) : 
+
+** Hashtags
+#+NAME: hashtag-yammy
+- [ ] yammy
+- [ ] forno
+- [ ] air-fryer
+  
+- [X] estacao-ano-primavera
+- [X] estacao-ano-verao
+- [X] estacao-ano-outono
+- [X] estacao-ano-inverno
+  
+
+* ------------- Ingredientes -------------- 
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade | Nome |
+|----+------------+---------+------|
+|  1 | 2          | Un.     | Ovos |
+|  2 | qb.        | qb.     | sal  |
+|----+------------+---------+------|
+#+TBLFM: $1=@#-1
+
+* -------------- Preparacao --------------- 
+
+
+
+** Passo 1: Notas:  
+Precisa mesmo dos utensilios
+
+** Passo 2: Separar claras das gemas
+Numa frigideira quente (em lume brando)
+Colocar 2 ovos numa espumadeira e deixar as claras escorrer e separarem-se das gemas
+quando estiverem separadas por gravidade para cima da fridideira, as claras ficam redondinhas ate as bordas da frigideira e é so colocar as 2 gemas bem ao centro
+
+** Passo 2: Cozinhar
+Deixar cozinhar em lume brando com a tampa por cima para ficar cozido de ambos os lados
+Colocar sal qb.
+
+** Passo 2: Embrulhar as Gemas com as claras
+Como as gemas estao ao centro, quando estiver cozinhado com as claras brancas e solidas, dobrar lateralmente e frontalmente as claras para cima das gemas fazendo um wrap de ovo bem simetrico
+
+** Passo 2: Servir
+Retirar da frigideira e esta pronto
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [X] Servir quente
+- [X] Servir morno
+- [X] Servir frio
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg):
+- Doses (pessoas): 1
+
+* -------- Materiais / Utensilios --------- 
+% 1 Frigideira (com tampa)
+% 1 Espumadeira larga
+% 1 Espatula
+
+* --------------- Duraçao -----------------
+Pre-Preparacao:  x min
+Preparacao:      x min
+Lavar materiais: x min
+Total: 
+
+* ------------- Dicas / Notas ------------- 
+ - 
+
+* --- Relatorio das ultimas preparacoes --- 
+ - 
+

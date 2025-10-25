@@ -131,6 +131,28 @@ A agua escorrida no passo X pode ser usada para sopa noutra receita (ou para mai
 
 ** Passo 2: Ferver X  (exemplo)
 
+
+
+** Passo 1: 
+
+** Passo 2: 
+
+** Passo 3: 
+
+** Passo 4: 
+
+** Passo 5: 
+
+** Passo 6: 
+
+** Passo 7: 
+
+** Passo 8: 
+
+** Passo 9: 
+
+** Passo 10: 
+
 * ---------------- Servir ----------------- 
 
 Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
@@ -150,10 +172,10 @@ Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar est
 % 1 
 
 * --------------- Duraçao ----------------- 
-   Pre-Preparacao:  x min
-   Preparacao:      x min
-   Lavar materiais: x min
-   Total: 
+Pre-Preparacao:  x min
+Preparacao:      x min
+Lavar materiais: x min
+Total: 
 
 * ------------- Dicas / Notas ------------- 
  - 
