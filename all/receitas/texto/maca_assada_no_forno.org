@@ -39,6 +39,7 @@ Imagem 1: (offline) :
 |  2 |          4 | c.cha   | açucar Mascavado |
 |  3 |          1 | Un.     | Pau dr canela    |
 |  4 |          4 | c.cha   | vinho do porto   |
+|    |        qb. | qb.     | caramelo         |
 |----+------------+---------+------------------|
 #+TBLFM: $1=@#-1
 
@@ -53,6 +54,9 @@ Lave muito bem as maçãs e retire-lhes o caroço com um descaroçador. Coloque-
 ** Passo 3: Retirar do forno
 Leve ao forno durante cerca de 25 minutos ou até as maçãs estarem macias.
 
+** Passo 4: Humedecer por cima
+Usar o molho da cozedura e colocar por cima
+Ou entao colocar caramelo (opcional)
 * ---------------- Servir ----------------- 
 
 Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
