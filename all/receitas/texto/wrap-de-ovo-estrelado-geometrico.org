@@ -29,39 +29,46 @@ Imagem 1: (offline) :
 - [X] estacao-ano-verao
 - [X] estacao-ano-outono
 - [X] estacao-ano-inverno
-  
 
 * ------------- Ingredientes -------------- 
 
 #+NAME: Ingredientes
-| ID | Quantidade | Unidade | Nome |
-|----+------------+---------+------|
-|  1 | 2          | Un.     | Ovos |
-|  2 | qb.        | qb.     | sal  |
-|----+------------+---------+------|
+| ID | Quantidade | Unidade | Nome   |
+|----+------------+---------+--------|
+|  1 | 2          | Un.     | Ovos   |
+|  2 | qb.        | qb.     | sal    |
+|  3 | qb.        | qb.     | azeite |
+|----+------------+---------+--------|
 #+TBLFM: $1=@#-1
 
 * -------------- Preparacao --------------- 
 
-
-
 ** Passo 1: Notas:  
-Precisa mesmo dos utensilios
+Precisa mesmo dos utensilios:
+1. Frigideira pequena ou media, para que as claras preencham o fundo todo de forma redonda (ver passo 2), fundo da frigideira cerca de 20 cm de diametro ou menos (15 cm)
 
 ** Passo 2: Separar claras das gemas
-Numa frigideira quente (em lume brando)
-Colocar 2 ovos numa espumadeira e deixar as claras escorrer e separarem-se das gemas
-quando estiverem separadas por gravidade para cima da fridideira, as claras ficam redondinhas ate as bordas da frigideira e é so colocar as 2 gemas bem ao centro
+1. Undar o fundo de uma frigideira com azeite
+
+2. Aquecer a frigideira
+   (em lume brando. Fogao INDESIT eletrico: nivel 3)
+   
+3. Partir 2 ovos e colocar numa espumadeira para que as claras sejam filtradas e escorrerram para fora das gemas diretamente para a frigideira
+   
+4. Quando estiverem separadas por gravidade para cima da fridideira, as claras ficam redondinhas ate as bordas da frigideira e é so colocar as 2 gemas da espumadeira bem ao centro
 
 ** Passo 2: Cozinhar
-Deixar cozinhar em lume brando com a tampa por cima para ficar cozido de ambos os lados
-Colocar sal qb.
+1. Colocar sal qb.
+
+2. Colocar a tampa por cima para ficar cozido de ambos os lados
+
+3. Manter a cozer em lume brando (fogao INDESIT 1-6 niveis: nivel 3 ou 2)
 
 ** Passo 2: Embrulhar as Gemas com as claras
-Como as gemas estao ao centro, quando estiver cozinhado com as claras brancas e solidas, dobrar lateralmente e frontalmente as claras para cima das gemas fazendo um wrap de ovo bem simetrico
+4. Quando as claras estiverem cozidas, rijas, embrulhamos as gemas que estao ao centro. Dobrar lateralmente e frontalmente as claras para cima das gemas fazendo um wrap de ovo bem simetrico
 
 ** Passo 2: Servir
-Retirar da frigideira e esta pronto
+Retirar da frigideira e esta pronto a servir
 * ---------------- Servir ----------------- 
 
 Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
@@ -75,7 +82,7 @@ Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar est
 - Doses (pessoas): 1
 
 * -------- Materiais / Utensilios --------- 
-% 1 Frigideira (com tampa)
+% 1 Frigideira (com tampa) de 20 centimetos de diametro
 % 1 Espumadeira larga
 % 1 Espatula
 

@@ -1,0 +1,103 @@
+# Title: Sumo de roma
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
+
+* ----------------- Info ------------------ 
+** Source
+** Imagens
+
+Imagem 1: (web)     : 
+Imagem 1: (offline) : 
+
+** Hashtags
+#+NAME: hashtag-yammy
+- [X] yammy
+- [ ] forno
+- [ ] air-fryer
+  
+- [ ] estacao-ano-primavera
+- [ ] estacao-ano-verao
+- [ ] estacao-ano-outono
+- [ ] estacao-ano-inverno
+- [X] em-duvida
+  
+* ------------- Ingredientes -------------- 
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade | Nome |
+|----+------------+---------+------|
+|  1 | 1          | Un.     | Romã |
+|  2 | 0,300      | litro   | agua |
+|----+------------+---------+------|
+#+TBLFM: $1=@#-1
+
+#+NAME: funcoes-para-tabela-ingredientes
+| ID | adicionar linhas | tabela inteira             |
+|----+------------------+----------------------------|
+|  1 | [[udev][adicionar: Kg]]    |                            |
+|----+------------------+----------------------------|
+|  2 |                  | [[udev][limpar tabela Ingredientes]] |
+|----+------------------+----------------------------|
+|  3 |                  | [[apagar estas instrucoes][apagar esta tabela]]         |
+|----+------------------+----------------------------|
+#+TBLFM: $1=@#-1
+
+* -------- Materiais / Utensilios --------- 
+
+Materiais: 
+- 1 passadores de rede estreito       (para coar o sumo)
+- 1 passadores de rede muito estreito (para coar o sumo, opcional)
+
+* -------------- Preparacao --------------- 
+
+** Passo 1: 
+Corta o topo e o fundo de 1 Roma ate encontrar os veios brancos verticais que fazem os gomos do fruto
+
+** Passo 2: 
+Para cada gomo cortado, bater com uma colher de sopa na casca do fruto (segurando com a mao) com forca. Os bagos vao se separar todinhos para dentro da yammy diretamente
+
+** Passo 3: 
+Adicionar 300 gr agua
+
+** Passo 4: 
+Triturar 1 min, vel 11
+
+** Passo 5: 
+Coar o sumo qb.
+O conteudo que fica no coador parece areia
+
+** Passo 6: 
+Servir
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [ ] Servir quente
+- [ ] Servir morno
+- [X] Servir frio
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg): 
+- Doses (pessoas): 1
+
+* --------------- Duraçao ----------------- 
+Pre-Preparacao:  x min
+Preparacao:      x min
+Lavar materiais: x min
+Total: 
+
+* ------------- Dicas / Notas ------------- 
+ - 
+
+* --- Relatorio das ultimas preparacoes --- 
+ - 
+
