@@ -1,0 +1,120 @@
+# Title: assorda de tomate
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
+
+* ----------------- Info ------------------ 
+** Source
+https://intrusanacozinha.blogspot.com/2023/07/acorda-de-tomate-alentejana.html?m=1
+
+** Imagens
+
+Imagem 1: (web)     : 
+Imagem 1: (offline) : 
+
+** Hashtags
+#+NAME: hashtag-yammy
+- [ ] yammy
+- [ ] forno
+- [ ] air-fryer
+  
+* ------------- Ingredientes -------------- 
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade   | Nome     |
+|----+------------+-----------+----------|
+|  8 |            | Un.       |          |
+|  9 |            | Kg        |          |
+| 10 |            | gr        |          |
+| 11 |            | litro     |          |
+| 12 |            | colh-sopa |          |
+| 13 |            | colh-cha  |          |
+| 14 | qb.        | qb.       |          |
+|----+------------+-----------+----------|
+#+TBLFM: $1=@#-1
+
+Ingredientes (4 Pessoas):
+
+Fonte Ruralea
+
+350g de Pão, de preferência tipo Saloio, e do dia anterior
+
+500g de Água ou Caldo de Legumes
+
+90g de Azeite
+
+1 Cebola, picada
+
+4 dentes de Alho, picados
+
+100g de Tomate, em pedaços
+
+1 molhinho de Coentros frescos
+
+qb de Polpa de Tomate
+
+qb de Sal
+
+2 Gemas de Ovo (opcional)
+
+* -------- Materiais / Utensilios --------- 
+
+Exemplos: 
+- 1 (exemplo: Frigideira especial)
+- 1 (exemplo: Tabua de madeira especial)
+- 1 Fogao INDESIT Eletrico 1-6 temperaturas
+
+Materiais: 
+- 1 
+
+* -------------- Preparacao --------------- 
+** Passo 1: 
+Parta o pão em pedaços grosseiros e coloque-o numa taça. Cubra-o com a água e deixe a demolhar cerca de 20 minutos.
+
+** Passo 2: 
+Cubra o fundo de uma panela com o azeite, junte-lhe a cebola e os alhos picados, e deixe refogar, mexendo de vez em quando.
+
+** Passo 3: 
+Acrescente os pedaços de tomate e um pouco de polpa de tomate e deixe cozinhar durante cerca de 10 minutos.
+
+** Passo 4: 
+Adicione o pão escorrido e um pouco de sal à panela, envolva tudo bem, e deixe cozinhar por uns minutos, até a açorda ter a consistência que deseja.
+
+** Passo 5: 
+Coloque os coentros picados na panela, mexa e desligue o fogão. Sirva a açorda ainda quente.
+
+** Passo 6: 
+Se optar por usar as gemas de ovo, que vai ajudar a que o prato tenha ainda mais a sua textura característica, depois de desligar o fogão junte as gemas e mexa bem para os incorporar rápido.
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [X] Servir quente
+- [ ] Servir morno
+- [ ] Servir frio
+- [ ] Servir no aro metalico
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg):
+- Doses (pessoas): 4
+
+* --------------- Duraçao ----------------- 
+Pre-Preparacao:  x min
+Preparacao:      x min
+Lavar materiais: x min
+Total: 
+
+* ------------- Dicas / Notas ------------- 
+ - 
+
+* --- Relatorio das ultimas preparacoes --- 
+ - 
+
