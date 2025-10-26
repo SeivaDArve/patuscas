@@ -10,7 +10,7 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
 #+STARTUP: indent
 :END:
 
-* Emacs Lisp
+* Emacs Lisp  [[uDev][Apagar header]]
 ** elisp: To eval
 #+BEGIN_SRC emacs-lisp :results silent :eval yes :confirm no
   ;; Funcoes para exportar este ficheiro ja evaluado para um ficheiro temporario em ~/home/.tmp
@@ -58,37 +58,49 @@ Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir T
 
 
 
+
 * ----------------- Info ------------------ 
 ** Source
+
 ** Imagens
-Imagem 1 (web): [[https://cdn-icons-png.flaticon.com/512/857/857681.png]] 
-Imagem 1 (web): [[https://cdn-icons-png.flaticon.com/512/857/857681.png][Exemplo]]  
+Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png]] 
+Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png][Exemplo]]  
 Imagem 1 (offline): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
 
 [[udev][Apagar exemplos]]
 
-Imagem 1: (web)     : 
+Imagem 1: (website) : 
 Imagem 1: (offline) : 
 
 ** Hashtags
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
 #+NAME: hashtag-yammy
-- [X] yammy
-- [X] forno
-- [X] air-fryer
+- [-] yammy
+- [-] forno
+- [-] air-fryer
+- [-] fogao
   
-- [X] estacao-ano-primavera
-- [X] estacao-ano-verao
-- [X] estacao-ano-outono
-- [X] estacao-ano-inverno
+- [-] estacao-ano-primavera
+- [-] estacao-ano-verao
+- [-] estacao-ano-outono
+- [-] estacao-ano-inverno
   
-- [X] preco-x
-- [X] nr-pessoas-n
-- [X] tempo-x
-- [X] rapido
-- [X] mt-facil
-- [X] doses-1
+- [-] preco-x
+- [-] nr-pessoas-n
+- [-] tempo-x
+- [-] rapido
+- [-] mt-facil
+- [-] doses-1
 
 * ------------- Ingredientes -------------- 
+
+[[uDev][Apagar parte do exemplo: Tabela Ingredientes]]
+
+[[uDev][Apagar tabela: funcoes-para-tabela-ingredientes]]
+
+[[uDev][Ajustar tabela: Ingredientes]]
 
 #+NAME: Ingredientes
 | ID | Quantidade | Unidade   | Nome     |
@@ -145,46 +157,62 @@ A agua escorrida no passo X pode ser usada para sopa noutra receita (ou para mai
 
 ** Passo 1: 
 
+
 ** Passo 2: 
+
 
 ** Passo 3: 
 
+
 ** Passo 4: 
+
 
 ** Passo 5: 
 
+
 ** Passo 6: 
+
 
 ** Passo 7: 
 
+
 ** Passo 8: 
+
 
 ** Passo 9: 
 
+
 ** Passo 10: 
+
 
 * ---------------- Servir ----------------- 
 
 Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
 
-- [X] Servir quente
-- [X] Servir morno
-- [X] Servir frio
-- [X] Servir no aro metalico
+- [-] Servir quente
+- [-] Servir morno
+- [-] Servir frio
+- [-] Servir no aro metalico
 
 * ------ Doses / Porcoes / Peso final ----- 
 - Peso final (kg):
 - Doses (pessoas):
 
 * --------------- Duraçao ----------------- 
-Pre-Preparacao:  x min
-Preparacao:      x min
-Lavar materiais: x min
-Total: 
+#+NAME: Duracao
+| ID | Descricao       | Quantidade | Unidade |
+|----+-----------------+------------+---------|
+|  1 | Pre-Preparacao  | x          | min     |
+|  2 | Preparacao      |            |         |
+|  3 | Lavar materiais |            |         |
+|----+-----------------+------------+---------|
+|  4 | Total           |            |         |
+|----+-----------------+------------+---------|
+#+TBLFM: $1=@#-1
 
-* ------------- Dicas / Notas ------------- 
- - 
+* ------------- Dicas / Notas -------------
+-
 
 * --- Relatorio das ultimas preparacoes --- 
- - 
+- 
 
