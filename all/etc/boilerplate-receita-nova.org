@@ -211,7 +211,8 @@ Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar est
 #+TBLFM: $1=@#-1
 
 * ------------- Dicas / Notas -------------
--
+Este prato combina bem com:
+ -
 
 * --- Relatorio das ultimas preparacoes --- 
 - 
