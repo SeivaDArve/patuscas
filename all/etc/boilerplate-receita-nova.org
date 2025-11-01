@@ -62,6 +62,9 @@ Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate
 ** elisp: Cozinhar outras doses
 uDev: Copiar a tabela '#+Name: Ingredientes' e calcular com regra de 3 simples, as suas doses (para um aumento ou diminuicao de comida final)
 
+** Cronometro
+uDev: Descobrir se o emaca tem cronometro
+
 * ----------------- Info ------------------ 
 ** Source
 
