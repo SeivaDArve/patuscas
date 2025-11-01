@@ -144,7 +144,8 @@ function f_abrir_ler_receitas_texto {
 
    v_file=$(ls $v_files | fzf --prompt="$L0")
    
-   [[ -n $v_file ]] && bash e $v_files/$v_file  # uDev: usar drya-text-editor `e`
+   [[ -n $v_file ]] && echo "P r t $v_file" >> $Lz4  # Enviar para o historico de comandos `D ..`
+   [[ -n $v_file ]] && bash e $v_files/$v_file  
 }
 
 function f_menu_receitas {

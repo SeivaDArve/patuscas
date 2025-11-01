@@ -1,4 +1,4 @@
-# Title: bolas de batata frita
+#+TITLE: bolas de batata frita
 
 Hashtags: #yammy-only #yammy #forno #estacao-ano-x #preco-x #pessoas-n #tempo-x #rapido #mt-facil #doses-1
 source: https://youtube.com/shorts/25VJcRqMa9A?si=0L3K9TZB9pnbmNL0 
@@ -11,14 +11,20 @@ Ingredientes:
    @ [        ] oleo alimentar 
 
 Prep:
-   --1-- Cozer batatas
-         Cozer batatas e esborrachar em pure (existe receita de pure de batata no livro da yammy)
+   --1-- Fazer puré
+         (existe receita de pure de batata no livro da yammy)
+
+         Cozer batatas (30 min)
+	 Esborrachar em pure no final
 
    --2-- Misturar
          Adicionar farinha, sal e pimenta
 
    --3-- Alizar
-         Fazer bolas com essa massa
+         Fazer bolas com essa massa (usando farinha nas maos para nao se colar muito
+	 As bolas nao deve ser muito grandes, senao nao fritam por dentro
+
+   --4-- Fritar
          Levar a frigideira ate ficar dourado
 
 Servir:
