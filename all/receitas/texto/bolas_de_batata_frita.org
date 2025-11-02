@@ -24,7 +24,10 @@ Prep:
          Fazer bolas com essa massa (usando farinha nas maos para nao se colar muito
 	 As bolas nao deve ser muito grandes, senao nao fritam por dentro
 
-   --4-- Fritar
+   --4-- Panar
+         Antes de irem fritar no oleo, as bolas tem de rebolar num recipuente com farinha peneirada para que depois nao se colem ao fundo da fritadeira
+
+   --5-- Fritar
          Levar a frigideira ate ficar dourado
 
 Servir:
@@ -63,3 +66,7 @@ Relatorio das ultimas prep:
                 a farinha nao chegou (agarra-se muito as maos). Se fosse menos quntidade, voltava a por na maquina com mais farinha. Ou entao é necessario farinha à parte como os pasteleiros, espalhar nas maos antes de fazer as bolinhas
                 Foi colocado a fritar, mas nao correu bem. As bolas podem-se colar ao fundo e podem-se colar umas as outras. Neste caso, as bolas colaram-se umas as outras porque quanfo comecaram a flutuar tambem espandiram em tamanho e nao couberam na frigideira sem estar apertadas... Como elas tem a propriedade de se colar, nao ficaram sequer em bolas
                 A batata a fritar tambem estava muito mole que nem dava para lhes mexer com uma colher. Provavelmente porque foi cozinho com muita agua
+
+  - Tentativa 3: Desta vez, antes de colocar as bolas no oleo, rebolei muito bem as bolas em farinha peneirada (as bolas ja nao se desfizeram)
+                 Para a proxima: experimentar fritar na temperatura maxima 6 de 6 (fogao eletrico) em vez de 3 de 6 (pois o objetivo é dourar a batata, nao é ensopar com oleo)
+                 Talvez seja da temperatura baixa: Ficaram douradas, mas nao estaladicas
