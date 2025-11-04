@@ -5,20 +5,21 @@ source: https://youtube.com/shorts/25VJcRqMa9A?si=0L3K9TZB9pnbmNL0
 img: 
 
 Ingredientes:
-   @ [        ] batatas
-   @ [        ] farinha
-   @ [        ] sal fino
-   @ [        ] oleo alimentar 
+   @ [ 300 gr ] batatas
+   @ [  15 gr ] farinha (peneirada)
+   @ [   qb   ] sal fino
+   @ [   qb   ] pimenta
+   @ [   qb   ] oleo alimentar (para fritar)
 
 Prep:
-   --1-- Fazer puré
+   --1-- Cozer
          (existe receita de pure de batata no livro da yammy)
 
          Cozer batatas (30 min)
-	 Esborrachar em pure no final
 
-   --2-- Misturar
-         Adicionar farinha, sal e pimenta
+   --2-- Fazer o puré
+   	 Escorrer as batatas, nao convem ter agua nenhuma.
+	 Esborrachar/Misturar a batata, farinha, sal e pimenta até ficar num puré homogenio
 
    --3-- Alizar
          Fazer bolas com essa massa (usando farinha nas maos para nao se colar muito
@@ -28,7 +29,7 @@ Prep:
          Antes de irem fritar no oleo, as bolas tem de rebolar num recipuente com farinha peneirada para que depois nao se colem ao fundo da fritadeira
 
    --5-- Fritar
-         Levar a frigideira ate ficar dourado
+         Levar a frigideira ate ficar dourado (temperatura no maximo, para dourar rapido e ensopar pouco de oleo
 
 Servir:
    - Servir morno 
@@ -36,6 +37,9 @@ Servir:
    - Peso final: X kg
 
 Materiais:
+ - Espumadeira      (para filtrar a agua das batatas e filtrar as bolas fritas do oleo)
+ - Papel absorvente (para as bolas fritas)
+ - Passador         (para pneirar a farinha)
 
 Duraçao: 
    Pre-Preparacao:  x min
