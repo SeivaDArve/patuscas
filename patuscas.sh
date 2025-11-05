@@ -426,6 +426,11 @@ function f_menu_artigos {
 
 }
 
+function f_apontamentos {
+   bash e $v_apontamentos
+}
+
+
 function f_menu_principal {
    # Menu Simples
 
@@ -435,7 +440,7 @@ function f_menu_principal {
       #L9 Onde conservar os ingredientes
        L9='9. web  |   | "Sabor Intenso"   (website)'
        L8='8. web  |   | "Aki Sinta Saude" (website Culinaria Ayurvedica)'
-       L7='7. Edit |   | Apontamentos-Patuscas.org' 
+       L7='7. Edit | p | Apontamentos-Patuscas.org' 
        L6='6. Menu |   | Cronometros | `D ca`'  # Dolce Gusto Mimic Times (Esta em ca-lculadoras
        L5='5. Menu | c | Compras'
 
@@ -455,7 +460,7 @@ function f_menu_principal {
       [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
       [[   $v_list =~ "9. " ]] && xdg-open $v_link_SabInt 
       [[   $v_list =~ "8. " ]] && xdg-open $v_link_AyuVed 
-      [[   $v_list =~ "7. " ]] && bash e $v_apontamentos
+      [[   $v_list =~ "7. " ]] && f_apontamentos 
       [[   $v_list =~ "6. " ]] && echo "uDev: $L7"
       [[   $v_list =~ "5. " ]] && f_menu_lista_de_compras
       [[   $v_list =~ "4. " ]] && f_menu_artigos
@@ -497,6 +502,9 @@ elif [ $1 == "o" ] || [ $1 == "offline" ]; then
 
 elif [ $1 == "." ] || [ $1 == "edit-self" ]; then
    bash e ${v_REPOS_CENTER}/patuscas/patuscas.sh
+
+elif [ $1 == "p" ] || [ $1 == "apontamentos" ]; then
+   f_apontamentos 
 
 elif [ $1 == "done" ]; then
    # Criar um blind commit e sincronizar tudo com o github
