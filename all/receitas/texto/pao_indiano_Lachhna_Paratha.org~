@@ -1,0 +1,225 @@
+# Title: pao indiano Lachhna Paratha
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
+
+Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate-lines -1)][Desativar]] 
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
+
+* Emacs Lisp  [[uDev][Apagar header]]
+** elisp: To eval
+#+BEGIN_SRC emacs-lisp :results silent :eval yes :confirm no
+  ;; Funcoes para exportar este ficheiro ja evaluado para um ficheiro temporario em ~/home/.tmp
+
+  (setq org-confirm-babel-evaluate nil)
+  
+  (setq v_titulo
+        (let ((parsed (org-element-parse-buffer)))
+        (org-element-property :title parsed)))   ;; Buscar uma variavel que guarde o texto de "#+TITLE"
+
+
+  (setq v_home (getenv "HOME"))          ;; Saber a pasta ~ atual
+  (setq v_tmp  (concat v_home "/.tmp/"))
+  (setq v_name "last-output-from-patuscas--")
+  (setq v_file (concat v_tmp v_name v_titulo))
+
+  (make-directory v_tmp t)        
+  (with-temp-buffer (write-file v_file))
+
+  (format "%s %s %s %d" "var1" "var2" "var3" 123)   ;; A diferença entre %s e %d está no tipo esperado dos argumentos: %d é para inteiros (números). %s é para strings (ou qualquer coisa que seja convertida para string) 
+
+#+END_SRC
+
+** elisp: Instructions
+*** formulas de tabelas
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade | Nome     |
+|----+------------+---------+----------|
+|  1 | 1          | Un.     | Maçãs    |
+|  2 | 1,5        | Kg      | Peras    |
+|  3 | 2          | gr      | Laranjas |
+|  4 | qb.        | qb.     | Sal      |
+|----+------------+---------+----------|
+#+TBLFM: $1=@#-1
+;; Auto Incrementar apartir da linha 1 da coluna até à sua ulima linha (`@#` é o número da linha atual ao qual subtraimos 1 (`@#` - 1).
+;; Para fazer efeito, precisa do cursor por cima da formula e carregar C-c C-c (ou seja, Crtl-C Ctrl-C)
+
+#+TBLFM: $2..$4=$2*$3::@>$4=vsum(@2..@-1)
+;; uDev
+
+#+TBLFM:
+;; uDev: apagar campos desnecessarios da tabela
+
+
+
+
+** elisp: Cozinhar outras doses
+uDev: Copiar a tabela '#+Name: Ingredientes' e calcular com regra de 3 simples, as suas doses (para um aumento ou diminuicao de comida final)
+
+** Cronometro
+uDev: Descobrir se o emaca tem cronometro
+
+* ----------------- Info ------------------ 
+** Source
+
+** Imagens
+Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png]] 
+Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png][Exemplo]]  
+Imagem 1 (offline): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
+
+[[udev][Apagar exemplos]]
+
+Imagem 1: (website) : 
+Imagem 1: (offline) : 
+
+** Hashtags
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+#+NAME: hashtag-yammy
+- [-] yammy
+- [-] forno
+- [-] air-fryer
+- [-] fogao
+  
+- [-] estacao-ano-primavera
+- [-] estacao-ano-verao
+- [-] estacao-ano-outono
+- [-] estacao-ano-inverno
+  
+- [-] preco-x
+- [-] nr-pessoas-n
+- [-] tempo-x
+- [-] rapido
+- [-] mt-facil
+- [-] doses-1
+
+* ------------- Ingredientes -------------- 
+
+[[uDev][Apagar parte do exemplo: Tabela Ingredientes]]
+
+[[uDev][Apagar tabela: funcoes-para-tabela-ingredientes]]
+
+[[uDev][Ajustar tabela: Ingredientes]]
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade   | Nome     |
+|----+------------+-----------+----------|
+|  1 | 1          | Un.       | Maçãs    |
+|  2 | 1,5        | Kg        | Peras    |
+|  3 | 2          | gr        | Laranjas |
+|  4 | 1          | litro     | leite    |
+|  5 | 1/4        | colh-sopa | fermento |
+|  6 | 1/2        | colh-cha  | acucar   |
+|  7 | qb.        | qb.       | Sal      |
+|----+------------+-----------+----------|
+|  8 |            | Un.       |          |
+|  9 |            | Kg        |          |
+| 10 |            | gr        |          |
+| 11 |            | litro     |          |
+| 12 |            | colh-sopa |          |
+| 13 |            | colh-cha  |          |
+| 14 | qb.        | qb.       |          |
+|----+------------+-----------+----------|
+#+TBLFM: $1=@#-1
+
+#+NAME: funcoes-para-tabela-ingredientes
+| ID | adicionar linhas | tabela inteira             |
+|----+------------------+----------------------------|
+|  1 | [[udev][adicionar: Kg]]    |                            |
+|----+------------------+----------------------------|
+|  2 |                  | [[udev][limpar tabela Ingredientes]] |
+|----+------------------+----------------------------|
+|  3 |                  | [[apagar estas instrucoes][apagar esta tabela]]         |
+|----+------------------+----------------------------|
+#+TBLFM: $1=@#-1
+
+* -------- Materiais / Utensilios --------- 
+
+Exemplos: 
+- 1 (exemplo: Frigideira especial)
+- 1 (exemplo: Tabua de madeira especial)
+- 1 Fogao INDESIT Eletrico 1-6 temperaturas
+
+Materiais: 
+- 1 
+
+* -------------- Preparacao --------------- 
+
+[[udev][fx criar passo novo]]  [[udev][fx: apagar exemplos]]  [[udev][Apagar estas Notas]]
+
+** Passo 1: Notas:    (exemplo)
+A agua escorrida no passo X pode ser usada para sopa noutra receita (ou para mais tarde deixar os talheres de molho, facilitandoba lavagem)
+
+** Passo 2: Ferver X  (exemplo)
+
+
+
+** Passo 1: 
+
+
+** Passo 2: 
+
+
+** Passo 3: 
+
+
+** Passo 4: 
+
+
+** Passo 5: 
+
+
+** Passo 6: 
+
+
+** Passo 7: 
+
+
+** Passo 8: 
+
+
+** Passo 9: 
+
+
+** Passo 10: 
+
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [-] Servir quente
+- [-] Servir morno
+- [-] Servir frio
+- [-] Servir no aro metalico
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg):
+- Doses (pessoas):
+
+* --------------- Duraçao ----------------- 
+#+NAME: Duracao
+| ID | Descricao       | Quantidade | Unidade |
+|----+-----------------+------------+---------|
+|  1 | Pre-Preparacao  | x          | min     |
+|  2 | Preparacao      |            |         |
+|  3 | Lavar materiais |            |         |
+|----+-----------------+------------+---------|
+|  4 | Total           |            |         |
+|----+-----------------+------------+---------|
+#+TBLFM: $1=@#-1
+
+* ------------- Dicas / Notas -------------
+Este prato combina bem com:
+ -
+
+* --- Relatorio das ultimas preparacoes --- 
+- 
+

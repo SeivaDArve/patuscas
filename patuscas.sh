@@ -512,7 +512,6 @@ elif [ $1 == "compras" ] || [ $1 == "c" ]; then
       L0="uDev: Aos selecionados: Eliminar/Declarar Comprados"
       v_items=$(cat $v_lista_atual_de_compras | fzf --prompt="$L0")
    elif [ $2 == "+" ]; then
-      rm    $v_lista_atual_de_compras
       touch $v_lista_atual_de_compras
 
       if [ -z $3 ]; then

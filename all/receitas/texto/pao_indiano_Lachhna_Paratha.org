@@ -1,0 +1,165 @@
+# Title: pao indiano Lachhna Paratha
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
+
+Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate-lines -1)][Desativar]] 
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
+
+
+* ----------------- Info ------------------ 
+** Source
+
+** Imagens
+Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png]] 
+Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png][Exemplo]]  
+Imagem 1 (offline): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
+
+[[udev][Apagar exemplos]]
+
+Imagem 1: (website) : 
+Imagem 1: (offline) : 
+
+** Hashtags
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+#+NAME: hashtag-yammy
+- [-] yammy
+- [-] forno
+- [-] air-fryer
+- [-] fogao
+  
+- [-] estacao-ano-primavera
+- [-] estacao-ano-verao
+- [-] estacao-ano-outono
+- [-] estacao-ano-inverno
+  
+- [-] preco-x
+- [-] nr-pessoas-n
+- [-] tempo-x
+- [-] rapido
+- [-] mt-facil
+- [-] doses-1
+
+* ------------- Ingredientes -------------- 
+
+[[uDev][Apagar parte do exemplo: Tabela Ingredientes]]
+
+[[uDev][Apagar tabela: funcoes-para-tabela-ingredientes]]
+
+[[uDev][Ajustar tabela: Ingredientes]]
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade   | Nome     |
+|----+------------+-----------+----------|
+|  8 |            | Un.       |          |
+|  9 |            | Kg        |          |
+| 10 |            | gr        |          |
+| 11 |            | litro     |          |
+| 12 |            | colh-sopa |          |
+| 13 |            | colh-cha  |          |
+| 14 | qb.        | qb.       |          |
+|----+------------+-----------+----------|
+#+TBLFM: $1=@#-1
+
+#+NAME: funcoes-para-tabela-ingredientes
+| ID | adicionar linhas | tabela inteira             |
+|----+------------------+----------------------------|
+|  1 | [[udev][adicionar: Kg]]    |                            |
+|----+------------------+----------------------------|
+|  2 |                  | [[udev][limpar tabela Ingredientes]] |
+|----+------------------+----------------------------|
+|  3 |                  | [[apagar estas instrucoes][apagar esta tabela]]         |
+|----+------------------+----------------------------|
+#+TBLFM: $1=@#-1
+
+* -------- Materiais / Utensilios --------- 
+
+Exemplos: 
+- 1 (exemplo: Frigideira especial)
+- 1 (exemplo: Tabua de madeira especial)
+- 1 Fogao INDESIT Eletrico 1-6 temperaturas
+
+Materiais: 
+- 1 
+
+* -------------- Preparacao --------------- 
+
+[[udev][fx criar passo novo]]  [[udev][fx: apagar exemplos]]  [[udev][Apagar estas Notas]]
+
+** Passo 1: Notas:    (exemplo)
+A agua escorrida no passo X pode ser usada para sopa noutra receita (ou para mais tarde deixar os talheres de molho, facilitandoba lavagem)
+
+** Passo 2: Ferver X  (exemplo)
+
+
+
+** Passo 1: 
+
+
+** Passo 2: 
+
+
+** Passo 3: 
+
+
+** Passo 4: 
+
+
+** Passo 5: 
+
+
+** Passo 6: 
+
+
+** Passo 7: 
+
+
+** Passo 8: 
+
+
+** Passo 9: 
+
+
+** Passo 10: 
+
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [-] Servir quente
+- [-] Servir morno
+- [-] Servir frio
+- [-] Servir no aro metalico
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg):
+- Doses (pessoas):
+
+* --------------- Duraçao ----------------- 
+#+NAME: Duracao
+| ID | Descricao       | Quantidade | Unidade |
+|----+-----------------+------------+---------|
+|  1 | Pre-Preparacao  | x          | min     |
+|  2 | Preparacao      |            |         |
+|  3 | Lavar materiais |            |         |
+|----+-----------------+------------+---------|
+|  4 | Total           |            |         |
+|----+-----------------+------------+---------|
+#+TBLFM: $1=@#-1
+
+* ------------- Dicas / Notas -------------
+Este prato combina bem com:
+ -
+
+* --- Relatorio das ultimas preparacoes --- 
+- 
+
