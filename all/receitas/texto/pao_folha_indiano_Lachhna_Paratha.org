@@ -1,0 +1,135 @@
+#+Title: boilerplate-receita-nova
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
+
+Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate-lines -1)][Desativar]] 
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
+
+* ----------------- Info ------------------ 
+** Source
+https://youtu.be/z1O8cfAyaz4?si=JEXpm5xdwDtxfNTe
+
+** Imagens
+Imagem 1: (website) : 
+Imagem 1: (offline) : 
+
+** Hashtags
+
+#+NAME: hashtag-yammy
+- [X] fogao
+
+* ------------- Ingredientes -------------- 
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade  | Nome                                                         |
+|----+------------+----------+--------------------------------------------------------------|
+|  8 |        250 | gr.      | farinha de trigo                                             |
+|  9 |          5 | gr.      | sal                                                          |
+| 10 |         15 | gr.      | oleo vegetal (ou azeite, ou outro oleo da nossa preferencia) |
+| 11 |        150 | ml       | de agua (ou menos. dependendo da absorcao da farinha )       |
+| 12 |         qb | qb.      | ghee                                                         |
+| 13 |            | colh-cha |                                                              |
+| 14 |        qb. | qb.      |                                                              |
+|----+------------+----------+--------------------------------------------------------------|
+#+TBLFM: $1=@#-1
+
+* -------- Materiais / Utensilios --------- 
+
+Materiais: 
+- 1 Frigideira
+- 1 pincel (para edpanhar a gordura, oleo ou ghee)
+
+* -------------- Preparacao --------------- 
+** Notas:
+"Lachna" significa circular. porque a massa é espalmada, bezuntda com um oleo e depois enrolado, para ser novamente espalmado. Isso saz um rendilhado durante a cozedura
+
+** Passo 1: 
+Misturar a farinha, sal, oleo, e metade da agua. Mexer tudo ate apagar a farinha
+Va adicionando aos poucos o resto da agua caso esteja muito seco
+O ponto ideal é quando ja nao tem farinha solta no fundo do recipiente
+
+** Passo 2: 
+Embrulhar num saco de plastico e deixar repousar no frigorifico
+
+Quanto mais repouso, mas elestica fica a massa
+
+Ela podia ficar a repousar fora do frio, mas como nao tem fermento nao faz diferenca
+
+Mas o frio ajuda a trabalhar a massa
+
+o descanso desenvolve o gluten e ela fica muito elastica
+
+Com o descanso suficiente a massa atinge o "ponto de veu" em que esticando ela demora muito para rasgar
+
+** Passo 3: 
+Partir em 5 partes iguais
+
+moldar muito bem em 5 bolas
+
+** Passo 4: 
+Coloxar um pouco de farinha na bancada
+
+Enfarimhar um pouco de ambos os lados. Espalmar as bolas com rolo da massa, esticando bem
+
+Os discos chega aos 12 centimetros
+
+Deixe descansar mais uns minutos
+
+** Passo 5: 
+A ghee tem um ponto de fusao mais elevado que a manteiga, da para ser usado em mais altas temperaturas sem queimar (acima de 200 graus sem queimar como um oleo vegetal)
+
+Mas se nao tiver, derretemos um pouco de manteiga e aplicamos na superficie da massa esticada
+
+Moldar o disco como uma concertina e encorar no fim como um caracol
+
+repousar 30 min
+
+** Passo 6: 
+Moldar os 5 discos com rolo da massa
+
+** Passo 7: 
+Um pouco de oleo na frigideira e assados os 5 discos ate a parte de baixo ficar dourada
+Este processo dura uns 5 minutos
+Se assar por muito tempo, fica demasiado estaladico e seco
+** Passo 8: 
+Cada vez que um paonacabar de assar, empilha em cima do ultimo pao assado e manter embrulhad em pano, para nao perder a humidade
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [X] Servir quente
+- [X] Servir morno
+- [X] Servir frio
+
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg):
+- Doses (pessoas): 5
+
+* --------------- Duraçao ----------------- 
+#+NAME: Duracao
+| ID | Descricao       | Quantidade | Unidade |
+|----+-----------------+------------+---------|
+|  1 | Pre-Preparacao  | x          | min     |
+|  2 | Preparacao      |            |         |
+|  3 | Lavar materiais |            |         |
+|----+-----------------+------------+---------|
+|  4 | Total           |            |         |
+|----+-----------------+------------+---------|
+#+TBLFM: $1=@#-1
+
+* ------------- Dicas / Notas -------------
+Este prato combina bem com:
+ -
+
+* --- Relatorio das ultimas preparacoes --- 
+- 
+

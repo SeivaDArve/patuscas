@@ -2,11 +2,12 @@
 
 Curcuma == Acafrao
 
+Existem receitas de culinaria (neste caso de pao) cujo segredo é nao colocar o sal diretamente com o fermento, o segredo é misturar o fermento e a farinha primeiro, depois o sal
 * Receitas ToDo:
 Yakisoba (do restaurante Nood)
 Vinho (pelo menos 1 litro na vida). Fazer de raiz
 pao indiano: https://youtu.be/z1O8cfAyaz4?si=JEXpm5xdwDtxfNTe
-
+petit gateau https://www.youtube.com/watch?v=z-s0dNKnanM
 * Compostagem
 exemplo: https://youtu.be/MnpUWPUXGu4?si=3GnT87LSsHBISxfb
 
