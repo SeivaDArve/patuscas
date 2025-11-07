@@ -54,12 +54,16 @@ INGREDIENTES
 1 ovo
 1 chávena (chá) de leite
 1 pitada de sal
+manteiga qb. (untar frigideira)
 
 PREPARAÇÃO
 No liquidificador, colocar o leite, o ovo, a Maizena e o sal. Bater até ficar bem cremoso.
 Aquecer uma frigideira anti-aderente, ou uma frigideira normal untada com manteiga. Colocar uma concha da massa e dourar de ambos os lados.
 Retirar da frigideira, rechear a gosto (carne moída, frango, queijo, presunto, etc.).
 Enrolar e, se desejar, colocar molho por cima e/ou parmesão ralado.
+
+RESULTADO:
+3 panquecas de 15 cm de diametroncada uma
 
 #+NAME: Ingredientes
 | ID | Quantidade | Unidade   | Nome     |
