@@ -1,4 +1,4 @@
-#+Title: boilerplate-receita-nova
+# Title: Panquecas de Maizena
 #+Author: David Rodrigues <mydvr7@gmail.com>
 
 Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
@@ -11,7 +11,6 @@ Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate
 #+STARTUP: hidestars
 #+STARTUP: indent
 :END:
-
 * Emacs Lisp  [[elisp:(progn (org-overview)(beginning-of-line)(org-kill-line))][Apagar header]]
 ** elisp: To eval
 #+BEGIN_SRC emacs-lisp :results silent :eval yes :confirm no
@@ -65,6 +64,7 @@ uDev: Copiar a tabela '#+Name: Ingredientes' e calcular com regra de 3 simples, 
 ** Cronometro
 uDev: Descobrir se o emaca tem cronometro
 
+
 * ----------------- Info ------------------ 
 ** Source
 
@@ -102,7 +102,17 @@ Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar est
 
 ** Precos
 * ------------- Ingredientes -------------- 
+INGREDIENTES
+1 chávena (chá) de Farinha Maizena
+1 ovo
+1 chávena (chá) de leite
+1 pitada de sal
 
+PREPARAÇÃO
+No liquidificador, colocar o leite, o ovo, a Maizena e o sal. Bater até ficar bem cremoso.
+Aquecer uma frigideira anti-aderente, ou uma frigideira normal untada com manteiga. Colocar uma concha da massa e dourar de ambos os lados.
+Retirar da frigideira, rechear a gosto (carne moída, frango, queijo, presunto, etc.).
+Enrolar e, se desejar, colocar molho por cima e/ou parmesão ralado.
 [[uDev][Apagar parte do exemplo: Tabela Ingredientes]]
 
 [[uDev][Apagar tabela: funcoes-para-tabela-ingredientes]]
