@@ -1,18 +1,18 @@
 #+Title: boilerplate-receita-nova
 #+Author: David Rodrigues <mydvr7@gmail.com>
 
-Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
-
-Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate-lines -1)][Desativar]] 
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(progn (org-show-all)(visual-line-mode 1))][Abrir Tudo + Line wrap]]
 
 - Settings
 :PROPERTIES:
 #+STARTUP: overview
 #+STARTUP: hidestars
 #+STARTUP: indent
+#+STARTUP: visual-line
+Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate-lines -1)][Desativar]]  [[elisp:(visual-line-mode 1)][Ativar]]  
 :END:
 
-* Emacs Lisp  [[elisp:(progn (org-overview)(beginning-of-line)(org-kill-line))][Apagar header]]
+* ------- Emacs Lisp [[elisp:(progn (org-overview)(beginning-of-line)(org-kill-line))][[Apagar]​]]------- 
 ** elisp: To eval
 #+BEGIN_SRC emacs-lisp :results silent :eval yes :confirm no
   ;; Funcoes para exportar este ficheiro ja evaluado para um ficheiro temporario em ~/home/.tmp
@@ -66,17 +66,21 @@ uDev: Copiar a tabela '#+Name: Ingredientes' e calcular com regra de 3 simples, 
 uDev: Descobrir se o emaca tem cronometro
 
 * ----------------- Info ------------------ 
+
+- [-] Receita 100% pronra
+  
 ** Source
 
 ** Imagens
-Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png]] 
-Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png][Exemplo]]  
-Imagem 1 (offline): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
-
-[[udev][Apagar exemplos]]
 
 Imagem 1: (website) : 
 Imagem 1: (offline) : 
+
+*** Exemplos [[elisp:(progn (org-overview)(beginning-of-line)(org-kill-line))][apagar]]
+
+Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png]] 
+Imagem 1 (website): [[https://cdn-icons-png.flaticon.com/512/857/857681.png][Exemplo]]  
+Imagem 1 (offline): "$__repo__/all/etc/img/chef-icon.jpg (uDev)"
 
 ** Hashtags
 
@@ -101,6 +105,10 @@ Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar est
 - [-] doses-1
 
 ** Precos
+[[uDev][Copiar tabela Ingredientes]]
+
+Preco de ingredientes + Eletricidade + Gas
+
 * ------------- Ingredientes -------------- 
 
 [[uDev][Apagar parte do exemplo: Tabela Ingredientes]]
@@ -165,28 +173,37 @@ A agua escorrida no passo X pode ser usada para sopa noutra receita (ou para mai
 ** Passo 1: 
 
 
+
 ** Passo 2: 
+
 
 
 ** Passo 3: 
 
 
+
 ** Passo 4: 
+
 
 
 ** Passo 5: 
 
 
+
 ** Passo 6: 
+
 
 
 ** Passo 7: 
 
 
+
 ** Passo 8: 
 
 
+
 ** Passo 9: 
+
 
 
 ** Passo 10: 
@@ -207,17 +224,18 @@ Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar est
 
 * --------------- Duraçao ----------------- 
 #+NAME: Duracao
-| ID | Descricao       | Quantidade | Unidade |
-|----+-----------------+------------+---------|
-|  1 | Pre-Preparacao  | x          | min     |
-|  2 | Preparacao      |            |         |
-|  3 | Lavar materiais |            |         |
-|----+-----------------+------------+---------|
-|  4 | Total           |            |         |
-|----+-----------------+------------+---------|
+| ID | Descricao                      | Quantidade | Unidade |
+|----+--------------------------------+------------+---------|
+|  1 | Pre-Preparacao (mise en place) | x          | min     |
+|  2 | Preparacao                     |            |         |
+|  3 | Lavar materiais                |            |         |
+|  4 | Comer                          |            |         |
+|----+--------------------------------+------------+---------|
+|  5 | Total                          |            |         |
+|----+--------------------------------+------------+---------|
 #+TBLFM: $1=@#-1
 
-* ------------- Dicas / Notas -------------
+* ------------- Dicas / Notas ------------- 
 Este prato combina bem com:
  -
 

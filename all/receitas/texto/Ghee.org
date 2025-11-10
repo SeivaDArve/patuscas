@@ -1,0 +1,117 @@
+# Title: Ghee
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]]
+
+Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate-lines -1)][Desativar]] 
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
+
+
+* ----------------- Info ------------------ 
+** Source
+
+** Imagens
+
+Imagem 1: (website) : 
+Imagem 1: (offline) : 
+
+** Hashtags
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+#+NAME: hashtag-yammy
+- [-] fogao
+
+- [-] preco-x
+- [-] nr-pessoas-n
+- [-] tempo-x
+- [-] rapido
+- [-] mt-facil
+- [-] doses-1
+
+** Precos
+* ------------- Ingredientes -------------- 
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade   | Nome                      |
+|----+------------+-----------+---------------------------|
+|  8 | 1          | Un.       | Caixa de manteiga sem sal |
+|----+------------+-----------+---------------------------|
+#+TBLFM: $1=@#-1
+
+* -------- Materiais / Utensilios --------- 
+
+Materiais: 
+- 1 taxo
+- 1 Algodao (para incendiar e testar se esta no ponto)
+
+* -------------- Preparacao --------------- 
+
+** Passo 1: 
+
+
+** Passo 2: 
+
+
+** Passo 3: 
+
+
+** Passo 4: 
+
+
+** Passo 5: 
+
+
+** Passo 6: 
+
+
+** Passo 7: 
+
+
+** Passo 8: 
+
+
+** Passo 9: 
+
+
+** Passo 10: 
+
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [-] Servir quente
+- [-] Servir morno
+- [-] Servir frio
+- [-] Servir no aro metalico
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg):
+- Doses (pessoas):
+
+* --------------- Duraçao ----------------- 
+#+NAME: Duracao
+| ID | Descricao       | Quantidade | Unidade |
+|----+-----------------+------------+---------|
+|  1 | Pre-Preparacao  | x          | min     |
+|  2 | Preparacao      |            |         |
+|  3 | Lavar materiais |            |         |
+|----+-----------------+------------+---------|
+|  4 | Total           |            |         |
+|----+-----------------+------------+---------|
+#+TBLFM: $1=@#-1
+
+* ------------- Dicas / Notas -------------
+Este prato combina bem com:
+ -
+
+* --- Relatorio das ultimas preparacoes --- 
+- 
+
