@@ -6,6 +6,7 @@
 - Ao cortar hortela ou outras ervas com caules rijos, cujas folhas sao aproveitas mas os caules nao, mesmo assim ha utilidade nos caules. O canal 24 Kitchen atou os caules e usou como aromatizante do caldo que estava a fazer. Ferveu na agua, no final da cozedura é que mandou fora
 - Iogurte (por exemplo iogurte natural) para substituir Natas
 - Cheddar é um tipo de queijo ideal para hamburgers, derrete-se ao ser colocado por cima da carne
+- Risoto: é feito com tipos de arroz com grao mais curto e com bastante amido (como o arbóreo ou carnaroli). O amido deixa mais "empapado"
 
 * Receitas ToDo:
 Yakisoba (do restaurante Nood)
@@ -27,4 +28,21 @@ Curcuma == Acafrao
 Gratinado?
 Bechamel de arroz?
 o que e azeite virgem e extra virgem?
+
+* Tabela "Arroz"
+
+| Tipo de Arroz           | Tamanho do Grão | Teor de Amido Total | Tipo de Amido Predominante      | Textura após Cozimento                 | Uso Típico                       |
+|-------------------------+-----------------+---------------------+---------------------------------+----------------------------------------+----------------------------------|
+| Arborio                 | Médio-curto     | Alto                | Amilopectina                    | Cremoso, ligeiramente firme no centro  | Risotos                          |
+| Carolino                | Médio           | Alto                | Amilopectina                    | Muito cremoso, mantém o "al dente"     | Risotos gourmet                  |
+| Vialoneano              | Curto           | Alto                | Amilopectina                    | Cremoso e homogéneo                    | Risotos delicados                |
+| Baldo                   | Médio           | Médio-alto          | Amilopectina                    | Cremoso e firme                        | Risotos e pratos italianos       |
+| Arrozara Sushi          | Curto           | Alto                | Amilopectina                    | Pegajoso, forma massas                 | Sushi, onigiri                   |
+| Arrozlutinoso           | Curto           | Muito alto          | Amilopectina (quase pura)       | Extremamente pegajoso                  | Sobremesas asiáticas             |
+| Arroze Valência (Bomba) | Curto           | Médio               | Amilopectina                    | Absorve bem o caldo, sem se desmanchar | Paella                           |
+| Arroz Agulha            | Longo           | Médio-baixo         | Amilose                         | Solto, seco                            | Acompanhamentos e pratos simples |
+| Arroz Basmati           | Longo           | Baixo               | Amilose                         | Muito solto e perfumado                | Pratos indianos e orientais      |
+| Arroz Jasmin            | Longo           | Médio               | Amilose/amilopectina balanceado   | Levemente pegajoso                     | Pratos asiáticos                 |
+| Arroz Arboilizado       | Longo           | Baixo               | Amilose                         | Solto, firme                           | Acompanhamentos                  |
+| Arroz Integral          | —               | Variável            | Igual ao tipo base              | Firme, fibroso                         | Versátil, saudável               |
 
