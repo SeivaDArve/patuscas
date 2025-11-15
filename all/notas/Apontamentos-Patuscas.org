@@ -29,6 +29,7 @@ Gratinado?
 Bechamel de arroz?
 o que e azeite virgem e extra virgem?
 
+"Papel Manteiga" : Papel semelhante ao papel vegetal que serve para ir ao forno
 * Tabela "Arroz"
 
 | Tipo de Arroz           | Tamanho do Grão | Teor de Amido Total | Tipo de Amido Predominante      | Textura após Cozimento                 | Uso Típico                       |

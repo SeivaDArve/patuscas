@@ -67,7 +67,7 @@ uDev: Descobrir se o emaca tem cronometro
 
 * ----------------- Info ------------------ 
 
-- [-] Receita 100% pronra
+- [-] Receita 100% pronta
   
 ** Source
 
@@ -118,24 +118,24 @@ Preco de ingredientes + Eletricidade + Gas
 [[uDev][Ajustar tabela: Ingredientes]]
 
 #+NAME: Ingredientes
-| ID | Quantidade | Unidade   | Nome     |
-|----+------------+-----------+----------|
-|  1 | 1          | Un.       | Maçãs    |
-|  2 | 1,5        | Kg        | Peras    |
-|  3 | 2          | gr        | Laranjas |
-|  4 | 1          | litro     | leite    |
-|  5 | 1/4        | colh-sopa | fermento |
-|  6 | 1/2        | colh-cha  | acucar   |
-|  7 | qb.        | qb.       | Sal      |
-|----+------------+-----------+----------|
-|  8 |            | Un.       |          |
-|  9 |            | Kg        |          |
-| 10 |            | gr        |          |
-| 11 |            | litro     |          |
-| 12 |            | colh-sopa |          |
-| 13 |            | colh-cha  |          |
-| 14 | qb.        | qb.       |          |
-|----+------------+-----------+----------|
+| ID | Quantidade | Unidade   | Nome     |     |
+|----+------------+-----------+----------+-----|
+|  1 | 1          | Un.       | Maçãs    |     |
+|  2 | 1,5        | Kg        | Peras    |     |
+|  3 | 2          | gr        | Laranjas |     |
+|  4 | 1          | litro     | leite    |     |
+|  5 | 1/4        | colh-sopa | fermento |     |
+|  6 | 1/2        | colh-cha  | acucar   |     |
+|  7 | qb.        | qb.       | Sal      |     |
+|----+------------+-----------+----------+-----|
+|  8 |            | Un.       |          | [[uDev][_+_]] |
+|  9 |            | Kg        |          |     |
+| 10 |            | gr        |          |     |
+| 11 |            | litro     |          |     |
+| 12 |            | colh-sopa |          |     |
+| 13 |            | colh-cha  |          |     |
+| 14 | qb.        | qb.       |          |     |
+|----+------------+-----------+----------+-----|
 #+TBLFM: $1=@#-1
 
 #+NAME: funcoes-para-tabela-ingredientes

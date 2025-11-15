@@ -1,0 +1,110 @@
+# Title: Broas dos Santos de Alcochete
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(progn (org-show-all)(visual-line-mode 1))][Abrir Tudo + Line wrap]]
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+#+STARTUP: visual-line
+Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate-lines -1)][Desativar]]  [[elisp:(visual-line-mode 1)][Ativar]]  
+:END:
+
+* ----------------- Info ------------------ 
+
+- [-] Receita 100% pronra
+  
+** Source
+Familia de uma dos alunos da IsM
+
+** Imagens
+
+Imagem 1: (website) : 
+Imagem 1: (offline) : 
+
+
+* ------------- Ingredientes -------------- 
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade   | Nome            |
+|----+------------+-----------+-----------------|
+|  1 | 1          | Kg.       | Farinha         |
+|  2 | 400        | gr        | acucar amarelo  |
+|  3 | 6          | Un.       | ovos            |
+|  3 | qb.        | Un.       | ovos (pincelar) |
+|  4 | 2          | colh-sopa | mel             |
+|  5 | 1          | colh-sopa | fermento        |
+|  6 | 0,5        | chavena   | de Oleo         |
+|  7 | 0,5        | chavena   | de azeite       |
+|  8 | qb.        | qb.       | Nozes e passas  |
+|  9 | qb.        | qb.       | agua morna      |
+|----+------------+-----------+-----------------|
+#+TBLFM: $1=@#-1
+
+* -------- Materiais / Utensilios --------- 
+
+Materiais: 
+- 1 taça para misturar os ingredientes
+- 1 Tabuleiro para ir ao forno
+- qb. Papel manteiga (papel vegetal de ir ao forno)
+
+
+* -------------- Preparacao --------------- 
+
+** Passo 1: Amassar
+Coloca-se todos os ingredientes numa taca (taça) e massar tudo muito bem. (Menos as nozes e ovos para pincelar)
+
+Se a massa estiver dura junra-se agua morna
+
+
+** Passo 2: Aquecer o forno
+Pre-aquecer o forno a 180 graus
+
+
+
+** Passo 3: Fazer bolinhas
+Num tabuleiro com papel manteiga
+
+Faser bolinhas pequenas (tamanho? ... uDev) com uma noz em cima
+
+Pincelar com ovo batido (Gemas ou ovo inteiro? ... uDev(
+
+ 
+** Passo 4: Forno
+Colocar no forno (tempo? ... uDev)
+
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [X] Servir quente
+- [X] Servir morno
+- [X] Servir frio
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg):
+- Doses (pessoas):
+
+* --------------- Duraçao ----------------- 
+#+NAME: Duracao
+
+| ID | Descricao                      | Quantidade | Unidade |
+|  1 | Pre-Preparacao (mise en place) | x          | min     |
+|  2 | Preparacao                     |            |         |
+|  6 | Lavar materiais                |            |         |
+|  4 | Comer                          |            |         |
+|----+--------------------------------+------------+---------+
+|  5 | Total                          |            |         |
+|----+--------------------------------+------------+---------+
+#+TBLFM: $1=@#-1
+
+* ------------- Dicas / Notas ------------- 
+Este prato combina bem com:
+ -
+
+* --- Relatorio das ultimas preparacoes --- 
+- 
+
