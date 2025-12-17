@@ -34,8 +34,8 @@ Imagem 1: (offline) :
 #+NAME: Ingredientes
 | ID | Quantidade | Unidade | Nome |
 |----+------------+---------+------|
-|  1 | 1          | Un.     | Romã |
-|  2 | 0,300      | litro   | agua |
+|  1 | 2          | Un.     | Romã |
+|  2 | 0,200      | litro   | agua |
 |----+------------+---------+------|
 #+TBLFM: $1=@#-1
 
