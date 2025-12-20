@@ -1,0 +1,131 @@
+# Title: Broas dos Santos de Alcochete
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(progn (org-show-all)(visual-line-mode 1))][Abrir Tudo + Line wrap]]
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+#+STARTUP: visual-line
+Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate-lines -1)][Desativar]]  [[elisp:(visual-line-mode 1)][Ativar]]  
+:END:
+
+* ----------------- Info ------------------ 
+
+- [-] Receita 100% pronta
+
+Nome alternativo: Fogaca (Fogaça)
+  
+** Source
+Familia de uma dos alunos da IsM
+
+** Imagens
+
+Imagem 1: (website) : 
+Imagem 1: (offline) : 
+
+
+* ------------- Ingredientes -------------- 
+
+Nota: 1 kg é MUITO, para 1 copo da yammy convem reduz para metade
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade   | Nome            |
+|----+------------+-----------+-----------------|
+|  1 | 1          | Kg.       | Farinha         |
+|  2 | 400        | gr        | acucar amarelo  |
+|  3 | 6          | Un.       | ovos            |
+|  3 | qb.        | Un.       | ovos (pincelar) |
+|  4 | 2          | colh-sopa | mel             |
+|  5 | 1          | colh-sopa | fermento        |
+|  6 | 0,5        | chavena   | de Oleo         |
+|  7 | 0,5        | chavena   | de azeite       |
+|  8 | qb.        | qb.       | Nozes e passas  |
+|  9 | qb.        | qb.       | agua morna      |
+|----+------------+-----------+-----------------|
+#+TBLFM: $1=@#-1
+
+* -------- Materiais / Utensilios --------- 
+
+Materiais: 
+- 1 taça para misturar os ingredientes
+- 1 Tabuleiro para ir ao forno
+- 1 Pincel
+- 2 colheres de sopa (para enrolar o bolinho)
+- 1 palito
+- qb. Papel manteiga (papel vegetal de ir ao forno)
+
+
+* -------------- Preparacao --------------- 
+
+** Passo 1: Amassar
+Numa taca, misturar e amassar todos os ingredientes. (Menos as nozes e ovos para pincelar)
+
+- Farinha
+- Acucar
+- Ovos
+- Mel
+- Fermento (so se a sarinha naobtiver)
+- Oleo
+- Azeite
+- Passas
+- Um pouco de agua
+  
+Se a massa estiver dura junta-se agua morna
+
+
+** Passo 2: Aquecer o forno
+Pre-aquecer o forno a 180 graus
+
+
+** Passo 3: Fazer bolinhas
+Forrar um tabuleiro com papel manteiga
+
+As bolinhas vao crescer, portanto precusam de espaco no tabuleiro.
+
+Com 2 colheres de sopa fazer bolinhas pequenas (para enrolar a massa entre elas e deixar cair no tabuleiro)
+
+Pincelar com ovo batido (Gemas ou ovo inteiro? ... uDev(
+
+Colocar com uma noz em cima
+
+** Passo 4: Forno
+Colocar no forno cerca de 10 min (uDev: confirmar o tempo)
+
+Verificar no fim com um palito é possivel perfurar o bolinho até ao fundo e depois traser o palito sem massa agarrada. Se nao trouxer massa, está pronto
+
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [X] Servir quente
+- [X] Servir morno
+- [X] Servir frio
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg):
+- Doses (pessoas):
+
+* --------------- Duraçao ----------------- 
+#+NAME: Duracao
+
+| ID | Descricao                      | Quantidade | Unidade |
+|  1 | Pre-Preparacao (mise en place) | x          | min     |
+|  2 | Preparacao                     |            |         |
+|  6 | Lavar materiais                |            |         |
+|  4 | Comer                          |            |         |
+|----+--------------------------------+------------+---------+
+|  5 | Total                          |            |         |
+|----+--------------------------------+------------+---------+
+#+TBLFM: $1=@#-1
+
+* ------------- Dicas / Notas ------------- 
+Este prato combina bem com:
+ -
+
+* --- Relatorio das ultimas preparacoes --- 
+- 
+

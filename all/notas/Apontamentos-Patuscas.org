@@ -7,6 +7,7 @@
 - Iogurte (por exemplo iogurte natural) para substituir Natas
 - Cheddar é um tipo de queijo ideal para hamburgers, derrete-se ao ser colocado por cima da carne
 - Risoto: é feito com tipos de arroz com grao mais curto e com bastante amido (como o arbóreo ou carnaroli). O amido deixa mais "empapado"
+- A tampa de um frasco com papel transparente slofan serve para fazer de forma para hamburgers redondos/simetricos
 
 * Receitas ToDo:
 Yakisoba (do restaurante Nood)
@@ -15,6 +16,8 @@ pao indiano: https://youtu.be/z1O8cfAyaz4?si=JEXpm5xdwDtxfNTe
 petit gateau https://www.youtube.com/watch?v=z-s0dNKnanM
 Hamburger na frigideira
 Ratatuille ao estilo do filme (uDev: buscar musica, lyrics em frances, barrete de Cozinha)
+cheeseburger de mc donalds: https://frederikkewaerens.dk/en/cheeseburger/
+
 
 Diz-se: Receita de Marshmellow: Fazer gelatina normalmente, bater com varinha magica 8 min ate ganhar ar, levar ao frigorifico, depois é so cortar em cubos
 * Compostagem
@@ -31,6 +34,7 @@ Gratinado?
 Bechamel de arroz?
 o que e azeite virgem e extra virgem?
 
+"Papel Manteiga" : Papel semelhante ao papel vegetal que serve para ir ao forno
 * Tabela "Arroz"
 
 | Tipo de Arroz           | Tamanho do Grão | Teor de Amido Total | Tipo de Amido Predominante      | Textura após Cozimento                 | Uso Típico                       |
