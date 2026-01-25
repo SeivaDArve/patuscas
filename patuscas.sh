@@ -155,6 +155,8 @@ function f_menu_receitas {
    # Lista de opcoes para o menu `fzf`
       Lz1='Saved '; Lz2='P receitas'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
+      L8='8. | a | Mencionar uma Receita de Texto Aleatoria'
+
       L7='7. |   | Editar Boilerplate (para futuras novas receita)'
       L6='6. |   | Marcar Receitas (guardar lista tmp de receitas)'                                      
 
@@ -168,13 +170,14 @@ function f_menu_receitas {
       L0="$v_fzf Menu 'Receitas': "
       
    # Ordem de Saida das opcoes durante run-time
-      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n\n$L4 \n$L5 \n\n$L6 \n$L7 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n\n$L4 \n$L5 \n\n$L6 \n$L7 \n\n$L8\n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
    # Atualizar historico fzf automaticamente (deste menu)
       echo "$Lz2" >> $Lz4
    
    # Atuar de acordo com as instrucoes introduzidas pelo utilizador
       [[   $v_list =~ $Lz3  ]] && echo -e "Acede ao historico com \`D ..\` e encontra: \n > $Lz2"
+      [[   $v_list =~ "8. " ]] && echo uDev
       [[   $v_list =~ "7. " ]] && bash e $v_boi
       [[   $v_list =~ "6. " ]] && echo "uDev"
       [[   $v_list =~ "5. " ]] && v_file=$(ls ${v_REPOS_CENTER}/patuscas/all/receitas/texto | fzf) && vim ${v_REPOS_CENTER}/patuscas/all/receitas/texto/$v_file
