@@ -305,7 +305,9 @@ function f_lista_de_compras_menu_adicionar {
    # Lista de opcoes para o menu `fzf`
       Lz1='Save '; Lz2='P c +'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-      bL5='5. | r | Adicionar Receitas | fzf menu'
+       L6='6. | r | Adicionar Receitas | fzf menu'
+
+       L5='5. | F | Adicionar foto de uma lista de compras (guardando o nome da foto da galeria)'
 
        L4='4. | p | Adicionar Artigos  | Prompt de terminal'
        L3='3. | m | Adicionar Artigos  | Manualmente. Editar o ficheiro'
@@ -315,10 +317,11 @@ function f_lista_de_compras_menu_adicionar {
 
        L0="$v_fzf Menu 'Adicionar Compras': "
       
-      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n$L5 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$L5 \n\n$L6 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[ $v_list =~ "6. " ]] && echo "uDev: $L6" 
       [[ $v_list =~ "5. " ]] && echo "uDev: $L5" 
       [[ $v_list =~ "4. " ]] && echo "uDev: $L4" 
       [[ $v_list =~ "3. " ]] && echo "uDev: $L3" 
