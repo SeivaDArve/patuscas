@@ -1,73 +1,73 @@
-[Item] Areia Aglomerante Clumping
-[Item] Néctar Goiaba Rosa Brasil  
-[Menu] Sumo
-Refrigerante com Gás Guaraná sem Açúcar
-Ampolas Cabelo Resgate Repara e Protege
-Filetes Primavera Alecrim e Sal Marinho   
-Filetes Primavera Quinoa e 4 Sementes
-Lasanha Bolonhesa
-Batata Vermelha
-Dots Pistácio
-Hambúrguer de Porco com Queijo
-Laranja IGP Algarve
-Lasanha Bolonhesa
-Preparado para Mariscada Ultracongelado
-Pão de Forma sem Côdea
-Pão de Milho Girassol
-Queijo Curado Light Fatiado
-Rojões de Porco
-Rolo Misto Folhado com Queijo e Fiambre
-Tentáculos de Pota Grandes Congelados
-Chantilly
-Creme Culinário
-Danete-Creme de Chocolate
-Iogurte Líquido Morango Infantil
-Iogurte Líquido Pistácio
-Leite Achocolatado
-Leite Achocolatado Ucal-Go!
-Leite UHT Magro Cálcio sem Lactose
-Ovos de Solo Classe L
-Arroz Thai Jasmim
-Topping de Chocolate Belga
-Natas
-Chocolate de culinaria
-Baunilha
-Gelatina em pó, com aromas
-Gelatina em folhas, neutra
-Detergente para roupa - (skip)
-Amaciador de roupa - (Comfort)
-Papel higiénico - (Renova)
-Sacos congelação - (Lidl)
-Pasta de dentes - (Aquafresh)
-Shampoo - (Pantene)
-Rissóis de camarão forno - (Auchan)
-Esponjas de cozinha - (ScotchvBrite)
-Sacos do lixo - (Pingo Doce)
-Água (1x 5L) - (Monchique)
-Água (6x 1L) - (Auchan 9.5)
-Água (6x 250 ml) - (Continente)
-Tisanas chá preto - (Pleno)
-Guaraná	
-Fanta
-Néctar Maga e Laranja - (Compal)
-Pensos Higiénicos	- (Evax Liberty)
-Gelado Pistácio - (Magnum)
-Gelado Classicone Masrhmallow - (Continente)
-Batatas Palitos - (Continente)
-Dots Pistácio - (Continente)
-Pão de forma sem Côdea - (Bimbo)
-Lasanha Bolonhesa - (Continente)
-Hambúrguer de Porco com Queijo - (Continente)
-Leite achocolatado - (Agros)
-Leite com café - (Agros)
-Iogurte tipo actimel - (Continente)
-Iogurte Líquido Pistácio - (Continente)
-Detergente Máquina Roupa Líquido Delicadas - (Continente)
-Tablete de chocolate - (Milka)
-Bolachas Choco Biscuit - (Milka)
-Bolachas com cobertura de chocolate finas - (Milka)
-Bolachas recheadas - (Milka)
-Batata frita lisa camponesas - (Lay’s)
-Bolacha choco minis - (Milka)
-Atum Posta ao Natural - (Continente Equilíbrio)
-Tempero Strogonoff - (Knorr)
+#000_[Item]:_Areia_Aglomerante_Clumping
+#001_[Item]:_Néctar_Goiaba_Rosa_Brasil
+#002_[Menu]:_Sumo
+#003_Guarana_sem_Açúcar
+#004_Ampolas_Cabelo_Resgate_Repara_e_Protege
+#005_Filetes_Primavera_Alecrim_e_Sal_Marinho
+#006_Filetes_Primavera_Quinoa_e_4_Sementes
+#007_FiletLasanha_Bolonhesa
+#008_Batata_Vermelha
+#009_Dots_Pistácio
+#010_Hambúrguer_de_Porco_com_Queijo
+#011_Laranja_IGP_Algarve
+#012_Lasanha_Bolonhesa
+#013_Preparado_para_Mariscada_Ultracongelado
+#014_Pão_de_Forma_sem_Côdea
+#015_Pão_de_Milho_Girassol
+#016_Queijo_Curado_Light_Fatiado
+#017_Rojões_de_Porco
+#018_Rolo_Misto_Folhado_com_Queijo_e_Fiambre
+#019_Tentáculos_de_Pota_Grandes_Congelados
+#020_Chantilly
+#021_Creme_Culinário
+#022_Danete-Creme_de_Chocolate
+#023_Iogurte_Líquido_Morango_Infantil
+#024_Iogurte_Líquido_Pistácio
+#025_Leite_Achocolatado
+#026_Leite_Achocolatado_Ucal-Go!
+#027_Leite_UHT_Magro_Cálcio_sem_Lactose
+#028_Ovos_
+#029_Arroz_Thai_Jasmim
+#030_Topping_de_Chocolate_Belga
+#031_Natas
+#032_Chocolate_de_culinaria
+#033_Baunilha
+#034_Gelatina_em_pó,_com_aromas
+#035_Gelatina_em_folhas,_neutra
+#036_Detergente_para_roupa_-_(skip)
+#037_Amaciador_de_roupa_-_(Comfort)
+#038_Papel_higiénico_-_(Renova)
+#039_Sacos_congelação_-_(Lidl)
+#040_Pasta_de_dentes_-_(Aquafresh)
+#041_Shampoo_-_(Pantene)
+#042_Rissóis_de_camarão_forno_-_(Auchan)
+#043_Esponjas_de_cozinha_-_(ScotchvBrite)
+#044_Sacos_do_lixo_-_(Pingo_Doce)
+#045_Água_(1x_5L)_-_(Monchique)
+#046_Água_(6x_1L)_-_(Auchan_9.5)
+#047_Água_(6x_250_ml)_-_(Continente)
+#048_Tisanas_chá_preto_-_(Pleno)
+#049_Guaraná	
+#050_Fanta
+#051_Néctar_Maga_e_Laranja_-_(Compal)
+#052_Pensos_Higiénicos	-_(Evax_Liberty)
+#053_Gelado_Pistácio_-_(Magnum)
+#054_Gelado_Classicone_Masrhmallow_-_(Continente)
+#055_Batatas_Palitos_-_(Continente)
+#056_Dots_Pistácio_-_(Continente)
+#057_Pão_de_forma_sem_Côdea_-_(Bimbo)
+#058_Lasanha_Bolonhesa_-_(Continente)
+#059_Hambúrguer_de_Porco_com_Queijo_-_(Continente)
+#060_Leite_achocolatado_-_(Agros)
+#061_Leite_com_café_-_(Agros)
+#062_Iogurte_tipo_actimel_-_(Continente)
+#063_Iogurte_Líquido_Pistácio_-_(Continente)
+#064_Detergente_Máquina_Roupa_Líquido_Delicadas_-_(Continente)
+#065_Tablete_de_chocolate_-_(Milka)
+#066_Bolachas_Choco_Biscuit_-_(Milka)
+#067_Bolachas_com_cobertura_de_chocolate_finas_-_(Milka)
+#068_Bolachas_recheadas_-_(Milka)
+#069_Batata_frita_lisa_camponesas_-_(Lay’s)
+#070_Bolacha_choco_minis_-_(Milka)
+#071_Atum_Posta_ao_Natural_-_(Continente_Equilíbrio)
+#072_Tempero_Strogonoff_-_(Knorr)

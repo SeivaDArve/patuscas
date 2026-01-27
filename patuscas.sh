@@ -9,7 +9,7 @@ __repo__=${v_REPOS_CENTER}/patuscas
    source $v_lib1 2>/dev/null || (read -s -n 1 -p "DRYa libs: $__name__: drya-lib-1 does not exist (error)" && echo )
 
    v_greet="Patuscas"
-   v_talk="patuscas: "
+   v_talk="Patuscas: "
 
    # Examples: `db` (an fx to use during debug)
    #           f_greet, f_greet2, f_talk, f_done, f_anyK, f_Hline, f_horizlina, f_verticline, etc... [From the repo at: "https://github.com/SeivaDArve/DRYa.git"]
@@ -111,7 +111,10 @@ function f_declare_variables {
                 v_apontamentos=$__repo__/all/notas/Apontamentos-Patuscas.org
                    v_all_items=$__repo__/all/ingredientes/all-ingredientes.txt
                    v_wish_list=$__repo__/all/lista-de-compras/1-wish-list.txt 
+                      v_livros=$__repo__/all/receitas/pdf
+                      v_textos=$__repo__/all/receitas/texto
                          v_boi=$__repo__/all/etc/boilerplate-receita-nova.org
+
 
    # Links de sites externos na internet
       v_link_SabInt="https://saborintenso.com"
@@ -126,8 +129,6 @@ function f_abrir_ler_receitas_pdf {
    # Menu fzf para escolher abrir/ler um livro de receitas PDF
 
    L0="$v_fzf 'Abrir/Ler' um livro de receitas em PDF: "
-
-   v_livros=${v_REPOS_CENTER}/patuscas/all/receitas/pdf
    v_livro=$(ls $v_livros | fzf --prompt="$L0") 
    
    [[ -n $v_livro ]] && f_talk && echo "Vai ser aberto: $v_livro" 
@@ -140,14 +141,10 @@ function f_abrir_ler_receitas_texto {
    # uDev: upgrade para --multiple
 
    L0="$v_fzf 'Abrir/Ler' uma receita de texto: "
-
-   # Variavel ja definida anteriormente
-      v_files=${v_REPOS_CENTER}/patuscas/all/receitas/texto
-
-   v_file=$(ls $v_files | fzf --prompt="$L0")
+   v_file=$(ls $v_textos | fzf --prompt="$L0")
    
    [[ -n $v_file ]] && echo "P r t $v_file" >> $Lz4  # Enviar para o historico de comandos `D ..`
-   [[ -n $v_file ]] && bash e $v_files/$v_file  
+   [[ -n $v_file ]] && bash e $v_textos/$v_file  
 }
 
 function f_menu_receitas {
@@ -160,7 +157,7 @@ function f_menu_receitas {
       L7='7. |   | Editar Boilerplate (para futuras novas receita)'
       L6='6. |   | Marcar Receitas (guardar lista tmp de receitas)'                                      
 
-      L5='5. |   | Editar Uma Receita de texto'
+      L5='5. | c | Enviar ingrediente de Receitar para a lista de compras'
       L4='4. | n | Criar Nova Receita (com boilerplate)'
 
       L3='3. | p | Ler/Abrir Livros de Receitas (em PDF)'
@@ -180,7 +177,7 @@ function f_menu_receitas {
       [[   $v_list =~ "8. " ]] && echo uDev
       [[   $v_list =~ "7. " ]] && bash e $v_boi
       [[   $v_list =~ "6. " ]] && echo "uDev"
-      [[   $v_list =~ "5. " ]] && v_file=$(ls ${v_REPOS_CENTER}/patuscas/all/receitas/texto | fzf) && vim ${v_REPOS_CENTER}/patuscas/all/receitas/texto/$v_file
+      [[   $v_list =~ "5. " ]] && echo "uDev: Escolher 1 receita; Filtrar cada ingrediente; concat o prefixo [Receita] nesse iten; concat o sufixo [<nome-da-receita>]; enviar esse nome para a lista de compras atual"
       [[   $v_list =~ "4. " ]] && f_criar_nova_receita_com_boilerplate
       [[   $v_list =~ "3. " ]] && f_abrir_ler_receitas_pdf 
       [[   $v_list =~ "2. " ]] && f_abrir_ler_receitas_texto 
@@ -206,7 +203,7 @@ function f_criar_nova_receita_com_boilerplate {
       #v_boi=${v_REPOS_CENTER}/patuscas/all/etc/boilerplate-receita-nova.org
 
    # Caminho do diretorio onde vai ser guardado o ficheiro da receita
-      v_path=${v_REPOS_CENTER}/patuscas/all/receitas/texto
+      v_path=$v_textos
 
    # Decidir o nome da receita
       echo    "Qual o nome que quer dar a receita? "
@@ -260,46 +257,22 @@ function f_filtrar_hashtags {
       v_list=$(echo -e "$L1 \n$L2 \n$L3 \n$L4 \n$L5 \n$L6 \n\n$L7 \n$L8 \\n\n$Lz3" | fzf --pointer=">" -m --cycle --prompt="$L0" )
 
    # Perceber qual foi a escolha da lista
-      [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
-      [[ $v_list =~ "8. " ]] && echo "uDev"
-      [[ $v_list =~ "7. " ]] && echo "uDev"
-      [[ $v_list =~ "6. " ]] && echo "uDev"
-      [[ $v_list =~ "5. " ]] && echo "uDev"
-      [[ $v_list =~ "4. " ]] && echo "uDev"
-      [[ $v_list =~ "3. " ]] && echo "uDev"
-      [[ $v_list =~ "2. " ]] && echo "uDev: $L2"
-      [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
+      [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[   $v_list =~ "8. " ]] && echo "uDev"
+      [[   $v_list =~ "7. " ]] && echo "uDev"
+      [[   $v_list =~ "6. " ]] && echo "uDev"
+      [[   $v_list =~ "5. " ]] && echo "uDev"
+      [[   $v_list =~ "4. " ]] && echo "uDev"
+      [[   $v_list =~ "3. " ]] && echo "uDev"
+      [[   $v_list =~ "2. " ]] && echo "uDev: $L2"
+      [[   $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
       unset v_list
 
 
 
 }
 
-function f_lista_de_compras_menu_adicionar_artigos {
-   # Gerir e criar listas de compras
-      
-   # Lista de opcoes para o menu `fzf`
-      Lz1='Save '; Lz2='P c + a'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
-
-       L3='3. | m | Adicionar | Artigos manualmente' # uDev: aos itens que foram adicionados manualmente, perguntar se quer memorizar
-       L2='2. | f | Adicionar | Artigos com fzf menu'
-
-       L1='1. Cancel'
-
-       Lh=$(echo -e "\nInfo: Pode substituir o ultimo arg 'a' por um 'artigo'\n > Exemplo \`P c + \"batatas fritas\"\` \n > Exemplo \`P c + batatas fritas\` \n ")
-       L0="$v_fzf Menu 'Adicionar Compras' (Artigos): "
-      
-      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
-
-   # Perceber qual foi a escolha da lista
-      [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
-      [[ $v_list =~ "3. " ]] && echo "uDev: $L3" 
-      [[ $v_list =~ "2. " ]] && echo "uDev: $L2"
-      [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
-      unset v_list
-}
-    
-function f_lista_de_compras_menu_adicionar {
+function f_menu_adicionar_a_lista_de_compras {
    # Gerir e criar listas de compras
       
    # Lista de opcoes para o menu `fzf`
@@ -320,13 +293,13 @@ function f_lista_de_compras_menu_adicionar {
       v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$L5 \n\n$L6 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
-      [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
-      [[ $v_list =~ "6. " ]] && echo "uDev: $L6" 
-      [[ $v_list =~ "5. " ]] && echo "uDev: $L5" 
-      [[ $v_list =~ "4. " ]] && echo "uDev: $L4" 
-      [[ $v_list =~ "3. " ]] && echo "uDev: $L3" 
-      [[ $v_list =~ "2. " ]] && echo "uDev: $L2" 
-      [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
+      [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[   $v_list =~ "6. " ]] && echo "uDev: $L6" 
+      [[   $v_list =~ "5. " ]] && echo "uDev: $L5" 
+      [[   $v_list =~ "4. " ]] && echo "uDev: $L4" 
+      [[   $v_list =~ "3. " ]] && f_adicionar_artigos_a_lista_de_compras_manualmente
+      [[   $v_list =~ "2. " ]] && f_adicionar_artigos_a_lista_de_compras_com_fzf 
+      [[   $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
       unset v_list
 }
 
@@ -336,28 +309,30 @@ function f_menu_lista_de_compras {
    # Lista de opcoes para o menu `fzf`
       Lz1='Save '; Lz2='P compras'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-       L6='6. | s | Informar (Stock - X) | Artigo X acabou'
-       L5='5. | S | Informar (Stock + X) | Artigo X foi adquirido'
+       L7='7. | s | Informar (Stock - X) | Artigo X acabou'
+       L6='6. | S | Informar (Stock + X) | Artigo X foi adquirido'
 
+       L5='5. | e | Editar    | Lista de compras atual'
        L4='4. | - | Remover   | Artigos ou receitas' # Artigos eliminados da lista, passam para a lista de adquiridos com a data/hora atual
        L3='3. | + | Adicionar | Artigos ou receitas'
-       L2='2. | . | Ver       | Listas de compas atual'
+       L2='2. | . | Ver (fzf) | Listas de compas atual'
 
        L1='1. Cancel'
 
        Lh=$(echo -e "\nO que pretende fazer na lista de compras?\n ")
        L0="$v_fzf Menu 'Lista de Compras': "
       
-      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n\n$L5 \n$L6 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n$L5 \n\n$L6 \n$L7 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
-      [[ $v_list =~ $Lz3  ]] && echo "$Lz2" 
-      [[ $v_list =~ "6. " ]] && echo "uDev: $L6" 
-      [[ $v_list =~ "5. " ]] && echo "uDev: $L5" 
-      [[ $v_list =~ "4. " ]] && echo "uDev: $L4" 
-      [[ $v_list =~ "3. " ]] && f_lista_de_compras_menu_adicionar 
-      [[ $v_list =~ "2. " ]] && vim $v_lista_atual_de_compras 
-      [[ $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
+      [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[   $v_list =~ "7. " ]] && echo "uDev: $L7" 
+      [[   $v_list =~ "6. " ]] && echo "uDev: $L6" 
+      [[   $v_list =~ "5. " ]] && f_adicionar_artigos_a_lista_de_compras_manualmente 
+      [[   $v_list =~ "4. " ]] && echo "uDev: $L4"
+      [[   $v_list =~ "3. " ]] && f_menu_adicionar_a_lista_de_compras 
+      [[   $v_list =~ "2. " ]] && f_ver_lista_de_compras_atual 
+      [[   $v_list =~ "1. " ]] && echo "Canceled: $Lz2"
       unset v_list
 }
 
@@ -385,47 +360,95 @@ function f_menu_lista_de_compras_legacy {
       v_list=$(echo -e "$L1 \n$L2 \n$L3 \n\n$L4 \n$L5 \n$L6 \n\n$L7 \n$L8 \n$L9 \n$L10 \n\n$Lz3" | fzf --no-info --cycle --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
-      [[ $v_list =~ $Lz3   ]] && echo "$Lz2" 
-      [[ $v_list =~ "10. " ]] && echo "uDev: $L10" 
-      [[ $v_list =~ "9.  " ]] && echo "uDev: $L9" 
-      [[ $v_list =~ "8.  " ]] && echo "uDev: $L8" 
-      [[ $v_list =~ "7.  " ]] && echo "uDev: $L7" 
-      [[ $v_list =~ "6.  " ]] && echo "uDev: $L6" 
-      [[ $v_list =~ "5.  " ]] && echo "uDev: $L5" 
-      [[ $v_list =~ "4.  " ]] && echo "uDev: $L4" 
-      [[ $v_list =~ "3.  " ]] && echo "uDev: $L3" 
-      [[ $v_list =~ "2.  " ]] && echo "uDev: $L2"
-      [[ $v_list =~ "1.  " ]] && echo "Canceled: $Lz2"
+      [[   $v_list =~ $Lz3   ]] && echo "$Lz2" 
+      [[   $v_list =~ "10. " ]] && echo "uDev: $L10" 
+      [[   $v_list =~ "9.  " ]] && echo "uDev: $L9" 
+      [[   $v_list =~ "8.  " ]] && echo "uDev: $L8" 
+      [[   $v_list =~ "7.  " ]] && echo "uDev: $L7" 
+      [[   $v_list =~ "6.  " ]] && echo "uDev: $L6" 
+      [[   $v_list =~ "5.  " ]] && echo "uDev: $L5" 
+      [[   $v_list =~ "4.  " ]] && echo "uDev: $L4" 
+      [[   $v_list =~ "3.  " ]] && echo "uDev: $L3" 
+      [[   $v_list =~ "2.  " ]] && echo "uDev: $L2"
+      [[   $v_list =~ "1.  " ]] && echo "Canceled: $Lz2"
       unset v_list
 }
 
+function f_adicionar_artigos_a_lista_de_compras_manualmente {
+   f_greet
+   f_talk; echo "Adicionar/Alterar artigos a lista de compras manualmente" 
+           echo
 
-function f_menu_demonstrar_todos_os_artigos {
-   L0="$v_fzf Lista 'Todos os artigos' conhecidos: "
-   v_items=$(less $v_all_items | fzf --prompt="$L0" --pointer=">" -m) 
+   bash e $v_lista_atual_de_compras 
+}
 
-   [[ -n $v_items ]] && echo "$v_items" > $v_wish_list && echo "Sent to Wish list (uDev: perguntar primeiro o que fazer, print, send to wish, send to shopping, remove from shopping, remove from wish" && echo && echo "$v_items"
+function f_ver_lista_de_compras_atual {
+   f_greet
+   f_talk; echo "Ver 'lista de compras' atual" 
+           echo
+
+   L0="$v_fzf Ver 'lista de compras' atual: "
+   v_items=$(cat $v_lista_atual_de_compras | fzf --prompt="$L0")
+}
+
+function f_adicionar_artigos_a_lista_de_compras_com_fzf {
+
+   # Passos:
+   #  1. Abrir a lista
+   #  2. Escolher [Menu] ou [Iten]
+   #  3. Se for [Menu] vai aparecer esse menu posteriormente
+   #     3.1. O menu `fzf -m` apresenta 'Indiferente' 'Agua 1L' 'Agua 33 mL' 'Agua 5L'
+   #     3.2. Para cada alinea: Perguntar quantidades
+   #  4. Perguntar quantidades de cada [iten}]
+
+   L0="$v_fzf 'Adicionar Artigos' a lista de compras: "
+   v_items=$(cat $v_all_items | fzf --pointer=">" -m --prompt="$L0") 
+   
+   if [[ -n $v_items ]]; then
+
+      for i in $v_items
+      do 
+         echo $i >> $v_lista_atual_de_compras
+
+      done
+
+      echo "Artigos adicionafos a lista de compras"
+   else
+      echo "Nenhum artigo selecionado para se adicionar a lista de compras"
+
+   fi
+}
+
+function f_editar_catalogo_de_todos_os_artigos {
+   echo "Editar catalogo de 'Todos os Artigos'"
+   bash e $v_all_items 
+}
+
+function f_mostrar_todos_os_artigos {
+   L0="$v_fzf Mostrar 'Todos os artigos' conhecidos: "
+   v_items=$(less $v_all_items | fzf --prompt="$L0" ) 
 }
 
 function f_menu_artigos {
-
    # Menu Simples
 
    # Lista de opcoes para o menu `fzf`
       Lz1='Saved '; Lz2='P a'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
-      L2='2. Mostrar todos os Artigos'                                      
+      L3="3. | e | Editar catalogo de 'Todos os Artigos'"
+      L2='2. | t | Mostrar todos os Artigos'                                      
       L1='1. Cancel'
 
       L0="$v_fzf Menu 'Artigos': "
-      v_list=$(echo -e "$L1 \n$L2 \n\n$Lz3" | fzf --no-info --pointer=">" --cycle --prompt="$L0")
+      v_list=$(echo -e "$L1 \n$L2 \n$L3 \n\n$Lz3" | fzf --no-info --pointer=">" --cycle --prompt="$L0")
 
    # Atualizar historico fzf automaticamente (deste menu)
       echo "$Lz2" >> $Lz4
 
    # Atuar de acordo com as instrucoes introduzidas pelo utilizador
       [[    $v_list =~ $Lz3  ]] && echo -e "Acede ao historico com \`D ..\` e encontra: \n > $Lz2"
-      [[    $v_list =~ "2. " ]] && f_menu_demonstrar_todos_os_artigos  
+      [[    $v_list =~ "3. " ]] && f_editar_catalogo_de_todos_os_artigos 
+      [[    $v_list =~ "2. " ]] && f_mostrar_todos_os_artigos  
       [[    $v_list =~ "1. " ]] && echo "Canceled: Menu: $Lz2" 
       [[ -z $v_list          ]] && echo "ESC key used, aborting..." && exit 1
       unset  v_list
@@ -517,6 +540,21 @@ elif [ $1 == "done" ]; then
    # Criar um blind commit e sincronizar tudo com o github
    f_talk; echo "Tem a certeza que quer upload do estado atual do patuscas? (uDev)"
 
+elif [ $1 == "o" ] || [ $1 == "offline" ]; then
+   # Nesta fx, nao usar `git fetch` + `git pull`
+
+   f_menu_principal
+
+elif [ $1 == "." ] || [ $1 == "edit-self" ]; then
+   bash e ${v_REPOS_CENTER}/patuscas/patuscas.sh
+
+elif [ $1 == "p" ] || [ $1 == "apontamentos" ]; then
+   f_apontamentos 
+
+elif [ $1 == "done" ]; then
+   # Criar um blind commit e sincronizar tudo com o github
+   f_talk; echo "Tem a certeza que quer upload do estado atual do patuscas? (uDev)"
+
 elif [ $1 == "compras" ] || [ $1 == "c" ]; then
    # Aprentar o menu de lista de compras diretamente
 
@@ -524,52 +562,42 @@ elif [ $1 == "compras" ] || [ $1 == "c" ]; then
       f_menu_lista_de_compras
 
    elif [ $2 == "." ]; then
-      f_talk; echo "Ver lista de compras atual"
-      L0="$v_fzf 'Eliminar/Declarar' artigos comprados: "
-      v_items=$(cat $v_lista_atual_de_compras | fzf --prompt="$L0")
+      f_ver_lista_de_compras_atual
 
    elif [ $2 == "+" ]; then
       touch $v_lista_atual_de_compras
 
       if [ -z $3 ]; then
-         f_talk; echo "Adicionar + artigos a lista de compras"
-
-         L0="$v_fzf 'Adicionar' artigos na lista de compras: "
-         v_items=$(cat $v_all_items | fzf -m --prompt="$L0")
-         
-         for i in $v_items
-         do 
-            for i in $i
-            do
-               v_i="$v_i $i"
-            done
-
-            unset IFS
-         done
-            echo "$v_i" >> "$v_lista_atual_de_compras"
+         f_menu_adicionar_a_lista_de_compras 
 
       elif [ $3 == "m" ]; then
-         bash e $v_lista_atual_de_compras 
+         f_adicionar_artigos_a_lista_de_compras_manualmente
+
+      elif [ $3 == "f" ]; then
+         f_adicionar_artigos_a_lista_de_compras_com_fzf 
+
       else
          IFS=$'\n'
          for i in $*; do echo $i >> $v_lista_atual_de_compras; done
          unset IFS
       fi
-
    
-      read -sn2
-      echo
-      f_talk; echo "Lista de compras"
-      cat $v_lista_atual_de_compras
-
    elif [ $2 == "-" ]; then
       f_talk; echo "Remover artigos da lista de compras"
+
+   elif [ $2 == "e" ]; then
+      # editar lista de compras
+      f_adicionar_artigos_a_lista_de_compras_manualmente 
+
    elif [ $2 == "s" ]; then
       f_talk; echo "Informar que existe menos X artigos em stock"
+
    elif [ $2 == "S" ]; then
       f_talk; echo "Informar que foi adicionado X artigos ao stock"
+
    else
       echo "Opcao para lista de compras nao reconhecida"
+
    fi
 
 elif [ $1 == "hash" ] || [ $1 == "H" ]; then
@@ -578,7 +606,17 @@ elif [ $1 == "hash" ] || [ $1 == "H" ]; then
 
 elif [ $1 == "artigos" ] || [ $1 == "a" ]; then
    # Aprentar o menu de Artigos
-   f_menu_artigos 
+
+   if [ -z $2 ]; then
+      f_menu_artigos 
+
+   elif [ $2 == "t" ]; then
+      f_mostrar_todos_os_artigos 
+
+   elif [ $2 == "e" ]; then
+      f_editar_catalogo_de_todos_os_artigos 
+
+   fi
 
 elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
 
@@ -600,9 +638,6 @@ elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
 
    elif [ $2 == "texto" ] || [ $2 == "t" ]; then
 
-      # Iniciar as Variaveis relacionadas com as receitas de texto
-         v_files=${v_REPOS_CENTER}/patuscas/all/receitas/texto
-
       if [ -z $3 ]; then
          # Nao nao forem dados mais args, abrir fzf
          f_abrir_ler_receitas_texto 
@@ -618,7 +653,7 @@ elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
                    # O arg $3 passou a ser arg $1
 
          # Criar uma lista de receitas. Apenas das receitas que correspinderem com o padrao
-            v_found=$(ls $v_files | grep -i $1)
+            v_found=$(ls $v_textos | grep -i $1)
 
          # Verbose do resultado:
             f_talk; echo "Receitas Encontradas (com padrao: '$1'):"
@@ -636,7 +671,7 @@ elif [ $1 == "receitas" ] || [ $1 == "r" ]; then
                f_talk; echo "A editar: $i"
                        echo
 
-               bash e $v_files/$i
+               bash e $v_textos/$i
 
                        echo
                f_talk; echo "[Any key]: Seguir para proxima Receita"
