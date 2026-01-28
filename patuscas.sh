@@ -376,10 +376,21 @@ function f_menu_lista_de_compras_legacy {
 
 function f_adicionar_artigos_a_lista_de_compras_manualmente {
    f_greet
-   f_talk; echo "Adicionar/Alterar artigos a lista de compras manualmente" 
+   f_talk; echo "Adicionar/Alterar manualmemte:"
+           echo " > Artigos da 'lista atual de compras'" 
            echo
 
    bash e $v_lista_atual_de_compras 
+           echo
+
+   f_talk; echo "Para 'bugfix' do ficheiro anterior ..."
+           echo " ... todos os espacos vazios: ' '"
+           echo " ... serao convertidos em underscore: '_'"
+           echo " ... ficheiro anterior: \$v_lista_atual_de_compras "
+           echo " ... devido ao bug: espacos brancos sao mal intrepretados como artigos diferentes"
+           echo
+
+   sed -i "s/ /_/g" $v_lista_atual_de_compras 
 }
 
 function f_ver_lista_de_compras_atual {
