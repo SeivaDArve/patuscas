@@ -1,6 +1,13 @@
 # Title: Patuscas
 # Description: A script to cook
 
+
+
+# uDev: Suporte para drya-termux-omni-key
+
+
+
+
 __name__="patuscas.sh"
 __repo__=${v_REPOS_CENTER}/patuscas
 
@@ -309,6 +316,8 @@ function f_menu_lista_de_compras {
    # Lista de opcoes para o menu `fzf`
       Lz1='Save '; Lz2='P compras'; Lz3="$Lz1\`$Lz2\`"; Lz4=$v_drya_fzf_menu_hist
 
+       L8='8. | c | Informar+Calcular: Artigos+Precos: Artigos do carrinho de supermercado'
+
        L7='7. | s | Informar (Stock - X) | Artigo X acabou'
        L6='6. | S | Informar (Stock + X) | Artigo X foi adquirido'
 
@@ -322,10 +331,11 @@ function f_menu_lista_de_compras {
        Lh=$(echo -e "\nO que pretende fazer na lista de compras?\n ")
        L0="$v_fzf Menu 'Lista de Compras': "
       
-      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n$L5 \n\n$L6 \n$L7 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
+      v_list=$(echo -e "$L1 \n\n$L2 \n$L3 \n$L4 \n$L5 \n\n$L6 \n$L7 \n\n$L8 \n\n$Lz3" | fzf --no-info --cycle --header="$Lh" --prompt="$L0")
 
    # Perceber qual foi a escolha da lista
       [[   $v_list =~ $Lz3  ]] && echo "$Lz2" 
+      [[   $v_list =~ "8. " ]] && f_carrinho_de_compras_help 
       [[   $v_list =~ "7. " ]] && echo "uDev: $L7" 
       [[   $v_list =~ "6. " ]] && echo "uDev: $L6" 
       [[   $v_list =~ "5. " ]] && f_adicionar_artigos_a_lista_de_compras_manualmente 
@@ -513,6 +523,10 @@ function f_menu_principal {
 }
 
 
+function f_carrinho_de_compras_help {
+   echo "uDev: Quando estamos a passear com o carrinho de compras, adicionamos ingredientes no carrinho, adicionamos ingredientes no Patuscas e adicionamos precos dos ingredientes no Patuscas. O patuscas regista esses ingredientes com esses precos na base de dados e da o calculo do somatorio final do carrinho" 
+
+}
 
 
 
@@ -605,6 +619,10 @@ elif [ $1 == "compras" ] || [ $1 == "c" ]; then
 
    elif [ $2 == "S" ]; then
       f_talk; echo "Informar que foi adicionado X artigos ao stock"
+
+   elif [ $1 == "carrinho" ] || [ $1 == "c" ]; then
+      # Menu para manusear artigos que estamos a adicionar ao carrinho de compras no interior de um supermercado
+      f_carrinho_de_compras_help
 
    else
       echo "Opcao para lista de compras nao reconhecida"
