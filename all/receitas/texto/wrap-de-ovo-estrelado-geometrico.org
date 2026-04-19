@@ -24,6 +24,7 @@ Imagem 1: (offline) :
 - [ ] yammy
 - [ ] forno
 - [ ] air-fryer
+- [ ] fogao 'INDESIT eletrico 1-a-6 niveis'
   
 - [X] estacao-ano-primavera
 - [X] estacao-ano-verao
@@ -44,25 +45,26 @@ Imagem 1: (offline) :
 * -------------- Preparacao --------------- 
 
 ** Passo 1: Notas:  
-Precisa mesmo dos utensilios:
-1. Frigideira pequena ou media, para que as claras preencham o fundo todo de forma redonda (ver passo 2), fundo da frigideira cerca de 20 cm de diametro ou menos (15 cm)
+Precisa mesmo de adquirir/utilizar os utensilios:
+- Frigideira pequena ou media (para que as claras preencham o fundo todo de forma redonda (ver passo 2), fundo da frigideira cerca de 20 cm de diametro ou menos (15 cm))
+- Aro metalico (caso nao tenha uma frigideira pequena o suficiente)
 
 ** Passo 2: Separar claras das gemas
 1. Undar o fundo de uma frigideira com azeite
 
 2. Aquecer a frigideira
-   (em lume brando. Fogao INDESIT eletrico: nivel 3)
+   (em lume brando. Fogao 'INDESIT eletrico 1-a-6 niveis': nivel 3)
    
 3. Partir 2 ovos e colocar numa espumadeira para que as claras sejam filtradas e escorrerram para fora das gemas diretamente para a frigideira
    
 4. Quando estiverem separadas por gravidade para cima da fridideira, as claras ficam redondinhas ate as bordas da frigideira e é so colocar as 2 gemas da espumadeira bem ao centro
 
-** Passo 2: Cozinhar
+** Passo 2: Ao Cozinhar
 1. Colocar sal qb.
 
-2. Colocar a tampa por cima para ficar cozido de ambos os lados
+2. Colocar a tampa por cima para ficar cozido de ambos os lados (incluindo as gemas)
 
-3. Manter a cozer em lume brando (fogao INDESIT 1-6 niveis: nivel 3 ou 2)
+3. Manter a cozer em lume brando (fogao 'INDESIT eletrico 1-a-6 niveis': nivel 3 ou 2)
 
 ** Passo 2: Embrulhar as Gemas com as claras
 4. Quando as claras estiverem cozidas, rijas, embrulhamos as gemas que estao ao centro. Dobrar lateralmente e frontalmente as claras para cima das gemas fazendo um wrap de ovo bem simetrico
@@ -82,9 +84,10 @@ Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar est
 - Doses (pessoas): 1
 
 * -------- Materiais / Utensilios --------- 
-% 1 Frigideira (com tampa) de 20 centimetos de diametro
-% 1 Espumadeira larga
-% 1 Espatula
+% 1 Frigideira (com tampa) de 20 centimetos de diametro ou menor
+% 1 Aro metalico (caso nao tenha frigideira pequena o suficiente para que as clara de ovo prencham todo o fundo da frigideira
+% 1 Espumadeira larga (Para separar as claras das gemas)
+% 1 Espatula (para fazer as dobras das claras no final e enrolar as gemas)
 
 * --------------- Duraçao -----------------
 Pre-Preparacao:  x min

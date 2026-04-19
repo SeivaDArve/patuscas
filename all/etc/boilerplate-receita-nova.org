@@ -91,6 +91,7 @@ Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar est
 - [-] forno
 - [-] air-fryer
 - [-] fogao
+- [-] fogao 'INDESIT eletrico 1-a-6 niveis'
   
 - [-] estacao-ano-primavera
 - [-] estacao-ano-verao
