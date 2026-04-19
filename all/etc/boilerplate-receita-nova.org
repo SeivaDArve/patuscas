@@ -104,6 +104,8 @@ Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar est
 - [-] mt-facil
 - [-] doses-1
 
+- [-] receita-de-aproveitamento-de-sobras
+
 ** Precos
 [[uDev][Copiar tabela Ingredientes]]
 
