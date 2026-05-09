@@ -1,0 +1,141 @@
+# Title: Pao com recheiro de queijo na frigideira (com molho pesto por cima)
+#+Author: David Rodrigues <mydvr7@gmail.com>
+
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(progn (org-show-all)(visual-line-mode 1))][Abrir Tudo + Line wrap]]
+
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+#+STARTUP: visual-line
+Line Wrap: [[elisp:(toggle-truncate-lines 1)][Ativar]]  [[elisp:(toggle-truncate-lines -1)][Desativar]]  [[elisp:(visual-line-mode 1)][Ativar]]  
+:END:
+
+
+* ----------------- Info ------------------ 
+
+- [-] Receita 100% pronta
+  
+** Source
+24 Kitchen - Oliver
+** Imagens
+
+Imagem 1: (website) : 
+Imagem 1: (offline) : 
+
+** Hashtags
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+#+NAME: hashtag-yammy
+- [X] fogao
+  
+- [-] estacao-ano-primavera
+- [-] estacao-ano-verao
+- [-] estacao-ano-outono
+- [-] estacao-ano-inverno
+  
+- [-] preco-x
+- [-] nr-pessoas-n
+- [-] tempo-x
+- [X] rapido
+- [-] mt-facil
+- [-] doses-1
+
+** Precos
+[[uDev][Copiar tabela Ingredientes]]
+
+Preco de ingredientes + Eletricidade + Gas
+
+* ------------- Ingredientes -------------- 
+
+[[uDev][Apagar parte do exemplo: Tabela Ingredientes]]
+
+[[uDev][Apagar tabela: funcoes-para-tabela-ingredientes]]
+
+[[uDev][Ajustar tabela: Ingredientes]]
+
+#+NAME: Ingredientes
+| ID | Quantidade | Unidade     | Nome                  |   |
+|----+------------+-------------+-----------------------+---|
+|  1 | 400        | gr          | Farinha com fermento  |   |
+|  2 | 125        | gr          | queijo chedar         |   |
+|  3 | 250        | mili litros | agua                  |   |
+|  4 | qb.        | qb.         | sal                   |   |
+|  5 | qb.        | qb.         | pimenta preta         |   |
+|  6 | qb.        | qb.         | molho Pesto de compra |   |
+|----+------------+-------------+-----------------------+---|
+#+TBLFM: $1=@#-1
+
+* -------- Materiais / Utensilios --------- 
+
+Exemplos: 
+- 1 (exemplo: Frigideira especial)
+- 1 (exemplo: Tabua de madeira especial)
+- 1 Fogao INDESIT Eletrico 1-6 temperaturas
+
+Materiais: 
+- 1 Frigideira
+- 1 Pincel, para pincelar o molho pesto quando o pao de frigideira ja estiver dourado de ambos os lados
+
+* -------------- Preparacao --------------- 
+
+** Passo 1:
+Peneirar a farinha para filtrar grumos indesejados
+Numa superficie plana, colocar a farinha em monte e abrir um buraco no meio ao estilo de um vulcao para meter a agua no meio
+Colocar a agua no meio e misturar a farinha na agua ate ja nao agarrar nas maos
+Juntar o sal
+
+** Passo 2: 
+Com a bola de farinha, cortar ao meio em 2 partes e estendar ambas as partes do diametro da frigideira
+
+
+** Passo 3: 
+Em uma das partes colocar o queijo chedar ralado bem no meio (ou outro recheio)
+Colocar a segunda metade por cima e selar as pontas (colar a farinha de cima na de baixo e fazer um pequeno enrolamento|rebordo como se faz nas pizzas)
+
+** Passo 4: 
+Colocar na frigideira ate dourar de ambos os lados
+
+
+** Passo 5: 
+Retirar da frigideira e pincelar com um molho pesto (ou outro à escolha)
+
+
+** Passo 6: 
+Servir
+
+* ---------------- Servir ----------------- 
+
+Notas: `C-c C-c` serve para Ativarar/Desativar as caixas [X]  [[udev][Apagar estas Notas]]
+
+- [-] Servir quente
+- [-] Servir morno
+- [-] Servir frio
+- [-] Servir no aro metalico
+
+* ------ Doses / Porcoes / Peso final ----- 
+- Peso final (kg):
+- Doses (pessoas):
+
+* --------------- Duraçao ----------------- 
+#+NAME: Duracao
+| ID | Descricao                      | Quantidade | Unidade |
+|----+--------------------------------+------------+---------|
+|  1 | Pre-Preparacao (mise en place) | x          | min     |
+|  2 | Preparacao                     |            |         |
+|  3 | Lavar materiais                |            |         |
+|  4 | Comer                          |            |         |
+|----+--------------------------------+------------+---------|
+|  5 | Total                          |            |         |
+|----+--------------------------------+------------+---------|
+#+TBLFM: $1=@#-1
+
+* ------------- Dicas / Notas ------------- 
+Este prato combina bem com:
+ -
+
+* --- Relatorio das ultimas preparacoes --- 
+- 
+
