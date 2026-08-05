@@ -1,7 +1,21 @@
 #+TITLE: Agricultura.org
+#+Description: 
 
-* Dicas
+- Settings
+:PROPERTIES:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: indent
+:END:
 
+Headers: [[elisp:(org-overview)][Fechar Tudo]] - [[elisp:(org-show-all)][Abrir Tudo]] - [[elisp:(org-narrow-to-subtree)][Focus-header]] | [[elisp:(widen)][Unfocus-header]]
+
+[[elisp:(end-of-buffer)][>> Navegar para: Fim do Buffer]]  
+
+* All (Titulo)
+
+** Notas/Dicas/Dicionario (random)
+*** Dicas
 - Existem receitas de culinaria (neste caso de pao) cujo segredo é nao colocar o sal diretamente com o fermento, o segredo é misturar o fermento e a farinha primeiro, depois o sal
 - Ao cortar hortela ou outras ervas com caules rijos, cujas folhas sao aproveitas mas os caules nao, mesmo assim ha utilidade nos caules. O canal 24 Kitchen atou os caules e usou como aromatizante do caldo que estava a fazer. Ferveu na agua, no final da cozedura é que mandou fora
 - Iogurte (por exemplo iogurte natural) para substituir Natas
@@ -13,7 +27,18 @@
 - Ao filmar receitas dos canais de TV, gravar tambem o numero do episodio e numero da temporada. Exemplos: 'Jamie Oliver: Coking for Less T1 Ep4'
 - Levantar fervuras: Quando o fundo de um tacho esta 100 a cobrir a chama do fogao (independentemente se o liquido é leite ou outros), vai surgir bolhas de ar no fundo no momento da fervura. Caso o tacho esteja 100% a apanhar chama, vai criar tantas bolhas que todas vao querer subir ao mesmo tempo e transbordar esse liquido (chama-se a isso 'Levantar Fervura'). Mas se nos quisermos manter a temperatura de ferver sem que a fervura levante e transborde, temos de colocar apenas 50% do tacho sobre a chama, porque uma metade vai levantar a fervura e reciclar na direcao onde a fervura nao levanta. Vai fazer um ciclo
 
-* Receitas ToDo:
+*** Dicionario
+o que é...
+
+Curcuma == Acafrao
+
+Gratinado?
+Bechamel de arroz?
+o que e azeite virgem e extra virgem?
+
+"Papel Manteiga" : Papel semelhante ao papel vegetal que serve para ir ao forno
+** Culinaria
+*** Receitas ToDo: 
 Yakisoba (do restaurante Nood)
 Vinho (pelo menos 1 litro na vida). Fazer de raiz
 pao indiano: https://youtu.be/z1O8cfAyaz4?si=JEXpm5xdwDtxfNTe
@@ -25,7 +50,7 @@ Processo de: Colher azeitonas, retalhar para comer e sem retalhar para comer. Ta
 Salada de polvo
 Syllabub (is a traditional British dessert)
 
-** Banana Flambe
+*** Banana Flambe
 - um pouco de mantega na frigideira
 - banana cortada ao meio atÃ© ficar corado de ambos os lados
 - Adicionar rum
@@ -36,22 +61,11 @@ Syllabub (is a traditional British dessert)
 
 
 Diz-se: Receita de Marshmellow: Fazer gelatina normalmente, bater com varinha magica 8 min ate ganhar ar, levar ao frigorifico, depois é so cortar em cubos
-* Compostagem
-exemplo: https://youtu.be/MnpUWPUXGu4?si=3GnT87LSsHBISxfb
 
-* Lista de coisas a NAO ADQUIRIR
+*** Lista de coisas/compras a NAO ADQUIRIR/evitar
 nil. Coisas que nao se gosta ou coisas marcadas para nao comprar/adquirir
-* Dicionario
-o que é...
 
-Curcuma == Acafrao
-
-Gratinado?
-Bechamel de arroz?
-o que e azeite virgem e extra virgem?
-
-"Papel Manteiga" : Papel semelhante ao papel vegetal que serve para ir ao forno
-* Tabela "Arroz"
+*** Tabela "Arroz"
 
 | Tipo de Arroz           | Tamanho do Grão | Teor de Amido Total | Tipo de Amido Predominante      | Textura após Cozimento                 | Uso Típico                       |
 |-------------------------+-----------------+---------------------+---------------------------------+----------------------------------------+----------------------------------|
@@ -69,7 +83,15 @@ o que e azeite virgem e extra virgem?
 | Arroz Integral          | —               | Variável            | Igual ao tipo base              | Firme, fibroso                         | Versátil, saudável               |
 
 
-* Vinhos Bons
+*** Vinhos Bons
 Periquita
 Vale de barqueiros
 Vinhas da comporta
+
+** Agricultura
+*** Lista para a Autosuficiencia
+- Criar agrononia para a independencia de supermercados
+- Criar Bio Gas
+  
+*** Compostagem
+exemplo: https://youtu.be/MnpUWPUXGu4?si=3GnT87LSsHBISxfb
