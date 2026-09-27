@@ -118,6 +118,38 @@ Vinhas da comporta
 - Adquirir fogao Solar
 - Adquirir painel solar (fotovoltaico que depois de carregar as baterias passa a aquecer agua de um termoacumulador)
 - FAZER COLECAO DE SEMENTES
+- Criar uma sala com excelente acustica para as pessoas conseguirem conversar num tom de voz muito baixinho
+- Negocio: website de venda de sememtes
 
+*** Inseticidas naturais
+Afasta Insetos e Passaros: "Mint" (que vem do ingles e deve querer dizer Ortela) desfeita em puré e misturada em agua. Espremer mint com agua e borrifar com um borrifador nos frutos e legumes
 *** Compostagem
 exemplo: https://youtu.be/MnpUWPUXGu4?si=3GnT87LSsHBISxfb
+
+*** Sementes
+**** Melancia (website de venda de sementes)
+Exemplo de texto descritivo das sementes listadas num website de venda de sementes
+
+#+Titulo: Sementes de melancia 'Crimson Sweet' (Citrullus lanatus) folha de dados
+#+webgrafia: https://www.zamnesia.pt/9173-citrullus-lanatus-melancia-crimson-sweet.html
+|-------------------------------------+----------------------------------|
+| Nome botânico                       | Cucumis melo                     |
+| Indicado para                       | Exterior                         |
+| Tipo de planta                      | Fruta                            |
+| Localização                         | No vaso, No solo                 |
+| Funcionalidades                     | Grow	Elevado rendimento       |
+| Calendário de rega                  | Bastante                         |
+| Quantidade de sol                   | Pleno sol                        |
+| Espaço necessário                   | 150x300                          |
+| Técnica recomendada                 | Transplante                      |
+| Profundidade da semente             | 3 cm                             |
+| Período de sementeira em estufa     | Março, Abril                     |
+| Período de sementeira ao ar livre   | Abril                            |
+| Período de colheita                 | Julho, Agosto, Setembro, Outubro |
+| Utilizações                         | Comestível, Abelhas, Insetos     |
+| Veneno                              | Não                              |
+| Resistente ao gelo                  | Não                              |
+| Esperança de vida                   | Anual                            |
+| Quantidade de sementes por grama    | 25                               |
+| Altura média                        | 50                               |
+| Conteúdo da embalagem por grama	1,5 |                                  |
